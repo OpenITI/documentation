@@ -976,18 +976,19 @@ forks off from the trunk - nothing to do with cutlery).
 6.  You will now be transferred to a new repository on your personal
      GitHub page that contains an exact copy of the repository you
      forked; its URL will look something like:
-     https://github.com/\<yourUsername\>/<year\>AH
+     https://github.com/<yourUsername\>/<year\>AH
 
 ### Create a copy of your OpenITI fork on your computer: Cloning
 
-Now you have your own fork of an OpenITI repository, you can download it
+Now you have a fork of an OpenITI repository on your own GitHub page, you can download it
 on your computer so you can work on it.
 
 1.  Go to the fork you just created on GitHub
-     (https://github.com/\<yourUsername\>/\<year\>AH)
+     (https://github.com/<yourUsername\>/<year\>AH)
 
-2.  Click the green "Code" button, and then click the icon next to the
-     URL to copy the URL to your clipboard:\
+2.  Click the green "Code" button, and then click the clipboard icon next to the
+     URL to copy the URL to your clipboard:
+     
      ![](./media/image9.png)
 
 3.  On your computer, create a folder where you will keep all your
@@ -997,7 +998,7 @@ on your computer so you can work on it.
 
 5.  Type the command "git clone" and paste the link (for Windows users:
      use shift+insert, ctrl+v does not work in Git Bash):\
-     \$ git clone https://github.com/\<yourUsername\>/\<year\>.git
+     \$ git clone https://github.com/<yourUsername\>/<year\>.git
 
 6.  Git will now download all files and folders from your clone to your
      computer. This may take some time if you forked a large
