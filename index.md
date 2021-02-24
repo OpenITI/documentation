@@ -931,11 +931,11 @@ or install a dedicated command line tool for Git, called Git Bash:
 To open Terminal, do one of the following:
 
 -   Click the Launchpad icon
-     ![](./media/image17.png) in the Dock, type Terminal in the
-     search field, then click Terminal.
+     ![](./media/image17.png) in the Dock, type "Terminal" in the
+     search field, then click "Terminal".
 
 -   In the Finder ![](./media/image42.png), open the /Applications/Utilities
-     folder, then double-click Terminal.
+     folder, then double-click "Termina"l.
 
 To install Git Bash: download it from here:
 [https://downloads.digitaltrends.com/git/mac](https://downloads.digitaltrends.com/git/mac)
@@ -944,13 +944,12 @@ To install Git Bash: download it from here:
 
 If you're using Linux, you don't have to download the Git Bash program;
 you can use the normal shell to interact with Git. You can use all
-normal Linux commands (cd, ls, ...), in addition to a number of
+normal Linux commands (`cd`, `ls`, ...), in addition to a number of
 additional git commands that will be explained below.
 
 ### Working with OpenITI text repositories
 
-
-### Create your personal copy of an OpenITI repo: Forking
+#### Create your personal copy of an OpenITI repo: Forking
 
 To work on an OpenITI repository as an external contributor, you first
 have to create your personal copy of that repository. This process is
@@ -959,16 +958,16 @@ forks off from the trunk - nothing to do with cutlery).
 
 1.  Make sure you are logged in on GitHub
 
-2.  Go to
-    * [https://github.com/OpenITI](https://github.com/OpenITI)
+2.  Go to [https://github.com/OpenITI](https://github.com/OpenITI)
 
 3.  Select a text repository (0025AH, 0050AH, 0075AH, ...); you can
      search the repositories using the "Find a repository" search box
 
-![](./media/image30.png)
+    ![](./media/image30.png)
 
 4.  On the repository page, click the "Fork" button (in the upper right
-     corner): ![](./media/image5.png)
+     corner): 
+     ![](./media/image5.png)
 
 5.  If GitHub asks you where to fork the repository to, choose the
      option with your GitHub username.
