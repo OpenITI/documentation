@@ -1923,11 +1923,11 @@ annotation
 -   Please raise an issue on GitHub (you will need a GitHub account to
      do this):
 
--   For problems with a URI:
-    * [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=URI+change+suggestion&template=change-uri.md&title=)
+    -   For problems with a URI: [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=URI+change+suggestion&template=change-uri.md&title=)
 
--   For typos and other types of text quality problems:
-    * [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=) Give your issue a title and fill in the form. Click the "Submit new issue" button.
+    -   For typos and other types of text quality problems: [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=)
+    
+         Give your issue a title and fill in the form. Click the "Submit new issue" button.
 
 -   Alternatively, you can use the [metadata
      application](https://kitab-corpus-metadata.azurewebsites.net/)
@@ -1935,17 +1935,25 @@ annotation
      texts in OpenITI. The issues will be assigned a proper label and
      the OpenITI development team will take care of the issue.
 
-1.  To generate an issue, first find the text in the metadata
-     application (see [how](#fngdifjhixv)).
+    - To generate an issue, first find the text in the metadata
+       application (see [how](#how-can-i-find-a-text-in-openiti)).
 
-2.  The author, Book Title and Book Id columns contain a number of icons
-     that can be used to raise issues:
+    - The author, Book Title and Book Id columns contain a number of icons
+       that can be used to raise issues:
 
-     ![](./media/image43.png)
+       ![](./media/image43.png)
 
-     Use one of the issue links to click in the Book id column of the text. These categories are in fact the labels that we have created for the issues on the [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). Make sure that you have a github account to raise an issue. If you have one and are already logged in the github, you will be redirected to a page where you can create an issue by filling the required information and clicking the \"Submit new issue\" button (see the example below). You can also choose another category for the issue [here](https://github.com/OpenITI/Annotation/issues/new/choose) and click \"Get started\" of the proper category.
+       Use one of the issue links to click in the Book id column of the text. 
+       These categories are in fact the labels that we have created for the issues on the 
+       [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). 
+       Make sure that you have a github account to raise an issue. 
+       If you have one and are already logged in the github, you will be redirected to a page 
+       where you can create an issue by filling the required information and clicking the 
+       "Submit new issue" button (see the example below). 
+       You can also choose another category for the issue [here](https://github.com/OpenITI/Annotation/issues/new/choose) 
+       and click the "Get started" of the proper category.
 
-     ![](./media/image29.png)
+       ![](./media/image29.png)
 
 You can also submit issues directly on the corresponding github
 repository by clicking on the \"New issue\" on the \"Issues\" tab in the
