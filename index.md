@@ -1509,7 +1509,9 @@ These steps assume a basic understanding of the GitHub process (see
      using the template [IN
      PROGRESS](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=in+progress&template=in-progress.md&title=IN+PROGRESS%3A+%5B%5BURI+of+the+TEXT%5D%5D)
      to inform others that a specific text has been claimed and is in
-     the process of tagging. **Note**: *with this step in place we will always know who is working on what, where, and when. Before you start working on a specific text, simply search for the URI of your text on the [page with issues for the Annotation repository](https://github.com/OpenITI/Annotation/issues): if the URI is not found, it is safe to annotate that text.*
+     the process of tagging. 
+     
+     **Note**: *with this step in place we will always know who is working on what, where, and when. Before you start working on a specific text, simply search for the URI of your text on the [page with issues for the Annotation repository](https://github.com/OpenITI/Annotation/issues): if the URI is not found, it is safe to annotate that text.*
 
 6.  **Annotator** finds an edition of the text online (it must be a
      scanned version of the actual book, not an electronic text file!
@@ -1529,33 +1531,37 @@ These steps assume a basic understanding of the GitHub process (see
     d.  **Annotator** annotates the text by collating its structure with
          the PDF or the actual book. Only chapter headers need to be
          tagged (*approximately*: what you see in the table of
-         contents). **IMPORTANT**: save your progress after every tagging session, using **git** (git add . \> git commit -m "your message" \> git push origin master)
+         contents). 
+         
+         **IMPORTANT**: save your progress after every tagging session, using **git**
+         (git add . \> git commit -m "your message" \> git push origin master)
 
-9.  After the annotation is complete**:**
+9.  After the annotation is complete:
 
-    e.  **Annotator** renames the tagged file by adding "**.completed**"
+    e.  **Annotator** renames the tagged file by adding the extension `.completed`
          to the end of the filename. For example, if the file was
-         **0597IbnJawzi.Muntazam.JK001209-ara1**, it should become
-         **0597IbnJawzi.Muntazam.JK001209-ara1.completed**
+         `0597IbnJawzi.Muntazam.JK001209-ara1`, it should become
+         `0597IbnJawzi.Muntazam.JK001209-ara1.completed`
 
     f.  **Annotator** updates the relevant YML file, as described
-         [here](#yml-2-book-record).
+         [here](#yml-1-version-record).
 
-    g.  **Annotator** [commits](#save-your-changes-add-and-commit) the changes in her local git repo and [pushes](#contribute-to-openiti-push-changes-and-pull-requests) those local
+    g.  **Annotator** [commits](#save-your-changes-add-and-commit) the changes in her local git repo 
+         and [pushes](#contribute-to-openiti-push-changes-and-pull-requests) those local
          updates to her remote repository
 
-    h.  **Annotator** submits a [pull
-         request](#contribute-to-openiti-push-changes-and-pull-requests) (please, do pull requests
-         for each finished text!)
+    h.  **Annotator** submits a 
+         [pull request](#contribute-to-openiti-push-changes-and-pull-requests)
+         (please, make a pull request for each finished text!)
 
     i.  **Annotator** submits an issue to **the Annotation repository**
          using the template [Submission report (for Pull
          Requests)](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
 
-        i.  The title of the issue (already prefilled) should be: **TEXT
+        *  The title of the issue (already prefilled) should be: **TEXT
              TAGGED: \<URI of the text\>**
 
-        ii. In the body of the issue: please paste the contents of your
+        * In the body of the issue: please paste the contents of your
              YML file ([from YML-1](#roqh12z02fg7)).
 
     j.  **Annotator** closes the **IN PROGRESS** issue for that text
