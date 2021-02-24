@@ -360,50 +360,37 @@ can be divided into several groups:
 
 #### 25-years folders
 
--   [Old-ish
-     description](https://maximromanov.github.io/OpenITI/#the-overall-organization-of-openiti)
-     from maximromanov.github.io
-
 The entire corpus is divided into a series of repositories. Each
-repository covers a chronological period of 25AH lunar years: 1) the
-main folder within each repository is data, which contains subfolders
-for each author who died within a given period; 2) each author's
-subfolder includes subfolders for this author's books (often in multiple
-versions). For example, the repository 0525AH includes authors whose
-death dates fall in the range of 501--525 AH). Below is an example of
-how al-Ġazālī's Iḥyāʾ ʿulūm al-dīn fits into the corpus.
+repository covers a chronological period of 25AH lunar years: 
+1) the main folder within each repository is `data`, which contains subfolders
+    for each author who died within a given period; 
+2) each author's subfolder includes subfolders for this author's books (often in multiple
+    versions). For example, the repository 0525AH includes authors whose
+    death dates fall in the range of 501--525 AH). 
+
+Below is an example of how al-Ġazālī's Iḥyāʾ ʿulūm al-dīn fits into the corpus.
 
 ![](./media/image31.png)
 
-![](./media/image47.png)
+From this example, you can see that the repository `0525AH` includes a
+subfolder `data`, which includes a subfolder with al-Ġazālī's URI,
+`0505Ghazali`, which then includes a subfolder with Iḥyāʾ ʿulūm al-dīn's URI
+(uniform resource identifier), `0505Ghazali.IhyaCulumDin`, which then
+includes all the relevant files. 
 
-From this example, you can see that the repository 0525AH includes a
-subfolder data, which includes a subfolder with al-Ġazālī's URI,
-0505Ghazali, which then includes a subfolder with Iḥyāʾ ʿulūm al-dīn URI
-(uniform resource identifier), 0505Ghazali.IhyaCulumDin, which then
-includes all the relevant files. NB: README.md files contain some
-technical descriptions for a relevant level; \*.yml files contain
+NB: README.md files contain some
+technical descriptions; \*.yml files contain
 machine-readable metadata (On these metadata files see the description
 of YAML files below).
 
 #### URIs & CTS-Like Folder Structure
-
--   [Peter's recent
-     description](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
-
--   [Raqmiyyāt](https://alraqmiyyat.github.io/OpenITI/#cts-compliant-naming-pattern)
-     description of the URIs
-
--   Need to add description of naming convention for large texts spread
-     across multiple files: [URIs special
-     cases](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit)
 
 OpenITI URIs are CTS-compliant and constructed hierarchically, by
 chaining together sub-URIs. To make this example more understandable in
 the context of OpenITI, let's take a look at a practical example of
 al-Ḏahabī's Taʾrīḫ al-islām below.
 
-![](./media/image46.png){width="6.5in" height="2.0694444444444446in"}
+![](./media/image46.png)
 
 1.  Namespaces are standard technical parameters from the CTS URN
      structure which, among other things, allow building and
@@ -418,7 +405,7 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
      approximate date will suffice, since it will allow you to arrange
      texts chronologically. Any issues regarding the year death can
      described in the metadata files (\*.yml). In the above example,
-     0748Dhahabi is the identifier for Šams al-dīn al-Ḏahabī, who died
+     `0748Dhahabi` is the identifier for Šams al-dīn al-Ḏahabī, who died
      in 748/1347
 
 3.  BookID is an element that identifies a book (book title), usually
@@ -441,21 +428,20 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
      Languages](https://www.loc.gov/standards/iso639-2/php/code_list.php)
      at the LOC website). Lang also allows one to accommodate
      translations of a specific version of a text. For example, the URI
-     0748Dhahabi.TarikhIslam.Shamela0035100-eng1 would indicate an
+     `0748Dhahabi.TarikhIslam.Shamela0035100-eng1` would indicate an
      English translation of al-Ḏahabī's Taʾrīḫ al-islām, which is based
      on the text represented with the URI in the
-     example---0748Dhahabi.TarikhIslam.Shamela0035100-ara1; the number
+     example---`0748Dhahabi.TarikhIslam.Shamela0035100-ara1`; the number
      that follows the three-letter language code also allows to
      accommodate additional versioning. For example, the URI
-     0748Dhahabi.TarikhIslam.Shamela0035100-eng2 would represent
+     `0748Dhahabi.TarikhIslam.Shamela0035100-eng2` would represent
      another translation of
-     0748Dhahabi.TarikhIslam.Shamela0035100-ara1. Combined with the
+     `0748Dhahabi.TarikhIslam.Shamela0035100-ara1`. Combined with the
      preceding elements, it becomes 9: Unique Version Identifier.
 
 6.  Passage is the ID of a specific text unit (like a chapter, a
      biography, a paragraph, etc.). Combined with the preceding
-     elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document
-* [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
+     elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
 
 #### Text files: OpenITI mARkdown
 
@@ -507,10 +493,8 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
      20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing):
 
 YAML files record Metadata associated with texts, authors and annotators
-in the OpenITI. There are three types. For their locations see the
-25-year file structure (**LINK**)
+in the OpenITI. There are three types. For their locations see [above](#25-years-folders)
 
-DIAGRAM POINTING TO TYPES IN OPENITI STRUCTURE?
 
 #### YML-1 (Version Record)
 
