@@ -574,9 +574,7 @@ itself.
 
 **The following is an explanation of the fields in a YML-2 file.**
 
-For an original file see: [**[0325AH/0310Tabari.TahdhibAthar.yml at
-master · OpenITI/0325AH ·
-GitHub]{.underline}**](https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.TahdhibAthar/0310Tabari.TahdhibAthar.yml)
+For an original file see: [0310Tabari.TahdhibAthar.yml](https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.TahdhibAthar/0310Tabari.TahdhibAthar.yml)
 
 | Field | Description | Example (random, not necessarily real |
 |-------|-------------|---------------------------------------|
@@ -762,8 +760,7 @@ outside contributors and interaction with users.
 [https://swcarpentry.github.io/git-novice/01-basics/index.html](https://swcarpentry.github.io/git-novice/01-basics/index.html)
 )
 
-![](./media/image4.png){width="3.7864588801399823in"
-height="5.048611111111111in"}
+![](./media/image4.png)
 
 Even if working alone, you quickly run into multiple versions of the
 same document. This problem is compounded when working in a team.
@@ -774,8 +771,7 @@ as a recording of your progress: you can rewind to start at the base
 document and play back each change you made, eventually arriving at your
 more recent version.
 
-![](./media/image35.png){width="4.057292213473316in"
-height="1.2996533245844268in"}
+![](./media/image35.png)
 
 Once you think of changes as separate from the document itself, you can
 then think about "playing back" different sets of changes on the base
@@ -783,15 +779,12 @@ document, ultimately resulting in different versions of that document.
 For example, two users can make independent sets of changes on the same
 document.
 
-![](./media/image10.png){width="2.310734908136483in"
-height="2.1302088801399823in"}
-
+![](./media/image10.png)
 Unless multiple users make changes to the same section of the document -
 a conflict - you can incorporate two sets of changes into the same base
 document.
 
-![](./media/image19.png){width="2.5052088801399823in"
-height="2.4044969378827648in"}
+![](./media/image19.png)
 
 A version control system is a tool that keeps track of these changes for
 us, effectively creating different versions of our files. It allows us
@@ -891,12 +884,11 @@ we need only very few commands.
 To open Git Bash, right-click on a folder in Windows Explorer, and
 choose "Git Bash here"
 
-![](./media/image48.png){width="3.1770833333333335in"
-height="2.1770833333333335in"}
+![](./media/image48.png)
 
 This will open the program:
 
-![](./media/image2.png){width="6.5in" height="0.9861111111111112in"}
+![](./media/image2.png)
 
 "d/London/trainings/GitHub" shows the location of our working directory,
 where we opened the program; the dollar sign indicates that we can write
@@ -918,7 +910,7 @@ Useful commands:
 
     -   To move to the parent folder (which is the folder above your
          current working directory):\
-         ![](./media/image15.png){width="5.4375in" height="0.96875in"}
+         ![](./media/image15.png)
 
 -   ls (for "list"): list all files and folders in a directory (folder).
 
@@ -939,12 +931,10 @@ or install a dedicated command line tool for Git, called Git Bash:
 To open Terminal, do one of the following:
 
 -   Click the Launchpad icon
-     ![](./media/image17.png){width="0.20833333333333334in"
-     height="0.20833333333333334in"} in the Dock, type Terminal in the
+     ![](./media/image17.png) in the Dock, type Terminal in the
      search field, then click Terminal.
 
--   In the Finder ![](./media/image42.png){width="0.20833333333333334in"
-     height="0.20833333333333334in"}, open the /Applications/Utilities
+-   In the Finder ![](./media/image42.png), open the /Applications/Utilities
      folder, then double-click Terminal.
 
 To install Git Bash: download it from here:
@@ -975,11 +965,10 @@ forks off from the trunk - nothing to do with cutlery).
 3.  Select a text repository (0025AH, 0050AH, 0075AH, ...); you can
      search the repositories using the "Find a repository" search box
 
-![](./media/image30.png){width="5.614583333333333in" height="3.78125in"}
+![](./media/image30.png)
 
 4.  On the repository page, click the "Fork" button (in the upper right
-     corner): ![](./media/image5.png){width="1.1875in"
-     height="0.4583333333333333in"}
+     corner): ![](./media/image5.png)
 
 5.  If GitHub asks you where to fork the repository to, choose the
      option with your GitHub username.
@@ -999,8 +988,7 @@ on your computer so you can work on it.
 
 2.  Click the green "Code" button, and then click the icon next to the
      URL to copy the URL to your clipboard:\
-     ![](./media/image9.png){width="3.7916666666666665in"
-     height="1.6145833333333333in"}
+     ![](./media/image9.png)
 
 3.  On your computer, create a folder where you will keep all your
      OpenITI repositories
@@ -1018,14 +1006,12 @@ on your computer so you can work on it.
 7.  After the cloning process is done, you can use the command "ls" to
      show all files and folders in your current working directory; it
      will show you that the new repository was added:\
-     ![](./media/image7.png){width="5.625in"
-     height="0.5833333333333334in"}
+     ![](./media/image7.png)
 
 8.  Now use the command "ls -a" followed by the name of the repository
      (the -a is a "flag" that tells the program to also show hidden
-     files):\
-     ![](./media/image24.png){width="5.40625in"
-     height="0.6041666666666666in"}\
+     files):
+     ![](./media/image24.png)
      The .git/ folder contains the change history of the repository;
      the data/ folder contains the text files.
 
@@ -1051,7 +1037,7 @@ repository, and writing the command "remote -v". This will list all
 remote repositories (that is, repositories on the internet, not locally
 on your computer) linked to your local repository:
 
-![](./media/image36.png){width="6.5in" height="1.2222222222222223in"}
+![](./media/image36.png)
 
 The response you see in Git Bash means that only one remote repository
 is connected to your local repo: it is called origin, is located at the
@@ -1064,9 +1050,7 @@ from which you created your fork.
 1.  Go to the OpenITI GitHub page and copy the link from the original
      repo again, as you did before, by clicking the green "Code" button
      and then clicking the icon next to the URL:\
-     ![](./media/image9.png){width="3.7916666666666665in"
-     height="1.6145833333333333in"}
-
+     ![](./media/image9.png)
 2.  In Git Bash on your computer, use the cd command to move into your
      local repository:\
      \$ cd D:/London/trainings/GitHub/0325AH
@@ -1080,8 +1064,7 @@ from which you created your fork.
 
 4.  Check whether this worked by writing the command "git remote -v"
      again:\
-     ![](./media/image16.png){width="6.5in"
-     height="1.0555555555555556in"}\
+     ![](./media/image16.png)
      You see a new remote repository has been added: it is called
      "upstream", is located at the URL you copied, and can be used for
      synchronizing in both directions.\
@@ -1153,32 +1136,48 @@ the repository, for example to return to earlier versions of a file.
 1.  Make sure you have saved and closed the files you changed.
 
 2.  In Git Bash on your computer, use the cd command to move into your
-     local repository:\
-     \$ cd D:/London/trainings/GitHub/0325AH
+     local repository:
+     ```
+     $ cd D:/London/trainings/GitHub/0325AH
+     ```
 
-3.  You can use the command "git status" to make Git check which files
-     in your local repository have undergone changes:\
-     \$ git status If no changes occurred, you will get the following message:\ On branch master\ Your branch is up to date with \'origin/master\'.\ nothing to commit, working tree clean If you have made changes, Git will return a list of the files that have been changed (or added):\ ![](./media/image14.png){width="6.5in" height="2.0in"}\ For this example, we have changed the metadata about the life of the author al-Ṭabarī in his author yml file. Git displays it in red to show that the changes to this file have not yet been stored in Git.
+3.  You can use the command `git status` to make Git check which files
+     in your local repository have undergone changes:
+     ```
+     $ git status
+     ```
+     If no changes occurred, you will get the following message: 
+     ```
+     On branch master
+     Your branch is up to date with \'origin/master\'.
+     nothing to commit, working tree clean
+     ```
+     If you have made changes, Git will return a list of the files that have been changed (or added):
+![](./media/image14.png)
+     For this example, we have changed the metadata about the life of the author al-Ṭabarī 
+     in his author yml file. Git displays it in red to show that the changes to this file 
+     have not yet been stored in Git.
+
 
 4.  A commit is like a box in which changes are saved. First you have to
      add the changes to the box using the "git add" command, followed
      by the path to the files you changed. In this example, we changed
-     the yml file of the author al-Ṭabarī:\
-     \$ git add data/0310Tabari/0310Tabari.yml
+     the yml file of the author al-Ṭabarī:
+     ```
+     $ git add data/0310Tabari/0310Tabari.yml
+     ```
 
 5.  If you use the "git status" command again, you will see that the
      file we changed is now displayed in green: the changes are in the
-     commit box, ready to be committed to the storage system.\
-     ![](./media/image34.png){width="6.5in"
-     height="2.111111111111111in"}
+     commit box, ready to be committed to the storage system.
+     ![](./media/image34.png)
 
-6.  Using the command "git commit", we will commit our changes to the
+6.  Using the command `git commit`, we will commit our changes to the
      storage system. For later reference, we have to add a "commit
-     message": a label to the commit box, so to say, that should other
-     users help to understand the changes you made to the file without
-     having to compare both files.\
-     ![](./media/image3.png){width="6.5in"
-     height="0.6944444444444444in"}\
+     message": a label to the commit box, so to say, that should help other
+     users to understand the changes you made to the file without
+     having to compare both files.
+     ![](./media/image3.png)
      NB: a good commit message should be around 50 characters long, be
      descriptive, and in the imperative mood: the idea is that when you
      go through the history of changes made to a repo from the start,
@@ -1186,17 +1185,17 @@ the repository, for example to return to earlier versions of a file.
      Git will..."
 
 7.  Your changes have now been included in the change history. You can
-     view the change history with the command "git log":\
-     \$ git log\
+     view the change history with the command `git log`:
+     ```
+     $ git log
+     ```
      This will open an editor within Git Bash that will show you a log
      of all commits made to the repo, from the most recent to the
      earliest. You can use the UP and DOWN arrows on your keyboard to
-     navigate through this history.\
+     navigate through this history.
      To quit the log, type "q" after the colon at the bottom of the
-     window.\
-     \
-     ![](./media/image39.png){width="6.5in"
-     height="3.6666666666666665in"}
+     window.
+     ![](./media/image39.png)
 
 ### Contribute to OpenITI: push changes and pull requests
 
@@ -1224,8 +1223,7 @@ GitHub page to pull our changes to the "upstream" repo.
      message is displayed at the top; and GitHub notifies us that our
      fork is "1 commit ahead" of the repository on the OpenITI GitHub
      page.\
-     ![](./media/image1.png){width="6.5in"
-     height="2.236111111111111in"}
+     ![](./media/image1.png)
 
 4.  We now have to update the "upstream" repository on the OpenITI
      GitHub page. Try to use the same "git push" command, but now with
@@ -1240,12 +1238,11 @@ GitHub page to pull our changes to the "upstream" repo.
      administrator of the upstream repository to accept our changes.
      This is called a "pull request". This has to be done from our
      personal GitHub page. Go to the page of the repo and click "pull
-     requests" at the top of the page: ![](./media/image18.png){width="6.5in" height="1.3472222222222223in"}
+     requests" at the top of the page: ![](./media/image18.png)
 
 6.  In the upper right corner, click the green "New pull request"
      button:\
-     ![](./media/image11.png){width="1.6458333333333333in"
-     height="0.5104166666666666in"}
+     ![](./media/image11.png)
 
 7.  GitHub will ask you now between which repositories you want to
      create the pull request. Make sure the repository on the right of
@@ -1254,15 +1251,14 @@ GitHub page to pull our changes to the "upstream" repo.
      destination) of the arrow is the repository on the OpenITI GitHub
      page (OpenITI/\<repoName\>). Then click the green "Create pull
      request" button.\
-     ![](./media/image23.png){width="6.5in" height="1.5in"}
-
+     ![](./media/image23.png)
 8.  This will open a new window where you should write a "pull request
      message" (similar to the "commit message" we used on our local
      machine) to explain your changes to the administrators of the
      repository. By default, the latest commit message will be filled
      in as the pull request message. You can add a more verbose comment
      in the comment field below.\
-     ![](./media/image26.png){width="6.5in" height="4.125in"}
+     ![](./media/image26.png)
 
 9.  Press the green "Create pull request" button to finalize your pull
      request. The administrator of the page will review your changes,
@@ -1278,14 +1274,13 @@ GitHub page to pull our changes to the "upstream" repo.
      OpenITI team to review your changes: click "Reviewers" (to the
      right of the pull request message) and select one or more team
      members.\
-     ![](./media/image13.png){width="6.5in"
-     height="4.194444444444445in"}
+     ![](./media/image13.png)
 
 ### Summary 
 
-![](./media/image6.png){width="6.5in" height="3.6527777777777777in"}
+![](./media/image6.png)
 
-![](./media/image25.png){width="6.5in" height="3.6527777777777777in"}
+![](./media/image25.png)
 
 ### Raising GitHub issues
 
@@ -1296,7 +1291,7 @@ keep track of tasks inside a team, and allow external users to notify
 the development team about bugs or requests they have. Every GitHub
 repository has its own issues section, which you can find at the top of
 a GitHub repo page, just under its title:\
-![](./media/image41.png){width="4.552083333333333in" height="1.15625in"}
+![](./media/image41.png)
 
 In OpenITI, we collect all issues related to the texts in the corpus in
 the [Annotation
@@ -1312,14 +1307,14 @@ To raise a new issue:
      the Annotation
      repository](https://github.com/OpenITI/Annotation/issues):
 
-![](./media/image28.png){width="6.5in" height="2.263888888888889in"}
+![](./media/image28.png)
 
 2.  If not, click the green "New" button. This will bring up a page with
      a number of issue templates for frequently recurring issues.
      Choose the one that fits your issue best and click its "Get
      started" button.
 
-![](./media/image38.png){width="6.5in" height="7.597222222222222in"}
+![](./media/image38.png)
 
 3.  Each issue template contains directives on how to fill it in. Please
      follow the directives closely.\
@@ -1330,7 +1325,7 @@ To raise a new issue:
      reason. It also tells you to use the old URI as the title of the
      issue:
 
-![](./media/image33.png){width="6.5in" height="3.388888888888889in"}
+![](./media/image33.png)
 
 4.  Do not forget to use the URI in the title of the issue, and then
      click "Submit new issue".
@@ -1368,14 +1363,13 @@ In order to add your text, you will need a GitHub account (see the
 
 2.  On the GitHub page of your fork of the barzakh repository, go to
      "Add file", and choose "Upload files"\
-     ![](./media/image22.png){width="2.375in"
-     height="1.2291666666666667in"}
+     ![](./media/image22.png)
 
 3.  Choose the files you want to add, and write a description of the
      text file (author, author's death date, title, original edition
      (in case of a manuscript transcription: location and call number
      of the manuscript) in the description box:\
-     ![](./media/image20.png){width="6.5in" height="4.625in"}
+     ![](./media/image20.png)
 
 4.  Click the green "Commit changes" button
 
@@ -1442,8 +1436,8 @@ These steps assume a basic understanding of the GitHub process (see
      edition to collate with.
 
 5.  **Annotator** submits an issue to the ***Annotation repository***,
-     using the template [**[IN
-     PROGRESS]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=in+progress&template=in-progress.md&title=IN+PROGRESS%3A+%5B%5BURI+of+the+TEXT%5D%5D)
+     using the template [IN
+     PROGRESS](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=in+progress&template=in-progress.md&title=IN+PROGRESS%3A+%5B%5BURI+of+the+TEXT%5D%5D)
      to inform others that a specific text has been claimed and is in
      the process of tagging. **Note**: *with this step in place we will always know who is working on what, where, and when. Before you start working on a specific text, simply search for the URI of your text on the [page with issues for the Annotation repository](https://github.com/OpenITI/Annotation/issues): if the URI is not found, it is safe to annotate that text.*
 
@@ -1455,12 +1449,10 @@ These steps assume a basic understanding of the GitHub process (see
 
     a.  **Annotator** puts the text aside.
 
-    b.  **Annotator** fills the YML as described in
-         [**[YML-1]{.underline}**](#roqh12z02fg7).
+    b.  **Annotator** fills the YML as described in [YML-1](#yml-1-version-record).
 
     c.  **Annotator** submits an issue to the ***Annotation
-         repository***, using template [**[NO EDITION
-         FOUND]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=no+edition+found&template=no-edition-found.md&title=NO+EDITION+FOUND%3A+%2Apaste+the+URI+of+a+text%2A)
+         repository***, using template [NO EDITION FOUND](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=no+edition+found&template=no-edition-found.md&title=NO+EDITION+FOUND%3A+%2Apaste+the+URI+of+a+text%2A)
 
 8.  If **Annotator** can find a relevant edition:
 
@@ -1477,18 +1469,18 @@ These steps assume a basic understanding of the GitHub process (see
          **0597IbnJawzi.Muntazam.JK001209-ara1.completed**
 
     f.  **Annotator** updates the relevant YML file, as described
-         [**[here]{.underline}**](#roqh12z02fg7).
+         [here](#yml-2-book-record).
 
-    g.  **Annotator** [pushes](#ogb9951o2vm8) local
+    g.  **Annotator** [commits](#save-your-changes-add-and-commit) the changes in her local git repo and [pushes](#contribute-to-openiti-push-changes-and-pull-requests) those local
          updates to her remote repository
 
     h.  **Annotator** submits a [pull
-         request](#ogb9951o2vm8) (please, do pull requests
+         request](#contribute-to-openiti-push-changes-and-pull-requests) (please, do pull requests
          for each finished text!)
 
     i.  **Annotator** submits an issue to **the Annotation repository**
-         using the template [**[Submission report (for Pull
-         Requests)]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
+         using the template [Submission report (for Pull
+         Requests)](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
 
         i.  The title of the issue (already prefilled) should be: **TEXT
              TAGGED: \<URI of the text\>**
@@ -1637,7 +1629,7 @@ for more detail):
      value in EditPad Pro)
 
 -   Open a file in EditPad Pro and check if the schema works. It should
-     look like this: ![](./media/image21.png){width="6.5in" height="2.7916666666666665in"}
+     look like this: ![](./media/image21.png)
 
 NB: EditPad Pro was recently upgraded from version 7 to version 8.
 Currently we provide highlighting schemas for both versions, but 7 will
@@ -1704,7 +1696,7 @@ forms, please follow the following rules:
 
 Here is an example that shows how search function works.
 
-![](./media/image44.png){width="6.5in" height="3.4305555555555554in"}
+![](./media/image44.png)
 
 Further reading: [A New Application that Helps You Find Texts in the
 OpenITI
@@ -1869,10 +1861,10 @@ annotation
 2.  The author, Book Title and Book Id columns contain a number of icons
      that can be used to raise issues:
 
-![](./media/image43.png){width="6.5in" height="4.75in"} Use one of the issue links to click in the Book id column of the text. These categories are in fact the labels that we have created for the issues on the [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). Make sure that you have a github account to raise an issue. If you have one and are already logged in the github, you will be redirected to a page where you can create an issue by filling the required information and clicking the \"Submit new issue\" button (see the example below). You can also choose another category for the issue
-* [here](https://github.com/OpenITI/Annotation/issues/new/choose) and click \"Get started\" of the proper category.
+![](./media/image43.png)
+     Use one of the issue links to click in the Book id column of the text. These categories are in fact the labels that we have created for the issues on the [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). Make sure that you have a github account to raise an issue. If you have one and are already logged in the github, you will be redirected to a page where you can create an issue by filling the required information and clicking the \"Submit new issue\" button (see the example below). You can also choose another category for the issue [here](https://github.com/OpenITI/Annotation/issues/new/choose) and click \"Get started\" of the proper category.
 
-![](./media/image29.png){width="6.5in" height="3.2222222222222223in"}
+![](./media/image29.png)
 
 You can also submit issues directly on the corresponding github
 repository by clicking on the \"New issue\" on the \"Issues\" tab in the
@@ -1880,7 +1872,7 @@ Annotation repository (see the example below). This way provides more
 categories of issues in case you cannot find the proper one on the
 metadata app.
 
-![](./media/image27.png){width="6.5in" height="3.2222222222222223in"}
+![](./media/image27.png)
 
 ### - How can I use OpenITI? What license is used?
 
