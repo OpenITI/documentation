@@ -5,7 +5,7 @@
 NB: this documentation is a work in progress. Please feel free to
 contact us if you feel something is missing or unclear.
 
-[1. What is OpenITI?](#what-is-openiti)
+[1. What is OpenITI?](#1-what-is-openiti)
 
 * [A brief history of the OpenITI corpus](#a-brief-history-of-the-openiti-corpus)
 * [Goals](#goals)
@@ -16,7 +16,7 @@ contact us if you feel something is missing or unclear.
 * [Further reading](#further-reading)
 
 [2. Structure and organization of the OpenITI
-GitHub](#structure-and-organization-of-the-openiti-github)
+GitHub](#2-structure-and-organization-of-the-openiti-github)
 
 * [Text repositories](#text-repositories)
 * [25-years folders](#years-folders)
@@ -31,7 +31,7 @@ GitHub](#structure-and-organization-of-the-openiti-github)
 * [Annotation repo](#annotation-repo)
 * [Instantiations](#instantiations)
 
-[3. Working with GitHub](#working-with-github)
+[3. Working with GitHub](#3-working-with-github)
 
 * [Why use a version control system?](#why-use-a-version-control-system)
 * [Getting started with GitHub](#getting-started-with-github)
@@ -58,7 +58,7 @@ GitHub](#structure-and-organization-of-the-openiti-github)
 * [The barzakh repository](#the-barzakh-repository)
 * [Further reading on GitHub](#further-reading-on-github)
 
-[4. Annotation guidelines](#annotation-guidelines)
+[4. Annotation guidelines](#4-annotation-guidelines)
 
 * [Annotation workflow](#annotation-workflow)
 * [Validation workflow](#validation-workflow)
@@ -66,13 +66,13 @@ GitHub](#structure-and-organization-of-the-openiti-github)
 * [Further reading](#further-reading-1)
 
 [5. Software (versions and
-installation)](#software-versions-and-installation)
+installation)](#5-software-versions-and-installation)
 
 * [EditPad Pro](#editpad-pro)
 * [Git Bash](#git-bash)
 
 [6. Teaching and learning
-resources](#teaching-and-learning-resources)
+resources](#6-teaching-and-learning-resources)
 
 [7. FAQ](#faq)
 
@@ -181,7 +181,7 @@ digital analysis.
 Users of the OpenITI corpus will find the corpus in two key locations:
 GitHub
 ([https://github.com/openiti](https://github.com/openiti))
-and [Zenodo](https://zenodo.org/record/4513723#.YDYKUmj0ncs) (links for specific releases given below). The first is the active
+and [Zenodo](https://doi.org/10.5281/zenodo.3082463) (links for specific releases given below). The first is the active
 version of the corpus, and the second keeps snapshots of the corpus at
 a given time, for citation purposes.
 
@@ -199,8 +199,8 @@ the use of forking) helps protect against mistakes.
 Further reading:
 
 * [Structure and organization of the OpenITI
-GitHub](#structure-and-organization-of-the-openiti-github)
-* [Working with GitHub](#working-with-github)
+GitHub](#2-structure-and-organization-of-the-openiti-github)
+* [Working with GitHub](#3-working-with-github)
 
 ### Zenodo releases
 
@@ -212,7 +212,7 @@ text cited from the OpenITI might not be the same in two years\' time
 (it might have been further annotated, or some errors might have been
 corrected).
 
-For this reason we release the corpus quarterly onto Zenodo. This is a
+For this reason we release the corpus regularly onto Zenodo. This is a
 platform that allows for the archiving of data that can be linked
 throughout time without any risk of change. The corpus is released onto
 Zenodo with a specific version number (based on the date of the
@@ -234,6 +234,9 @@ mining using that corpus, one should cite 2019.1.1 in the paper. This
 allows other readers to repeat results. It also allows us to associate
 analysis of the full corpus with a release number (for example passim
 runs are always associated with a particular Zenodo release).
+
+The DOI [10.5281/zenodo.3082463](https://doi.org/10.5281/zenodo.3082463)
+will always refer to the latest release of OpenITI.
 
 ### What texts are in OpenITI?
 
