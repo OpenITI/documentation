@@ -381,7 +381,7 @@ technical descriptions; \*.yml files contain
 machine-readable metadata (On these metadata files see the description
 of YAML files below).
 
-#### URIs & CTS-Like Folder Structure
+##### URIs & CTS-Like Folder Structure
 
 OpenITI URIs are CTS-compliant and constructed hierarchically, by
 chaining together sub-URIs. To make this example more understandable in
@@ -441,7 +441,7 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
      biography, a paragraph, etc.). Combined with the preceding
      elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
 
-#### Text files: OpenITI mARkdown
+##### Text files: OpenITI mARkdown
 
 -   [Current description of OpenITI
      mARkdown](https://maximromanov.github.io/mARkdown/) @
@@ -481,14 +481,14 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
          Preparation](https://docs.google.com/document/d/19EZE_2jK44IgqK2dbq9-uywuvbAW-jG-Gyd9Cf-pLYg/edit?usp=sharing)
          section 6 has a use case for semantic tagging
 
-### Metadata: YAML files
+##### Metadata: YAML files
 
 OpenITI contains metadata for each author, work and text version. 
 This metadata is stored in separate metadata files in YAML format (\*.yml).
 There are three types. For their locations see [above](#25-years-folders)
 
 
-#### YML-1 (Version Record)
+###### YML-1 (Version Record)
 
 YML-1 Version YAML files relates to a specific version of a text,
 and are stored together with the text version they describe. 
@@ -561,7 +561,7 @@ can be used here:
 | INCOMPLETE\_VERSION | *The version contains only a part of the work (e.g., only one volume of a multi-volume edition; a manuscript transcription that does not cover all of the text). Indicate which parts of the text are present. Ideally, in the future, this will be done with CTN-style section references; for now, a description will be needed.* |
 | RECONSTRUCTED\_TEXT | *The text is the result of a reconstruction by a modern editor, usually from quotations of a lost text in a large number of other works. * |
 
-#### YML-2 (Book Record)
+###### YML-2 (Book Record)
 
 Each distinct work in the corpus has a YML-2 file. For example, the
 YML-2 for al-Tabari's Tahdhīb al-Āthār, would be:
@@ -617,7 +617,7 @@ Althurayya database. To identify those URIs take the following steps:
 
 ![](./media/image32.png)
 
-#### YML-3 (Author Record)
+###### YML-3 (Author Record)
 
 Each author in the corpus has a YML-3 file. The records metadata about
 the author and their relationship with other authors in the corpus.
@@ -653,7 +653,7 @@ For an example of an original file see:
      Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml). NB:
      on OpenITI gitHub; current YAML templates are slightly different
 
-### RAW folders
+#### RAW folders
 
 Many openITI texts were collected from various open-access online
 repositories and libraries and converted into OpenITI mARkdown format.
@@ -670,7 +670,7 @@ repositories whose names start with RAW.
 The [Annotation
 repository](https://github.com/OpenITI/Annotation) is
 created for documentation of the annotation process (see the
-[Annotation guidelines](#qi3k2b6wwysh) section for
+[Annotation guidelines](#4-annotation-guidelines) section for
 description of the annotation workflow), and to keep track of the
 advance of the annotation of the corpus. Steps below only explain the
 process of selection of a text for annotation.
@@ -678,15 +678,15 @@ process of selection of a text for annotation.
 -   Open the [priority
      list](https://github.com/OpenITI/Annotation/blob/master/priority_list.csv).
      It is organized chronologically and is searchable (the field with
-     a magnifying glass, saying Search this file).
+     a magnifying glass that says "Search this file").
 
 -   Texts with priority are the ones that should be annotated. Work in
      chronological order. Texts up to 1000 AH are of top priority.
 
 -   While the priority list will be updated regularly, you should check
-     if a text is not being annotated. To do so, go to
-    * [issues](https://github.com/OpenITI/Annotation/issues)
-     and, in the Field FILTER, search for the URI of the book that you
+     if a text is not being annotated. To do so, go to the
+    [issues](https://github.com/OpenITI/Annotation/issues) tab
+     and, in the field FILTER, search for the URI of the book that you
      want to annotate (use either complete URI, like
      0597IbnJawzi.Muntazam, or Author\'s URI 0597IbnJawzi, or the title
      of the book like Muntazam; note: if you search for IbnJawzi
@@ -698,14 +698,13 @@ process of selection of a text for annotation.
 
 -   Before you proceed, open an issue
      ([issues](https://github.com/OpenITI/Annotation/issues) \>
-     New Issue), using IN PROGRESS template.
+     New Issue), using the `IN PROGRESS` template.
 
--   After you finish annotating, send a pull request, close your IN
-     PROGRESS ISSUE, and open another issue using the Submission report
-     (for Pull Requests) template.
+-   After you finish annotating, send a pull request, close your `IN PROGRESS` 
+     issue, and open another issue using the [Submission report (for Pull Requests) template] (https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE).
 
-Note: You can create an URGENT issue to assign specific text to a
-specific person. Go to ISSUES \> New Issue \> select URGENT template \>
+Note: You can create an [URGENT](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=&template=urgent.md&title=URGENT+VET%2FTAG%3A+URI) issue to assign specific text to a
+specific person. Go to ([issues](https://github.com/OpenITI/Annotation/issues) \> New Issue \> select URGENT template \>
 Follow the instructions in the template.
 
 #### Instantiations
@@ -740,7 +739,6 @@ following instantiations (in progress):
 
 ## 3. Working with GitHub
 
-
 The development version of the corpus is hosted on the software
 development platform GitHub
 ([https://github.com/OpenITI](https://github.com/OpenITI)).
@@ -752,7 +750,6 @@ facilitate collaboration within the core team, collaboration with
 outside contributors and interaction with users.
 
 ### Why use a version control system?
-
 
 (adapted from
 [https://swcarpentry.github.io/git-novice/01-basics/index.html](https://swcarpentry.github.io/git-novice/01-basics/index.html)
@@ -801,16 +798,16 @@ also in each copy of the repository.
 ### Getting started with GitHub
 
 
-### Create a GitHub account
+#### Create a GitHub account
 
 If you don't have a GitHub account, you will have to create one.
 
 Go to [Github.com/join](https://github.com/join) and go
 through the sign-up process.
 
-### Installing Git
+#### Installing Git
 
-#### On Windows
+##### On Windows
 
 (instructions from
 [https://www.pluralsight.com/guides/using-git-and-github-on-windows](https://www.pluralsight.com/guides/using-git-and-github-on-windows))
@@ -846,7 +843,7 @@ just fine.
 
 After that one more Next, Finish, and Git is installed!
 
-#### On Mac
+##### On Mac
 
 (instructions from
 [https://www.atlassian.com/git/tutorials/install-git](https://www.atlassian.com/git/tutorials/install-git))
@@ -856,7 +853,7 @@ Download Git for Mac here:
 
 Follow the prompts to install Git.
 
-#### On Linux
+##### On Linux
 
 (instructions from
 [https://www.atlassian.com/git/tutorials/install-git\#linux](https://www.atlassian.com/git/tutorials/install-git#linux))
@@ -865,12 +862,11 @@ From your shell, install Git using apt-get:
 
 \$ sudo apt-get update\
 \$ sudo apt-get install git
+ 
 
-### 
+#### Introducing your main git tool: Git Bash
 
-### Introducing your main git tool: Git Bash
-
-On Windows
+##### On Windows
 
 We interact with Git through a program called Git Bash, which was
 installed together with Git in the step above. Git Bash is a command
@@ -916,11 +912,9 @@ Useful commands:
          \$ ls
 
     -   List all files and folders in another directory:\
-         \$ ls path/to/my/folder
+         \$ ls path/to/my/folder 
 
-#### 
-
-#### On Mac
+##### On Mac
 
 If you are a Mac user, you are probably familiar with the standard Mac
 command line tool, Terminal. You can use Terminal to interact with Git,
@@ -938,7 +932,7 @@ To open Terminal, do one of the following:
 To install Git Bash: download it from here:
 [https://downloads.digitaltrends.com/git/mac](https://downloads.digitaltrends.com/git/mac)
 
-#### On Linux
+##### On Linux
 
 If you're using Linux, you don't have to download the Git Bash program;
 you can use the normal shell to interact with Git. You can use all
