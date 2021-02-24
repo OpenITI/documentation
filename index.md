@@ -4,180 +4,92 @@ contact us if you feel something is missing or unclear.
 Table of contents
 =================
 
-[[1. What is OpenITI?]{.underline}](#what-is-openiti)
+[1. What is OpenITI?](#what-is-openiti)
 
-> [[A brief history of the OpenITI
-> corpus]{.underline}](#a-brief-history-of-the-openiti-corpus)
->
-> [[Goals]{.underline}](#goals)
->
-> [[Working version (GitHub repositories) vs. Corpus Releases
-> (Zenodo)]{.underline}](#working-version-github-repositories-vs.-corpus-releases-zenodo)
->
-> [[The GitHub Repositories]{.underline}](#the-github-repositories)
->
-> [[Zenodo releases]{.underline}](#zenodo-releases)
->
-> [[What texts are in OpenITI?]{.underline}](#what-texts-are-in-openiti)
->
-> [[Further reading]{.underline}](#further-reading)
+* [A brief history of the OpenITI corpus](#a-brief-history-of-the-openiti-corpus)
+* [Goals](#goals)
+* [Working version (GitHub repositories) vs. Corpus Releases (Zenodo)](#working-version-github-repositories-vs.-corpus-releases-zenodo)
+* [The GitHub Repositories](#the-github-repositories)
+* [Zenodo releases](#zenodo-releases)
+* [What texts are in OpenITI?](#what-texts-are-in-openiti)
+* [Further reading](#further-reading)
 
-[[2. Structure and organization of the OpenITI
-GitHub]{.underline}](#structure-and-organization-of-the-openiti-github)
+[2. Structure and organization of the OpenITI
+GitHub](#structure-and-organization-of-the-openiti-github)
 
-> [[Text repositories]{.underline}](#text-repositories)
->
-> [[25-years folders]{.underline}](#years-folders)
->
-> [[URIs & CTS-Like Folder
-> Structure]{.underline}](#uris-cts-like-folder-structure)
->
-> [[Text files: mARkdown]{.underline}](#text-files-markdown)
->
-> [[Metadata: YAML files]{.underline}](#metadata-yaml-files)
->
-> [[YML-1 (Version Record)]{.underline}](#yml-1-version-record)
->
-> [[YML-2 (Book Record)]{.underline}](#yml-2-book-record)
->
-> [[YML-3 (Author Record)]{.underline}](#yml-3-author-record)
->
-> [[RAW folders]{.underline}](#raw-folders)
->
-> [[Working repositories]{.underline}](#working-repositories)
->
-> [[Annotation repo]{.underline}](#annotation-repo)
->
-> [[Instantiations]{.underline}](#instantiations)
+* [Text repositories](#text-repositories)
+* [25-years folders](#years-folders)
+* [URIs & CTS-Like Folder Structure](#uris-cts-like-folder-structure)
+* [Text files: mARkdown](#text-files-markdown)
+* [Metadata: YAML files](#metadata-yaml-files)
+* [YML-1 (Version Record)](#yml-1-version-record)
+* [YML-2 (Book Record)](#yml-2-book-record)
+* [YML-3 (Author Record)](#yml-3-author-record)
+* [RAW folders](#raw-folders)
+* [Working repositories](#working-repositories)
+* [Annotation repo](#annotation-repo)
+* [Instantiations](#instantiations)
 
-[[3. Working with GitHub]{.underline}](#working-with-github)
+[3. Working with GitHub](#working-with-github)
 
-> [[Why use a version control
-> system?]{.underline}](#why-use-a-version-control-system)
->
-> [[Getting started with
-> GitHub]{.underline}](#getting-started-with-github)
->
-> [[Create a GitHub account]{.underline}](#create-a-github-account)
->
-> [[Installing Git]{.underline}](#installing-git)
->
-> [[On Windows]{.underline}](#on-windows)
->
-> [[On Mac]{.underline}](#on-mac)
->
-> [[On Linux]{.underline}](#on-linux)
->
-> [[Introducing your main git tool: Git
-> Bash]{.underline}](#introducing-your-main-git-tool-git-bash)
->
-> [[On Mac]{.underline}](#on-mac-1)
->
-> [[On Linux]{.underline}](#on-linux-1)
->
-> [[Working with OpenITI text
-> repositories]{.underline}](#working-with-openiti-text-repositories)
->
-> [[Create your personal copy of an OpenITI repo:
-> Forking]{.underline}](#create-your-personal-copy-of-an-openiti-repo-forking)
->
-> [[Create a copy of your OpenITI fork on your computer:
-> Cloning]{.underline}](#create-a-copy-of-your-openiti-fork-on-your-computer-cloning)
->
-> [[Keep up to date with OpenITI: pull
-> changes]{.underline}](#keep-up-to-date-with-openiti-pull-changes)
->
-> [[Set up a direct connection between your local repo and the one on
-> OpenITI's GitHub
-> page]{.underline}](#set-up-a-direct-connection-between-your-local-repo-and-the-one-on-openitis-github-page)
->
-> [[Synchronize your local repository with the "upstream"
-> repo]{.underline}](#synchronize-your-local-repository-with-the-upstream-repo)
->
-> [[Save your changes: add and
-> commit]{.underline}](#save-your-changes-add-and-commit)
->
-> [[Contribute to OpenITI: push changes and pull
-> requests]{.underline}](#contribute-to-openiti-push-changes-and-pull-requests)
->
-> [[Summary]{.underline}](#summary)
->
-> [[Raising GitHub issues]{.underline}](#raising-github-issues)
->
-> [[Contributing New Texts]{.underline}](#contributing-new-texts)
->
-> [[The easy way: contact us]{.underline}](#the-easy-way-contact-us)
->
-> [[The barzakh repository]{.underline}](#the-barzakh-repository)
->
-> [[Further reading on GitHub]{.underline}](#further-reading-on-github)
+* [Why use a version control system?](#why-use-a-version-control-system)
+* [Getting started with GitHub](#getting-started-with-github)
+* [Create a GitHub account](#create-a-github-account)
+* [Installing Git](#installing-git)
+* [On Windows](#on-windows)
+* [On Mac](#on-mac)
+* [On Linux](#on-linux)
+* [Introducing your main git tool: Git Bash](#introducing-your-main-git-tool-git-bash)
+* [On Mac](#on-mac-1)
+* [On Linux](#on-linux-1)
+* [Working with OpenITI text repositories](#working-with-openiti-text-repositories)
+* [Create your personal copy of an OpenITI repo: Forking](#create-your-personal-copy-of-an-openiti-repo-forking)
+* [Create a copy of your OpenITI fork on your computer: Cloning](#create-a-copy-of-your-openiti-fork-on-your-computer-cloning)
+* [Keep up to date with OpenITI: pull changes](#keep-up-to-date-with-openiti-pull-changes)
+* [Set up a direct connection between your local repo and the one on OpenITI's GitHub page](#set-up-a-direct-connection-between-your-local-repo-and-the-one-on-openitis-github-page)
+* [Synchronize your local repository with the "upstream" repo](#synchronize-your-local-repository-with-the-upstream-repo)
+* [Save your changes: add and commit](#save-your-changes-add-and-commit)
+* [Contribute to OpenITI: push changes and pull requests](#contribute-to-openiti-push-changes-and-pull-requests)
+* [Summary](#summary)
+* [Raising GitHub issues](#raising-github-issues)
+* [Contributing New Texts](#contributing-new-texts)
+* [The easy way: contact us](#the-easy-way-contact-us)
+* [The barzakh repository](#the-barzakh-repository)
+* [Further reading on GitHub](#further-reading-on-github)
 
-[[4. Annotation guidelines]{.underline}](#annotation-guidelines)
+[4. Annotation guidelines](#annotation-guidelines)
 
-> [[Annotation workflow]{.underline}](#annotation-workflow)
->
-> [[Validation workflow]{.underline}](#validation-workflow)
->
-> [[OpenITI mARkdown]{.underline}](#openiti-markdown)
->
-> [[Further reading]{.underline}](#further-reading-1)
+* [Annotation workflow](#annotation-workflow)
+* [Validation workflow](#validation-workflow)
+* [OpenITI mARkdown](#openiti-markdown)
+* [Further reading](#further-reading-1)
 
-[[5. Software (versions and
-installation)]{.underline}](#software-versions-and-installation)
+[5. Software (versions and
+installation)](#software-versions-and-installation)
 
-> [[EditPad Pro]{.underline}](#editpad-pro)
->
-> [[Git Bash]{.underline}](#git-bash)
+* [EditPad Pro](#editpad-pro)
+* [Git Bash](#git-bash)
 
-[[6. Teaching and learning
-resources]{.underline}](#teaching-and-learning-resources)
+[6. Teaching and learning
+resources](#teaching-and-learning-resources)
 
-[[7. FAQ]{.underline}](#faq)
+[7. FAQ](#faq)
 
-> [[- How can I find a text in
-> OpenITI?]{.underline}](#how-can-i-find-a-text-in-openiti)
->
-> [[- The text I\'m looking for is not in OpenITI. What
-> now?]{.underline}](#the-text-im-looking-for-is-not-in-openiti.-what-now)
->
-> [[- How do I add a text to the OpenITI
-> corpus?]{.underline}](#how-do-i-add-a-text-to-the-openiti-corpus)
->
-> [[- How do I request a new text be
-> added?]{.underline}](#how-do-i-request-a-new-text-be-added)
->
-> [[- How do I cite OpenITI
-> texts?]{.underline}](#how-do-i-cite-openiti-texts)
->
-> [[- Do you use texts generated by Optical Character
-> Recognition?]{.underline}](#do-you-use-texts-generated-by-optical-character-recognition)
->
-> [[- How can I help develop
-> OpenITI?]{.underline}](#how-can-i-help-develop-openiti)
->
-> [[- I found a typo in a text / a mistake in the metadata or URI. How
-> do I flag
-> this?]{.underline}](#i-found-a-typo-in-a-text-a-mistake-in-the-metadata-or-uri.-how-do-i-flag-this)
->
-> [[- How can I use OpenITI? What license is
-> used?]{.underline}](#how-can-i-use-openiti-what-license-is-used)
->
-> [[- what about copyright
-> issues?]{.underline}](#what-about-copyright-issues)
->
-> [[- Why do you use mARkdown rather than TEI? Can I convert my TEI tags
-> to mARkdown or vice
-> versa?]{.underline}](#why-do-you-use-markdown-rather-than-tei-can-i-convert-my-tei-tags-to-markdown-or-vice-versa)
->
-> [[- A text I am researching is in the corpus but not annotated, or the
-> annotation is insufficient for my research interests. What do I
-> do?]{.underline}](#a-text-i-am-researching-is-in-the-corpus-but-not-annotated-or-the-annotation-is-insufficient-for-my-research-interests.-what-do-i-do)
->
-> [[- I am not sure there is an appropriate mARkdown annotation, or I am
-> not sure how to annotate a particular part of a text. What do I
-> do?]{.underline}](#i-am-not-sure-there-is-an-appropriate-markdown-annotation-or-i-am-not-sure-how-to-annotate-a-particular-part-of-a-text.-what-do-i-do)
+* [- How can I find a text in OpenITI?](#how-can-i-find-a-text-in-openiti)
+* [- The text I\'m looking for is not in OpenITI. What now?](#the-text-im-looking-for-is-not-in-openiti.-what-now)
+* [- How do I add a text to the OpenITI corpus?](#how-do-i-add-a-text-to-the-openiti-corpus)
+* [- How do I request a new text be added?](#how-do-i-request-a-new-text-be-added)
+* [- How do I cite OpenITI texts?](#how-do-i-cite-openiti-texts)
+* [- Do you use texts generated by Optical Character Recognition?](#do-you-use-texts-generated-by-optical-character-recognition)
+* [- How can I help develop OpenITI?](#how-can-i-help-develop-openiti)
+* [- I found a typo in a text / a mistake in the metadata or URI. How do I flag this?](#i-found-a-typo-in-a-text-a-mistake-in-the-metadata-or-uri.-how-do-i-flag-this)
+* [- How can I use OpenITI? What license is used?](#how-can-i-use-openiti-what-license-is-used)
+* [- what about copyright issues?](#what-about-copyright-issues)
+* [- Why do you use mARkdown rather than TEI? Can I convert my TEI tags to mARkdown or vice versa?](#why-do-you-use-markdown-rather-than-tei-can-i-convert-my-tei-tags-to-markdown-or-vice-versa)
+* [- A text I am researching is in the corpus but not annotated, or the annotation is insufficient for my research interests. What do I do?](#a-text-i-am-researching-is-in-the-corpus-but-not-annotated-or-the-annotation-is-insufficient-for-my-research-interests.-what-do-i-do)
+* [- I am not sure there is an appropriate mARkdown annotation, or I am not sure how to annotate a particular part of a text. What do I do?](#i-am-not-sure-there-is-an-appropriate-markdown-annotation-or-i-am-not-sure-how-to-annotate-a-particular-part-of-a-text.-what-do-i-do)
 
-[[Glossary]{.underline}](#glossary)
+[Glossary](#glossary)
 
 1. What is OpenITI?
 ===================
@@ -194,7 +106,7 @@ OpenITI was founded in 2016 by Maxim Romanov, Sarah Savant and Matt
 Miller, who each had been working on individual corpus projects, because
 of their dissatisfaction with existing repositories of digital Arabic
 and Persian texts. They
-[[described]{.underline}](https://doi.org/10.1017/S0020743817000964) the
+[described](https://doi.org/10.1017/S0020743817000964) the
 problem with these text collections as threefold: "they are not
 compliant with any international data standards; they typically lack
 scholarly metadata; and they do not adequately represent the diversity
@@ -202,7 +114,7 @@ of the historic traditions."
 
 The principles on which the new corpus should rest have been described
 in a research paper published in
-[[2018]{.underline}](https://doi.org/10.1017/S0020743817000964): the
+[2018](https://doi.org/10.1017/S0020743817000964): the
 corpus should be developed as a collective effort by the field, "address
 the research needs of scholars and meet academic standards in terms of
 the quality of their texts and metadata", and promote open research by
@@ -227,7 +139,7 @@ Goals
 -----
 
 The OpenITI's main
-[[aim]{.underline}](https://alraqmiyyat.github.io/OpenITI/) is to
+[aim](https://alraqmiyyat.github.io/OpenITI/) is to
 provide the "textual infrastructure (...) for new forms of macro textual
 analysis and digital scholarship" for Islamicate texts, that is, texts
 written by Muslims and/or in contexts in which Muslims were socially and
@@ -267,7 +179,7 @@ Working version (GitHub repositories) vs. Corpus Releases (Zenodo)
 
 Users of the OpenITI corpus will find the corpus in two key locations:
 GitHub
-([[https://github.com/openiti]{.underline}](https://github.com/openiti))
+([https://github.com/openiti](https://github.com/openiti))
 and Zenodo (links for releases given below). The first is the active
 version of the corpus, and the second keeps a snapshot of the corpus at
 a given time.
@@ -285,9 +197,9 @@ the use of forking) helps protect against mistakes.
 
 Further reading:
 
-\> [[organization of the OpenITI GitHub
-page]{.underline}](#6b0prmhb9c0b)\
-\> [[working with GitHub]{.underline}](#j93jp6ujbc6o)
+\* [organization of the OpenITI GitHub
+page](#6b0prmhb9c0b)\
+\* [working with GitHub](#j93jp6ujbc6o)
 
 ### Zenodo releases
 
@@ -304,15 +216,15 @@ platform that allows for the archiving of data that can be linked
 throughout time without any risk of change. The corpus is released onto
 Zenodo with a specific version number (based on the date of the
 release). A full record of the releases is found
-[[here]{.underline}](https://zenodo.org/record/4075046#.X9Cj72j7RPY).
+[here](https://zenodo.org/record/4075046#.X9Cj72j7RPY).
 See also the list of releases below:
 
   Link                                                                                      How to cite?
   ----------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [[Zenodo release 2019.1.1]{.underline}](https://zenodo.org/record/3082464#.X9CjwGj7RPY)   Maxim Romanov, Masoumeh Seydi, 2019: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2019.1.1. [[https://zenodo.org/record/3082464\#.X9CjwGj7RPY]{.underline}](https://zenodo.org/record/3082464#.X9CjwGj7RPY)
-  [[Zenodo release 2020.1.2]{.underline}](https://zenodo.org/record/3891466#.X9CjZGj7RPY)   Lorenz Nigst; Maxim Romanov; Sarah Bowen Savant; Masoumeh Seydi; Peter Verkinderen, 2020: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2020.1.2. [[https://zenodo.org/record/3891466\#.X9CjZGj7RPY]{.underline}](https://zenodo.org/record/3891466#.X9CjZGj7RPY)
-  [[Zenodo release 2020.2.3]{.underline}](https://zenodo.org/record/4075046#.X9Cf_mj7RPY)   Lorenz Nigst; Maxim Romanov; Sarah Bowen Savant; Masoumeh Seydi; Peter Verkinderen, 2020: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2020.2.3. [[https://zenodo.org/record/4075046\#.X9I1jNj0lPZ]{.underline}](https://zenodo.org/record/4075046#.X9I1jNj0lPZ)
-  [[Zenodo release 2021.1.4]{.underline}](https://zenodo.org/record/4513723#.YDYKUmj0ncs)   Lorenz Nigst; Maxim Romanov; Sarah Bowen Savant; Masoumeh Seydi; Peter Verkinderen, 2020: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2021.1.4. [[https://zenodo.org/record/4513723\#.YDYKUmj0ncs]{.underline}](https://zenodo.org/record/4513723#.YDYKUmj0ncs)
+  [Zenodo release 2019.1.1](https://zenodo.org/record/3082464#.X9CjwGj7RPY)   Maxim Romanov, Masoumeh Seydi, 2019: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2019.1.1. [https://zenodo.org/record/3082464\#.X9CjwGj7RPY](https://zenodo.org/record/3082464#.X9CjwGj7RPY)
+  [Zenodo release 2020.1.2](https://zenodo.org/record/3891466#.X9CjZGj7RPY)   Lorenz Nigst; Maxim Romanov; Sarah Bowen Savant; Masoumeh Seydi; Peter Verkinderen, 2020: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2020.1.2. [https://zenodo.org/record/3891466\#.X9CjZGj7RPY](https://zenodo.org/record/3891466#.X9CjZGj7RPY)
+  [Zenodo release 2020.2.3](https://zenodo.org/record/4075046#.X9Cf_mj7RPY)   Lorenz Nigst; Maxim Romanov; Sarah Bowen Savant; Masoumeh Seydi; Peter Verkinderen, 2020: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2020.2.3. [https://zenodo.org/record/4075046\#.X9I1jNj0lPZ](https://zenodo.org/record/4075046#.X9I1jNj0lPZ)
+  [Zenodo release 2021.1.4](https://zenodo.org/record/4513723#.YDYKUmj0ncs)   Lorenz Nigst; Maxim Romanov; Sarah Bowen Savant; Masoumeh Seydi; Peter Verkinderen, 2020: OpenITI: A Machine-Readable Corpus of Islamicate Texts. Version 2021.1.4. [https://zenodo.org/record/4513723\#.YDYKUmj0ncs](https://zenodo.org/record/4513723#.YDYKUmj0ncs)
 
 When publishing research, it is important to refer to the exact release
 number that was used for the research project. For example, if one
@@ -388,19 +300,19 @@ OpenITI (19 texts):
 
   COUNT   COLL. ID       FULL NAME                                LINK                                                                                             SHORT DESCRIPTION
   ------- -------------- ---------------------------------------- ------------------------------------------------------------------------------------------------ -------------------------------------------------------------------------------------------------------
-  3635    Shamela        al-Maktaba al-Shāmila                    [[shamela.ws]{.underline}](http://www.shamela.ws/)                                               Large digital open-access library, scraped ca. 2014 (*official version*)
-  125     Sham19Y        al-Maktaba al-Shāmila (2019 additions)   [[shamela.ws]{.underline}](http://www.shamela.ws/)                                               Additional scrape of new texts in October 2019 (*official version*)
+  3635    Shamela        al-Maktaba al-Shāmila                    [shamela.ws](http://www.shamela.ws/)                                               Large digital open-access library, scraped ca. 2014 (*official version*)
+  125     Sham19Y        al-Maktaba al-Shāmila (2019 additions)   [shamela.ws](http://www.shamela.ws/)                                               Additional scrape of new texts in October 2019 (*official version*)
   2308    JK             al-Jāmiʿ al-kabīr                                                                                                                         Books digitized by Jordanian publisher Markaz al-Turāth
-  1041    Shia           al-Maktaba al-Shīʿiyya                   [[shiaonlinelibrary.com]{.underline}](http://shiaonlinelibrary.com/)                             Text collection by the Ayatollah Milani Foundation
+  1041    Shia           al-Maktaba al-Shīʿiyya                   [shiaonlinelibrary.com](http://shiaonlinelibrary.com/)                             Text collection by the Ayatollah Milani Foundation
   530     ShamAY                                                  (gift)                                                                                           Official version of al-Maktaba al-Shāmila + private collection of digitized books
   394     Zaydiyya       al-Maktaba al-Shāmila al-Zaydiyya                                                                                                         Collection of Zaydī texts, packaged in a Maktaba Shamela instance
-  132     ShamIbadiyya   al-Maktaba al-Shāmila al-Ibāḍiyya        [[archive.org/details/5\_20190723]{.underline}](https://archive.org/details/5_20190723)          Collection of Ibāḍī texts by the Algerian Jamʿiyyat al-Turāth, packaged in a Maktaba Shamela instance
-  99      GRAR           Graeco-Arabic Studies Corpus             [[graeco-arabic-studies.org]{.underline}](https://graeco-arabic-studies.org/)                    A Digital Corpus for Graeco-Arabic Studies
-  81      Tafsir         al-Tafāsīr                               [[altafsir.com]{.underline}](http://www.altafsir.com/)                                           Collection of Qur\'ān commentaries by the Jordanian "Royal Aal al-Bayt Institute for Islamic Thought"
-  77      Sham30K        al-Maktaba al-Shāmila (30.000 texts)     [[archive.org/details/SHAMELH30-1-20]{.underline}](https://archive.org/details/SHAMELH30-1-20)   Official version of al-Maktaba al-Shamela + large amount of additional texts
-  4       Filaha         The Filāḥa Project                       [[filaha.org/]{.underline}](http://www.filaha.org/)                                              Arabic books on husbandry
-  1       Hindawi        Hindawi                                  [[hindawi.org/books/]{.underline}](https://www.hindawi.org/books/)                               Books published by the Hindawi Foundation
-  1       BibleCorpus    Bible Corpus                             [[github.com/christos-c/bible-corpus]{.underline}](https://github.com/christos-c/bible-corpus)   A multilingual parallel corpus of Bible translations
+  132     ShamIbadiyya   al-Maktaba al-Shāmila al-Ibāḍiyya        [archive.org/details/5\_20190723](https://archive.org/details/5_20190723)          Collection of Ibāḍī texts by the Algerian Jamʿiyyat al-Turāth, packaged in a Maktaba Shamela instance
+  99      GRAR           Graeco-Arabic Studies Corpus             [graeco-arabic-studies.org](https://graeco-arabic-studies.org/)                    A Digital Corpus for Graeco-Arabic Studies
+  81      Tafsir         al-Tafāsīr                               [altafsir.com](http://www.altafsir.com/)                                           Collection of Qur\'ān commentaries by the Jordanian "Royal Aal al-Bayt Institute for Islamic Thought"
+  77      Sham30K        al-Maktaba al-Shāmila (30.000 texts)     [archive.org/details/SHAMELH30-1-20](https://archive.org/details/SHAMELH30-1-20)   Official version of al-Maktaba al-Shamela + large amount of additional texts
+  4       Filaha         The Filāḥa Project                       [filaha.org/](http://www.filaha.org/)                                              Arabic books on husbandry
+  1       Hindawi        Hindawi                                  [hindawi.org/books/](https://www.hindawi.org/books/)                               Books published by the Hindawi Foundation
+  1       BibleCorpus    Bible Corpus                             [github.com/christos-c/bible-corpus](https://github.com/christos-c/bible-corpus)   A multilingual parallel corpus of Bible translations
 
 4290 out of the 5104 distinct works in OpenITI derive from three main
 source collections (Sham, JK and ShiaOL). These three collections
@@ -419,21 +331,21 @@ TO DO: genre breakdown
 Further reading
 ---------------
 
--   [[The first-ish general description of
-    > OpenITI]{.underline}](https://maximromanov.github.io/OpenITI/)
+-   [The first-ish general description of
+    > OpenITI](https://maximromanov.github.io/OpenITI/)
 
 2. Structure and organization of the OpenITI GitHub
 ===================================================
 
--   [[Peter's recent
-    > description]{.underline}](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
+-   [Peter's recent
+    > description](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
     > (pp. 4ff.)
 
--   [[Raqmiyyāt]{.underline}](https://alraqmiyyat.github.io/OpenITI/)
+-   [Raqmiyyāt](https://alraqmiyyat.github.io/OpenITI/)
     > description
 
--   [[Uploading texts to the DAR Process Summary - Version
-    > 2]{.underline}](https://docs.google.com/document/d/1vNxgNQTYr0roU1qwuWcSMOYhrM5hj1ukv14ycy4XTac/edit?usp=sharing) -
+-   [Uploading texts to the DAR Process Summary - Version
+    > 2](https://docs.google.com/document/d/1vNxgNQTYr0roU1qwuWcSMOYhrM5hj1ukv14ycy4XTac/edit?usp=sharing) -
     > see data structure on page 6
 
 The OpenITI GitHub page contains a large number of repositories, which
@@ -459,8 +371,8 @@ Text repositories
 
 ### 25-years folders
 
--   [[Old-ish
-    > description]{.underline}](https://maximromanov.github.io/OpenITI/#the-overall-organization-of-openiti)
+-   [Old-ish
+    > description](https://maximromanov.github.io/OpenITI/#the-overall-organization-of-openiti)
     > from maximromanov.github.io
 
 The entire corpus is divided into a series of repositories. Each
@@ -487,15 +399,15 @@ of YAML files below).
 
 ### URIs & CTS-Like Folder Structure
 
--   [[Peter's recent
-    > description]{.underline}](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
+-   [Peter's recent
+    > description](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
 
--   [[Raqmiyyāt]{.underline}](https://alraqmiyyat.github.io/OpenITI/#cts-compliant-naming-pattern)
+-   [Raqmiyyāt](https://alraqmiyyat.github.io/OpenITI/#cts-compliant-naming-pattern)
     > description of the URIs
 
 -   Need to add description of naming convention for large texts spread
-    > across multiple files: [[URIs special
-    > cases]{.underline}](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit)
+    > across multiple files: [URIs special
+    > cases](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit)
 
 OpenITI URIs are CTS-compliant and constructed hierarchically, by
 chaining together sub-URIs. To make this example more understandable in
@@ -536,8 +448,8 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
     > preceding elements it becomes 8: Unique Edition Identifier.
 
 5.  Lang indicates the main language of the text (these are ISO 639-2
-    > codes, see [[Codes for the Representation of Names of
-    > Languages]{.underline}](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+    > codes, see [Codes for the Representation of Names of
+    > Languages](https://www.loc.gov/standards/iso639-2/php/code_list.php)
     > at the LOC website). Lang also allows one to accommodate
     > translations of a specific version of a text. For example, the URI
     > 0748Dhahabi.TarikhIslam.Shamela0035100-eng1 would indicate an
@@ -553,26 +465,21 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
 
 6.  Passage is the ID of a specific text unit (like a chapter, a
     > biography, a paragraph, etc.). Combined with the preceding
-    > elements, it becomes 10: Unique Passage Identifier.
-
-> For more information on the naming conventions of the special cases,
-> such as large texts that spread across multiple files, please see the
-> document
-> [[here]{.underline}](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing)
-> (in progress). New cases will be added to this document.
+    > elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document
+* [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
 
 ### Text files: mARkdown
 
--   [[Current description of
-    > mARkdown]{.underline}](https://maximromanov.github.io/mARkdown/) @
+-   [Current description of
+    > mARkdown](https://maximromanov.github.io/mARkdown/) @
     > maximromanov.github.io
 
--   [[Updating
-    > mARkdown]{.underline}](https://docs.google.com/document/d/1N2mcXVCU1fPk4BbH3jSL10D83_98y87hxy1juQwVock/edit?usp=sharing),
+-   [Updating
+    > mARkdown](https://docs.google.com/document/d/1N2mcXVCU1fPk4BbH3jSL10D83_98y87hxy1juQwVock/edit?usp=sharing),
     > working document by Maxim and Peter.
 
-    -   Also, from previous discussions of [[logical
-        > chunking]{.underline}](https://docs.google.com/document/d/1etXDRSUjVJJRuIWlh80g343V_wQ_6OWaZ4VzYv0RbRM/edit)
+    -   Also, from previous discussions of [logical
+        > chunking](https://docs.google.com/document/d/1etXDRSUjVJJRuIWlh80g343V_wQ_6OWaZ4VzYv0RbRM/edit)
         > with Masoumeh.
 
     -   Main goal: simplification of mARkdown, i.e. removing and
@@ -583,11 +490,11 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
             -   Automatically: a random number of 12 digits
 
             -   Manually: a timestamp (YYMMDDHHMMSS); see, here:
-                > [[https://maximromanov.github.io/sakhawi\_project/]{.underline}](https://maximromanov.github.io/sakhawi_project/)
+                * [https://maximromanov.github.io/sakhawi\_project/](https://maximromanov.github.io/sakhawi_project/)
 
             -   IDs to be stored in
 
--   [[mARkdownMSS]{.underline}](https://docs.google.com/document/d/1MTBiCTc0URbtDbDrrWUGGKqdpGh5hvj0t738R0CXepU/edit?usp=sharing),
+-   [mARkdownMSS](https://docs.google.com/document/d/1MTBiCTc0URbtDbDrrWUGGKqdpGh5hvj0t738R0CXepU/edit?usp=sharing),
     > a working version \-\-- Maxim together with Matt Miller, for Carl
     > Ernst (UNC, Chapel Hill) and Mbaye Lo (Duke U); input is needed
     > from Peter, Lorenz, and others)
@@ -597,18 +504,18 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
     -   Basic vs. advanced annotation - with use cases? (examples are
         > given in the general description of mARkdown)
 
-    -   [[DSP Dataset
-        > Preparation]{.underline}](https://docs.google.com/document/d/19EZE_2jK44IgqK2dbq9-uywuvbAW-jG-Gyd9Cf-pLYg/edit?usp=sharing)
+    -   [DSP Dataset
+        > Preparation](https://docs.google.com/document/d/19EZE_2jK44IgqK2dbq9-uywuvbAW-jG-Gyd9Cf-pLYg/edit?usp=sharing)
         > section 6 has a use case for semantic tagging
 
 ### Metadata: YAML files
 
--   [[YAML Template
-    > Overview]{.underline}](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
+-   [YAML Template
+    > Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
     > on OpenITI gitHub; current YAML templates are different
 
--   Explanation of YML files from [[4. Annotation Workflow - Version
-    > 20/12/2019]{.underline}](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing):
+-   Explanation of YML files from [4. Annotation Workflow - Version
+    > 20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing):
 
 YAML files record Metadata associated with texts, authors and annotators
 in the OpenITI. There are three types. For their locations see the
@@ -637,7 +544,7 @@ version that the annotator used to annotate the text
 **The following is an explanation of YML-1 fields:**
 
 **(Link to the original YML-1 described in the table, here:
-[[https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml]{.underline}](https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml))**
+[https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml](https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml))**
 
   **Field**                    **Description**                                                                                                                                                                                 **Example (from file)**
   ---------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
@@ -659,7 +566,7 @@ fields 80\#VERS\#BASED\#\#\#\# and 80\#VERS\#COLLATED\#, for example
 from GitHub. To get a permalink, follow these steps:
 
 1.  Go to
-    > [[https://www.worldcat.org]{.underline}](https://www.worldcat.org/)
+    * [https://www.worldcat.org](https://www.worldcat.org/)
 
 2.  Search for a needed book; there are usually many records \-\-- pick
     > the one that looks best (those submitted by major libraries are
@@ -880,7 +787,7 @@ the author and their relationship with other authors in the corpus.**
 **The following is an explanation of a YML-3 file.**
 
 For an example of an original file see:
-[[https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.yml]{.underline}](https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.yml)
+[https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.yml](https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.yml)
 
   **Field**                   **Description**                                                                                                                                                                                                                    **Example (random, not necessarily real data)**
   --------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------
@@ -916,16 +823,16 @@ Working repositories
 
 ### Annotation repo
 
-The [[Annotation
-repository]{.underline}](https://github.com/OpenITI/Annotation) is
+The [Annotation
+repository](https://github.com/OpenITI/Annotation) is
 created for documentation of the annotation process (see the
-[[Annotation guidelines]{.underline}](#qi3k2b6wwysh) section for
+[Annotation guidelines](#qi3k2b6wwysh) section for
 description of the annotation workflow), and to keep track of the
 advance of the annotation of the corpus. Steps below only explain the
 process of selection of a text for annotation.
 
--   Open the [[priority
-    > list]{.underline}](https://github.com/OpenITI/Annotation/blob/master/priority_list.csv).
+-   Open the [priority
+    > list](https://github.com/OpenITI/Annotation/blob/master/priority_list.csv).
     > It is organized chronologically and is searchable (the field with
     > a magnifying glass, saying Search this file).
 
@@ -934,7 +841,7 @@ process of selection of a text for annotation.
 
 -   While the priority list will be updated regularly, you should check
     > if a text is not being annotated. To do so, go to
-    > [[issues]{.underline}](https://github.com/OpenITI/Annotation/issues)
+    * [issues](https://github.com/OpenITI/Annotation/issues)
     > and, in the Field FILTER, search for the URI of the book that you
     > want to annotate (use either complete URI, like
     > 0597IbnJawzi.Muntazam, or Author\'s URI 0597IbnJawzi, or the title
@@ -946,7 +853,7 @@ process of selection of a text for annotation.
     > clone \> annotate).
 
 -   Before you proceed, open an issue
-    > ([[issues]{.underline}](https://github.com/OpenITI/Annotation/issues) \>
+    > ([issues](https://github.com/OpenITI/Annotation/issues) \>
     > New Issue), using IN PROGRESS template.
 
 -   After you finish annotating, send a pull request, close your IN
@@ -984,7 +891,7 @@ following instantiations (in progress):
     > simplified) for the use with stylo R-package.
 
 -   i.farasa, an instantiation of the corpus for processing with the
-    > [[Farasa]{.underline}](http://qatsdemo.cloudapp.net/farasa/)
+    * [Farasa](http://qatsdemo.cloudapp.net/farasa/)
     > engine.
 
 3. Working with GitHub
@@ -992,9 +899,9 @@ following instantiations (in progress):
 
 The development version of the corpus is hosted on the software
 development platform GitHub
-([[https://github.com/OpenITI]{.underline}](https://github.com/OpenITI)).
+([https://github.com/OpenITI](https://github.com/OpenITI)).
 GitHub uses the distributed version-control system Git
-([[https://en.wikipedia.org/wiki/Git]{.underline}](https://en.wikipedia.org/wiki/Git))
+([https://en.wikipedia.org/wiki/Git](https://en.wikipedia.org/wiki/Git))
 for keeping track of changes to files on each of the different
 developers' machines. GitHub also offers additional features that
 facilitate collaboration within the core team, collaboration with
@@ -1004,7 +911,7 @@ Why use a version control system?
 ---------------------------------
 
 (adapted from
-[[https://swcarpentry.github.io/git-novice/01-basics/index.html]{.underline}](https://swcarpentry.github.io/git-novice/01-basics/index.html)
+[https://swcarpentry.github.io/git-novice/01-basics/index.html](https://swcarpentry.github.io/git-novice/01-basics/index.html)
 )
 
 ![](./media/image4.png){width="3.7864588801399823in"
@@ -1047,7 +954,7 @@ metadata make up a repository. Repositories can be kept in sync across
 different computers, facilitating collaboration among different people.
 
 GitHub uses the version-control system Git
-([[https://en.wikipedia.org/wiki/Git]{.underline}](https://en.wikipedia.org/wiki/Git)).
+([https://en.wikipedia.org/wiki/Git](https://en.wikipedia.org/wiki/Git)).
 Git is called a "distributed" version-control system because the change
 history of a repository is maintained not only on a central server, but
 also in each copy of the repository.
@@ -1059,7 +966,7 @@ Getting started with GitHub
 
 If you don't have a GitHub account, you will have to create one.
 
-Go to [[Github.com/join]{.underline}](https://github.com/join) and go
+Go to [Github.com/join](https://github.com/join) and go
 through the sign-up process.
 
 ### Installing Git
@@ -1067,10 +974,10 @@ through the sign-up process.
 #### On Windows
 
 (instructions from
-[[https://www.pluralsight.com/guides/using-git-and-github-on-windows]{.underline}](https://www.pluralsight.com/guides/using-git-and-github-on-windows))
+[https://www.pluralsight.com/guides/using-git-and-github-on-windows](https://www.pluralsight.com/guides/using-git-and-github-on-windows))
 
 Download Git for windows here:
-[[https://gitforwindows.org/]{.underline}](https://gitforwindows.org/)
+[https://gitforwindows.org/](https://gitforwindows.org/)
 
 Execute the downloaded file. In the page Select Components you can leave
 the options at their defaults.
@@ -1103,17 +1010,17 @@ After that one more Next, Finish, and Git is installed!
 #### On Mac
 
 (instructions from
-[[https://www.atlassian.com/git/tutorials/install-git]{.underline}](https://www.atlassian.com/git/tutorials/install-git))
+[https://www.atlassian.com/git/tutorials/install-git](https://www.atlassian.com/git/tutorials/install-git))
 
 Download Git for Mac here:
-[[https://sourceforge.net/projects/git-osx-installer/files/]{.underline}](https://sourceforge.net/projects/git-osx-installer/files/)
+[https://sourceforge.net/projects/git-osx-installer/files/](https://sourceforge.net/projects/git-osx-installer/files/)
 
 Follow the prompts to install Git.
 
 #### On Linux
 
 (instructions from
-[[https://www.atlassian.com/git/tutorials/install-git\#linux]{.underline}](https://www.atlassian.com/git/tutorials/install-git#linux))
+[https://www.atlassian.com/git/tutorials/install-git\#linux](https://www.atlassian.com/git/tutorials/install-git#linux))
 
 From your shell, install Git using apt-get:
 
@@ -1193,7 +1100,7 @@ To open Terminal, do one of the following:
     > folder, then double-click Terminal.
 
 To install Git Bash: download it from here:
-[[https://downloads.digitaltrends.com/git/mac]{.underline}](https://downloads.digitaltrends.com/git/mac)
+[https://downloads.digitaltrends.com/git/mac](https://downloads.digitaltrends.com/git/mac)
 
 #### On Linux
 
@@ -1215,7 +1122,7 @@ forks off from the trunk - nothing to do with cutlery).
 1.  Make sure you are logged in on GitHub
 
 2.  Go to
-    > [[https://github.com/OpenITI]{.underline}](https://github.com/OpenITI)
+    * [https://github.com/OpenITI](https://github.com/OpenITI)
 
 3.  Select a text repository (0025AH, 0050AH, 0075AH, ...); you can
     > search the repositories using the "Find a repository" search box
@@ -1359,7 +1266,7 @@ from your local repo to a remote repository.
     > of the repo we forked, on the OpenITI GitHub page; "master" is the
     > name of a branch within this repo. Branches are an important
     > concept in Git (see
-    > [[here]{.underline}](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches)
+    * [here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches)
     > if you want to learn more), but in OpenITI text repositories, we
     > only use the master branch, so don't worry about this.
 
@@ -1374,7 +1281,7 @@ from your local repo to a remote repository.
     > someone else has meanwhile made changes in the upstream repo to
     > the same line in that same file, this leads to a "merge conflict":
     > Git cannot decide which change to keep. You will have to
-    > [[resolve]{.underline}](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
+    * [resolve](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
     > this merge conflict by manually selecting which changes to keep:
     > the one you pulled from the OpenITI GitHub page, or the one you
     > made locally. This can be a huge pain. In order to avoid this,
@@ -1403,19 +1310,7 @@ the repository, for example to return to earlier versions of a file.
 
 3.  You can use the command "git status" to make Git check which files
     > in your local repository have undergone changes:\
-    > \$ git status
-
-> If no changes occurred, you will get the following message:\
-> On branch master\
-> Your branch is up to date with \'origin/master\'.\
-> nothing to commit, working tree clean
->
-> If you have made changes, Git will return a list of the files that
-> have been changed (or added):\
-> ![](./media/image14.png){width="6.5in" height="2.0in"}\
-> For this example, we have changed the metadata about the life of the
-> author al-Ṭabarī in his author yml file. Git displays it in red to
-> show that the changes to this file have not yet been stored in Git.
+    > \$ git status If no changes occurred, you will get the following message:\ On branch master\ Your branch is up to date with \'origin/master\'.\ nothing to commit, working tree clean If you have made changes, Git will return a list of the files that have been changed (or added):\ ![](./media/image14.png){width="6.5in" height="2.0in"}\ For this example, we have changed the metadata about the life of the author al-Ṭabarī in his author yml file. Git displays it in red to show that the changes to this file have not yet been stored in Git.
 
 4.  A commit is like a box in which changes are saved. First you have to
     > add the changes to the box using the "git add" command, followed
@@ -1474,13 +1369,7 @@ GitHub page to pull our changes to the "upstream" repo.
 
 2.  Use the command "git push origin master" to push your changes to
     > your fork on your personal GitHub page:\
-    > \$ git push origin master
-
-> NB: "origin" is the default name for any remote repository you clone
-> on your computer; "master" is the name of the branch within that
-> repository. As we explained above, OpenITI does not use different
-> branches in its text repositories, so the name of the branch will
-> always be the default "master".
+    > \$ git push origin master NB: "origin" is the default name for any remote repository you clone on your computer; "master" is the name of the branch within that repository. As we explained above, OpenITI does not use different branches in its text repositories, so the name of the branch will always be the default "master".
 
 3.  If we go to our personal GitHub page now, we will see that our
     > changes are now also visible in our remote repository. Our commit
@@ -1497,19 +1386,13 @@ GitHub page to pull our changes to the "upstream" repo.
     > \$ git push upstream master\
     > This does not work: GitHub does not give us permission to push
     > directly to the upstream repository:\
-    > Remote: Permission to OpenITI/0325AH.git denied to pverkind.
-
-> This is a safety measure: GitHub allows anyone to fork any public
-> repository; if anyone would be allowed to make changes to any repo,
-> this would open the door to digital vandalism.
+    > Remote: Permission to OpenITI/0325AH.git denied to pverkind. This is a safety measure: GitHub allows anyone to fork any public repository; if anyone would be allowed to make changes to any repo, this would open the door to digital vandalism.
 
 5.  To update the upstream repository, we have to request the
     > administrator of the upstream repository to accept our changes.
     > This is called a "pull request". This has to be done from our
     > personal GitHub page. Go to the page of the repo and click "pull
-    > requests" at the top of the page:
-
-> ![](./media/image18.png){width="6.5in" height="1.3472222222222223in"}
+    > requests" at the top of the page: ![](./media/image18.png){width="6.5in" height="1.3472222222222223in"}
 
 6.  In the upper right corner, click the green "New pull request"
     > button:\
@@ -1536,9 +1419,7 @@ GitHub page to pull our changes to the "upstream" repo.
 9.  Press the green "Create pull request" button to finalize your pull
     > request. The administrator of the page will review your changes,
     > and either accept your request, or require you to make alterations
-    > before they accept your request.
-
-> NB: pull requests are not only a safety measure; they are also:
+    > before they accept your request. NB: pull requests are not only a safety measure; they are also:
 
 -   a quality control tool: administrators can check whether your
     > changes are acceptable
@@ -1562,7 +1443,7 @@ Raising GitHub issues
 ---------------------
 
 GitHub uses
-[[issues]{.underline}](https://guides.github.com/features/issues/) to
+[issues](https://guides.github.com/features/issues/) to
 keep track of tasks inside a team, and allow external users to notify
 the development team about bugs or requests they have. Every GitHub
 repository has its own issues section, which you can find at the top of
@@ -1570,8 +1451,8 @@ a GitHub repo page, just under its title:\
 ![](./media/image41.png){width="4.552083333333333in" height="1.15625in"}
 
 In OpenITI, we collect all issues related to the texts in the corpus in
-the [[Annotation
-repository]{.underline}](https://github.com/OpenITI/Annotation/issues).
+the [Annotation
+repository](https://github.com/OpenITI/Annotation/issues).
 This is where we keep track of which texts are being annotated, have
 quality problems, etc. Each issue related to a specific text (or author)
 contains its URI in the title.
@@ -1579,9 +1460,9 @@ contains its URI in the title.
 To raise a new issue:
 
 1.  Check whether an issue already exists for your text by typing (or
-    > pasting) its URI in the search field in the [[issues section of
+    > pasting) its URI in the search field in the [issues section of
     > the Annotation
-    > repository]{.underline}](https://github.com/OpenITI/Annotation/issues):
+    > repository](https://github.com/OpenITI/Annotation/issues):
 
 ![](./media/image28.png){width="6.5in" height="2.263888888888889in"}
 
@@ -1618,7 +1499,7 @@ corpus, there are a couple of ways to go about this.
 ### The easy way: contact us
 
 The easiest way to contribute a new text is to send it to our corpus
-manager, [[Lorenz Nigst]{.underline}](mailto:Lorenz.Nigst@aku.edu).
+manager, [Lorenz Nigst](mailto:Lorenz.Nigst@aku.edu).
 
 ### The *barzakh* repository
 
@@ -1627,14 +1508,14 @@ You can also add new texts to the corpus yourself.
 New texts are added via a special repository called "barzakh" (an Arabic
 term that refers to the phase between death and resurrection, similar to
 the Christian concept of
-"[[Purgatory]{.underline}](https://en.wikipedia.org/wiki/Barzakh)"):
-[[https://github.com/OpenITI/barzakh]{.underline}](https://github.com/OpenITI/barzakh)
+"[Purgatory](https://en.wikipedia.org/wiki/Barzakh)"):
+[https://github.com/OpenITI/barzakh](https://github.com/OpenITI/barzakh)
 
 In order to add your text, you will need a GitHub account (see the
-[[tutorial]{.underline}](#tzqgboevt0m1)):
+[tutorial](#tzqgboevt0m1)):
 
 1.  Fork the barzakh repository (see the
-    > [[tutorial]{.underline}](#vr8odkbtoqev)): create a personal copy
+    * [tutorial](#vr8odkbtoqev)): create a personal copy
     > of the repository on your own GitHub page.
 
 2.  On the GitHub page of your fork of the barzakh repository, go to
@@ -1651,10 +1532,10 @@ In order to add your text, you will need a GitHub account (see the
 4.  Click the green "Commit changes" button
 
 5.  Create a pull request (see the
-    > [[tutorial]{.underline}](#ogb9951o2vm8))
+    * [tutorial](#ogb9951o2vm8))
 
-6.  Raise an [["Added new text"
-    > issue]{.underline}](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=new+text&template=added-new-text.md&title=%5BNEW+TEXT%5D)
+6.  Raise an ["Added new text"
+    > issue](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=new+text&template=added-new-text.md&title=%5BNEW+TEXT%5D)
     > in the barzakh repository to notify the corpus administrators that
     > you have added a text
 
@@ -1663,27 +1544,27 @@ adheres to the basic formatting of OpenITI texts, and create metadata
 files, before adding it to the corpus.
 
 You can help us by providing metadata about the text and its author, by
-[[filling in yml metadata files]{.underline}](#roqh12z02fg7) (templates
+[filling in yml metadata files](#roqh12z02fg7) (templates
 can be downloaded from here:
-[[https://github.com/OpenITI/Templates]{.underline}](https://github.com/OpenITI/Templates))
+[https://github.com/OpenITI/Templates](https://github.com/OpenITI/Templates))
 
 Further reading on GitHub
 -------------------------
 
--   [[Forking a repo and the Open Source
-    > model]{.underline}](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/) -
+-   [Forking a repo and the Open Source
+    > model](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/) -
     > good explainer and diagram.
 
 -   Watch a video on Git & GitHub in Dr. Vierthaler's *Hacking the
-    > Humanities* series: [[Supplement 1: A quick Git and Github
-    > Tutorial]{.underline}](https://www.youtube.com/watch?v=YetC-gxgIVY).
+    > Humanities* series: [Supplement 1: A quick Git and Github
+    > Tutorial](https://www.youtube.com/watch?v=YetC-gxgIVY).
 
--   [[Introduction to
-    > Git]{.underline}](https://swcarpentry.github.io/git-novice/): very
+-   [Introduction to
+    > Git](https://swcarpentry.github.io/git-novice/): very
     > good tutorial for learning the basics of Git.
 
--   [[Git from the bottom
-    > up]{.underline}](https://github.com/tpn/pdfs/blob/master/Git%20from%20the%20Bottom%20Up.pdf):
+-   [Git from the bottom
+    > up](https://github.com/tpn/pdfs/blob/master/Git%20from%20the%20Bottom%20Up.pdf):
     > a more technical explanation of how Git works.
 
 4. Annotation guidelines
@@ -1697,7 +1578,7 @@ using GitHub issues. Validators check the annotations and the quality of
 the text.
 
 These steps assume a basic understanding of the GitHub process (see
-[[tutorial]{.underline}](#j93jp6ujbc6o)).
+[tutorial](#j93jp6ujbc6o)).
 
 Annotation workflow
 -------------------
@@ -1716,14 +1597,7 @@ Annotation workflow
     > using the template [**[IN
     > PROGRESS]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=in+progress&template=in-progress.md&title=IN+PROGRESS%3A+%5B%5BURI+of+the+TEXT%5D%5D)
     > to inform others that a specific text has been claimed and is in
-    > the process of tagging.
-
-> **Note**: *with this step in place we will always know who is working
-> on what, where, and when. Before you start working on a specific text,
-> simply search for the URI of your text on the [[page with issues for
-> the Annotation
-> repository]{.underline}](https://github.com/OpenITI/Annotation/issues):
-> if the URI is not found, it is safe to annotate that text.*
+    > the process of tagging. **Note**: *with this step in place we will always know who is working on what, where, and when. Before you start working on a specific text, simply search for the URI of your text on the [page with issues for the Annotation repository](https://github.com/OpenITI/Annotation/issues): if the URI is not found, it is safe to annotate that text.*
 
 6.  **Annotator** finds an edition of the text online (it must be a
     > scanned version of the actual book, not an electronic text file!
@@ -1745,11 +1619,7 @@ Annotation workflow
     d.  **Annotator** annotates the text by collating its structure with
         > the PDF or the actual book. Only chapter headers need to be
         > tagged (*approximately*: what you see in the table of
-        > contents).
-
-> **IMPORTANT**: save your progress after every tagging session, using
-> **git** (git add . \> git commit -m "your message" \> git push origin
-> master)
+        > contents). **IMPORTANT**: save your progress after every tagging session, using **git** (git add . \> git commit -m "your message" \> git push origin master)
 
 9.  After the annotation is complete**:**
 
@@ -1761,11 +1631,11 @@ Annotation workflow
     f.  **Annotator** updates the relevant YML file, as described
         > [**[here]{.underline}**](#roqh12z02fg7).
 
-    g.  **Annotator** [[pushes]{.underline}](#ogb9951o2vm8) local
+    g.  **Annotator** [pushes](#ogb9951o2vm8) local
         > updates to her remote repository
 
-    h.  **Annotator** submits a [[pull
-        > request]{.underline}](#ogb9951o2vm8) (please, do pull requests
+    h.  **Annotator** submits a [pull
+        > request](#ogb9951o2vm8) (please, do pull requests
         > for each finished text!)
 
     i.  **Annotator** submits an issue to **the Annotation repository**
@@ -1776,7 +1646,7 @@ Annotation workflow
             > TAGGED: \<URI of the text\>**
 
         ii. In the body of the issue: please paste the contents of your
-            > YML file ([[from YML-1]{.underline}](#roqh12z02fg7)).
+            > YML file ([from YML-1](#roqh12z02fg7)).
 
     j.  **Annotator** closes the **IN PROGRESS** issue for that text
         > (opened in Step 4a, above).
@@ -1821,7 +1691,7 @@ without the text direction issues that plague annotators of RTL texts
 with other markup schemes.
 
 A full description of OpenITI mARkdown can be found here:
-[[https://alraqmiyyat.github.io/mARkdown/]{.underline}](https://alraqmiyyat.github.io/mARkdown/)
+[https://alraqmiyyat.github.io/mARkdown/](https://alraqmiyyat.github.io/mARkdown/)
 
 To be added
 
@@ -1830,13 +1700,13 @@ To be added
 Further reading
 ---------------
 
--   [[Annotation Workflow - Version
-    > 20/12/2019]{.underline}](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing) -
+-   [Annotation Workflow - Version
+    > 20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing) -
     > covers both 3 and 4 - also explains YMLs
 
 -   A useful annotator's introduction is found in the following blog:
-    > [[Tagging the Structure of Texts in the OPENITI Corpus \|
-    > KITAB]{.underline}](http://kitab-project.org/2020/06/12/tagging-the-structure-of-texts-in-the-openiti-corpus/)
+    * [Tagging the Structure of Texts in the OPENITI Corpus \|
+    > KITAB](http://kitab-project.org/2020/06/12/tagging-the-structure-of-texts-in-the-openiti-corpus/)
 
 5. Software (versions and installation)
 =======================================
@@ -1859,28 +1729,28 @@ offers custom highlighting schemes that allow highlighting of OpenITI
 mARkdown tags.
 
 The free (trial) version of the software can be downloaded here:
-[[http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe]{.underline}](http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe)
+[http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe](http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe)
 . The trial version is fully functional for the needs of working with
 OpenITI texts.
 
 NB: EditPad Pro works on Windows only. If you use a Mac or Linux
 computer, you can still run the program using an emulator software like
-Wine ([[https://www.winehq.org/]{.underline}](https://www.winehq.org/)),
+Wine ([https://www.winehq.org/](https://www.winehq.org/)),
 which makes it possible to use Windows programs on Mac and Linux. For
 Mac, see:
-[[https://wiki.winehq.org/MacOS]{.underline}](https://wiki.winehq.org/MacOS).
+[https://wiki.winehq.org/MacOS](https://wiki.winehq.org/MacOS).
 Alternatively, you can install a virtual machine on your computer that
 runs Windows:
 
 -   Parallels (commercial):
-    > [[https://www.parallels.com/products/desktop/]{.underline}](https://www.parallels.com/products/desktop/)
+    * [https://www.parallels.com/products/desktop/](https://www.parallels.com/products/desktop/)
 
 -   VirtualBox (free):
-    > [[https://www.virtualbox.org/]{.underline}](https://www.virtualbox.org/)
+    * [https://www.virtualbox.org/](https://www.virtualbox.org/)
 
 Once you have downloaded and installed EditPad Pro, take the following
 steps to install the mARkdown schema (see
-[[https://github.com/OpenITI/mARkdown\_scheme]{.underline}](https://github.com/OpenITI/mARkdown_scheme)
+[https://github.com/OpenITI/mARkdown\_scheme](https://github.com/OpenITI/mARkdown_scheme)
 for more detail):
 
 -   VERY IMPORTANT: Make sure that EditPad Pro is fully closed. Do not
@@ -1888,7 +1758,7 @@ for more detail):
     > fully close the program) but go to 'file \> exit' in Edit Pad Pro.
 
 -   Download
-    > [[https://github.com/OpenITI/mARkdown\_scheme/archive/master.zip]{.underline}](https://github.com/OpenITI/mARkdown_scheme/archive/master.zip)
+    * [https://github.com/OpenITI/mARkdown\_scheme/archive/master.zip](https://github.com/OpenITI/mARkdown_scheme/archive/master.zip)
 
 -   Unzip the downloaded file.
 
@@ -1919,9 +1789,7 @@ for more detail):
     > value in EditPad Pro)
 
 -   Open a file in EditPad Pro and check if the schema works. It should
-    > look like this:
-
-> ![](./media/image21.png){width="6.5in" height="2.7916666666666665in"}
+    > look like this: ![](./media/image21.png){width="6.5in" height="2.7916666666666665in"}
 
 NB: EditPad Pro was recently upgraded from version 7 to version 8.
 Currently we provide highlighting schemas for both versions, but 7 will
@@ -1931,7 +1799,7 @@ Git Bash
 --------
 
 Installing bash/working through command line tool: see
-[[tutorial]{.underline}](#kwqrb181e1nv)
+[tutorial](#kwqrb181e1nv)
 
 6. Teaching and learning resources
 ==================================
@@ -1944,7 +1812,7 @@ Installing bash/working through command line tool: see
 ### - How can I find a text in OpenITI? 
 
 One can use the metadata application at
-[[https://kitab-corpus-metadata.azurewebsites.net/]{.underline}](https://kitab-corpus-metadata.azurewebsites.net/)
+[https://kitab-corpus-metadata.azurewebsites.net/](https://kitab-corpus-metadata.azurewebsites.net/)
 and search the books by the death year, author, title, or version id.
 Search function filters the metadata on the fly. By clicking on the Book
 Id one can access the text.
@@ -1990,27 +1858,22 @@ Here is an example that shows how search function works.
 
 ![](./media/image44.png){width="6.5in" height="3.4305555555555554in"}
 
-Further reading: [[A New Application that Helps You Find Texts in the
+Further reading: [A New Application that Helps You Find Texts in the
 OpenITI
-Corpus]{.underline}](http://kitab-project.org/2019/11/04/a-new-application-that-helps-you-find-texts-in-the-openiti-corpus/)
+Corpus](http://kitab-project.org/2019/11/04/a-new-application-that-helps-you-find-texts-in-the-openiti-corpus/)
 
 ### - The text I\'m looking for is not in OpenITI. What now? 
 
 -   Check if you can find the text here:
-    > [[https://kitab-collections-app.azurewebsites.net/]{.underline}](https://kitab-collections-app.azurewebsites.net/)
+    * [https://kitab-collections-app.azurewebsites.net/](https://kitab-collections-app.azurewebsites.net/) Many texts have not yet been added to the OpenITI corpus. However, we already do have them in machine-actionable form.
 
-> Many texts have not yet been added to the OpenITI corpus. However, we
-> already do have them in machine-actionable form.
+-   Add a text yourself: see [how](#lde4t8tyccvf)
 
--   Add a text yourself: see [[how]{.underline}](#lde4t8tyccvf)
-
--   Request a new text be added: see [[how]{.underline}](#gfinkmqtcdg7)
+-   Request a new text be added: see [how](#gfinkmqtcdg7)
 
 ### - How do I add a text to the OpenITI corpus? 
 
-See the tutorial [[here]{.underline}](#lde4t8tyccvf)
-
-> \-
+See the tutorial [here](#lde4t8tyccvf) \-
 
 -   How to share a link to a text
 
@@ -2021,7 +1884,7 @@ See the tutorial [[here]{.underline}](#lde4t8tyccvf)
         > URI
 
         -   Make sure the initials are documented here:
-            > [[https://github.com/OpenITI/Annotation]{.underline}](https://github.com/OpenITI/Annotation)
+            * [https://github.com/OpenITI/Annotation](https://github.com/OpenITI/Annotation)
 
     -   For manuscripts - point to explainer on mARkdownMSS?
 
@@ -2031,30 +1894,30 @@ See the tutorial [[here]{.underline}](#lde4t8tyccvf)
 
 If you have an open access version of a text in machine-readable format
 or a PDF (if the digital version is not available), or a link to such
-versions please create a [["New text request"
-issue]{.underline}](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=request+a+text&template=new-text-request.md&title=%5BREQUEST+TEXT%5D)
+versions please create a ["New text request"
+issue](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=request+a+text&template=new-text-request.md&title=%5BREQUEST+TEXT%5D)
 in the barzakh repository. Please make sure that you fill in all the
 necessary information to speed up the process. PDF versions will be sent
 to the OCR process.
 
 If you have a transcription, the quickest way is to push to the barzakh
 repository. The texts in this repository will be processed and added to
-the corpus. For more information, please see [[Contributing New
-Texts]{.underline}](#lde4t8tyccvf).
+the corpus. For more information, please see [Contributing New
+Texts](#lde4t8tyccvf).
 
-For other cases, please [[contact
-us]{.underline}](mailto:Lorenz.Nigst@aku.edu).
+For other cases, please [contact
+us](mailto:Lorenz.Nigst@aku.edu).
 
 ### - How do I cite OpenITI texts? 
 
-OpenITI releases are published under the [[CC BY-NC-SA
-4.0]{.underline}](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+OpenITI releases are published under the [CC BY-NC-SA
+4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 license. Our files are based firstly on existing open digital libraries,
 which we acknowledge in our URIs. Please, do cite URIs of specific files
 if you use them in your research. To cite the entire corpus, please
 check the release version which you would like to cite and use the
 citation information from our GitHub repository
-([[https://github.com/OpenITI/RELEASE]{.underline}](https://github.com/OpenITI/RELEASE)).
+([https://github.com/OpenITI/RELEASE](https://github.com/OpenITI/RELEASE)).
 OpenITI releases are freely available to download, in their entirety at
 the above link and Zenodo.
 
@@ -2065,59 +1928,59 @@ modern printed editions. We are finding this as we annotate digital
 files of books and compare them to their printed counterparts. However,
 our texts come from different sources, and their quality varies. The
 best quality texts were probably
-[[double-keyed]{.underline}](https://journals.openedition.org/jtei/739),
+[double-keyed](https://journals.openedition.org/jtei/739),
 but many texts (e.g., those digitized by al-Maktaba al-Shamela, see
-[[this
-publication]{.underline}](https://web.archive.org/web/20131101000000*/http://www.arrawdah.com/files/shamela.pdf),
+[this
+publication](https://web.archive.org/web/20131101000000*/http://www.arrawdah.com/files/shamela.pdf),
 p. 15) were typed up by a single typist and proofread by another. The
 worst quality texts are those produced by Optical Character Recognition
 (OCR) software, which currently still has an accuracy rate below 95 %
 for Arabic. OpenITI is a partner in a Mellon Foundation-funded
-[[project]{.underline}](https://medium.com/@openiti/openiti-aocp-9802865a6586)
+[project](https://medium.com/@openiti/openiti-aocp-9802865a6586)
 to improve the quality of Arabic-language OCR.
 
 We do not have the manpower to proofread all texts in the corpus. We
 rely on you, the user of OpenITI, to flag typos and other problems in
-our texts. Please raise a [[text quality
-issue]{.underline}](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=)
+our texts. Please raise a [text quality
+issue](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=)
 if you encounter typos or other text quality problems. Or correct the
-text yourself and create a [[pull request]{.underline}](#ogb9951o2vm8).
+text yourself and create a [pull request](#ogb9951o2vm8).
 
 Different types of digital analysis of texts require different levels of
 accuracy of texts in the corpus. For example, a search will likely fail
 to find a word with a typo in it; but the passim algorithm used by the
-[[KITAB project]{.underline}](http://kitab-project.org/) to detect text
+[KITAB project](http://kitab-project.org/) to detect text
 reuse, was developed for badly OCR'ed texts and is not thrown off by
 such small text quality problems.
 
 Further reading:
 
--   [[http://kitab-project.org/common-questions-about-the-corpus/]{.underline}](http://kitab-project.org/common-questions-about-the-corpus/)
+-   [http://kitab-project.org/common-questions-about-the-corpus/](http://kitab-project.org/common-questions-about-the-corpus/)
 
 -   KITAB project blogs about quality issues with OpenITI texts:
 
-    -   [[When al-Tabarī is Not (Just) al-Tabarī: The Challenges Posed
+    -   [When al-Tabarī is Not (Just) al-Tabarī: The Challenges Posed
         > by Composite Editions in the OpenITI
-        > Corpus]{.underline}](http://kitab-project.org/2020/01/10/when-al-tabari-is-not-just-al-tabari-the-challenges-posed-by-composite-editions-in-the-openiti-corpus/)
+        > Corpus](http://kitab-project.org/2020/01/10/when-al-tabari-is-not-just-al-tabari-the-challenges-posed-by-composite-editions-in-the-openiti-corpus/)
 
-    -   [[On Commentaries, Digressions, Transtextualities, and Rabbit
-        > Holes]{.underline}](http://kitab-project.org/2019/12/03/on-commentaries-digressions-transtextualities-and-rabbit-holes/)
+    -   [On Commentaries, Digressions, Transtextualities, and Rabbit
+        > Holes](http://kitab-project.org/2019/12/03/on-commentaries-digressions-transtextualities-and-rabbit-holes/)
 
-    -   [[The challenges of
-        > versions]{.underline}](http://kitab-project.org/2017/09/10/a-tale-of-3-versions/)
-        > and [[judging differences
-        > mathematically]{.underline}](http://kitab-project.org/2019/11/14/judging-the-difference-between-different-arabic-text-versions-mathematically/)
+    -   [The challenges of
+        > versions](http://kitab-project.org/2017/09/10/a-tale-of-3-versions/)
+        > and [judging differences
+        > mathematically](http://kitab-project.org/2019/11/14/judging-the-difference-between-different-arabic-text-versions-mathematically/)
 
 ### - Do you use texts generated by Optical Character Recognition?
 
 Some of the texts in the corpus we collected from other digital text
 repositories seem to have been created using OCR software, but this is
 rarely mentioned in the metadata. OCR software currently still has an
-[[accuracy
-rate]{.underline}](https://paperswithcode.com/paper/important-new-developments-in-arabographic)
+[accuracy
+rate](https://paperswithcode.com/paper/important-new-developments-in-arabographic)
 below 95 % (and often even much lower) for Arabic. OpenITI is a partner
 in a Mellon Foundation-funded
-[[project]{.underline}](https://medium.com/@openiti/openiti-aocp-9802865a6586)
+[project](https://medium.com/@openiti/openiti-aocp-9802865a6586)
 to improve the quality of Arabic-language OCR. We are slowly adding new
 texts to the corpus using OCR; if a text was OCR'ed by OpenITI
 contributors, this will be mentioned in its metadata file.
@@ -2141,40 +2004,25 @@ annotation
 <!-- -->
 
 -   For problems with a URI:
-    > [[here]{.underline}](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=URI+change+suggestion&template=change-uri.md&title=)
+    * [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=URI+change+suggestion&template=change-uri.md&title=)
 
 -   For typos and other types of text quality problems:
-    > [[here]{.underline}](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=)
+    * [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=) Give your issue a title and fill in the form. Click the "Submit new issue" button.
 
-> Give your issue a title and fill in the form. Click the "Submit new
-> issue" button.
-
--   Alternatively, you can use the [[metadata
-    > application]{.underline}](https://kitab-corpus-metadata.azurewebsites.net/)
+-   Alternatively, you can use the [metadata
+    > application](https://kitab-corpus-metadata.azurewebsites.net/)
     > to create a selected categories of github issues on the existing
     > texts in OpenITI. The issues will be assigned a proper label and
     > the OpenITI development team will take care of the issue.
 
 1.  To generate an issue, first find the text in the metadata
-    > application (see [[how]{.underline}](#fngdifjhixv)).
+    > application (see [how](#fngdifjhixv)).
 
 2.  The author, Book Title and Book Id columns contain a number of icons
     > that can be used to raise issues:
 
-![](./media/image43.png){width="6.5in" height="4.75in"}
-
-> Use one of the issue links to click in the Book id column of the text.
-> These categories are in fact the labels that we have created for the
-> issues on the [[OpenITI Annotation
-> repository]{.underline}](https://github.com/OpenITI/Annotation/issues/new/choose).
->
-> Make sure that you have a github account to raise an issue. If you
-> have one and are already logged in the github, you will be redirected
-> to a page where you can create an issue by filling the required
-> information and clicking the \"Submit new issue\" button (see the
-> example below). You can also choose another category for the issue
-> [[here]{.underline}](https://github.com/OpenITI/Annotation/issues/new/choose)
-> and click \"Get started\" of the proper category.
+![](./media/image43.png){width="6.5in" height="4.75in"} Use one of the issue links to click in the Book id column of the text. These categories are in fact the labels that we have created for the issues on the [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). Make sure that you have a github account to raise an issue. If you have one and are already logged in the github, you will be redirected to a page where you can create an issue by filling the required information and clicking the \"Submit new issue\" button (see the example below). You can also choose another category for the issue
+* [here](https://github.com/OpenITI/Annotation/issues/new/choose) and click \"Get started\" of the proper category.
 
 ![](./media/image29.png){width="6.5in" height="3.2222222222222223in"}
 
@@ -2188,12 +2036,12 @@ metadata app.
 
 ### - How can I use OpenITI? What license is used?
 
-OpenITI is published under the [[CC BY-NC-SA
-4.0]{.underline}](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+OpenITI is published under the [CC BY-NC-SA
+4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 license. You can use the corpus and publish or share your works based on
 it according to the license. Please, do cite the files or the corpus if
-you use them. For the citation information, please use [[this
-link]{.underline}](http://github.com/OpenITI/RELEASE).
+you use them. For the citation information, please use [this
+link](http://github.com/OpenITI/RELEASE).
 
 ### - what about copyright issues?
 
@@ -2231,17 +2079,17 @@ converted into TEI XML.
 ============
 
 -   **OpenITI**: a GitHub organization where all texts are hosted
-    > ([[https://github.com/OpenITI]{.underline}](https://github.com/OpenITI)).
+    > ([https://github.com/OpenITI](https://github.com/OpenITI)).
 
 -   **OpenITI mARkdown**: an easy-to-use tagging scheme developed for
     > texts in OpenITI. Detailed description can be found here:
-    > [[https://maximromanov.github.io/mARkdown/]{.underline}](https://maximromanov.github.io/mARkdown/).
+    * [https://maximromanov.github.io/mARkdown/](https://maximromanov.github.io/mARkdown/).
     > If you have any questions, concerns, or suggestions, you can leave
     > a comment at the bottom of the page.
 
 -   **Annotation repository**: a repository in the OpenITI, where all
     > metadata on the entire corpus is being aggregated:
-    > [[https://github.com/OpenITI/Annotation]{.underline}](https://github.com/OpenITI/Annotation)
+    * [https://github.com/OpenITI/Annotation](https://github.com/OpenITI/Annotation)
 
 -   **Annotator**: a person who annotates texts.
 
@@ -2261,4 +2109,4 @@ converted into TEI XML.
 -   **Betacode**: a transliteration system that allows easy conversion
     > from one transliteration system to another, and into fully
     > vocalized Arabic text. See
-    > [[https://alraqmiyyat.github.io/2015/02-07.html]{.underline}](https://alraqmiyyat.github.io/2015/02-07.html)
+    * [https://alraqmiyyat.github.io/2015/02-07.html](https://alraqmiyyat.github.io/2015/02-07.html)
