@@ -398,7 +398,7 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
 2.  AuthorID is the unique identifier for an author. As a rule, AuthorID
      is formed by combining (a) the hijrī year of death formatted into
      a 4-digit number (prepended with 0s, if necessary) and (b) the
-     šuhraŧ of the author, since this is usually the most recognizable
+     šuhra of the author, since this is usually the most recognizable
      element of any author's name. The year of death in the AuthorID
      does not have to be exact, if any controversy exists. Even an
      approximate date will suffice, since it will allow you to arrange
@@ -579,8 +579,8 @@ For an original file see: [0310Tabari.TahdhibAthar.yml](https://github.com/OpenI
 |-------|-------------|---------------------------------------|
 | **00\#BOOK\#URI\#\#\#\#\#\#:** | The URI of the book : XXXShuhra.IsmKitab (autoupdated) | 0310Tabari.TahdhibAthar |
 | **10\#BOOK\#GENRES\#\#\#:** | Classification of books into forms and genres according to different sources, comma-separated. Template: `src@keyword` : `src` indicates the creator of the category and `keyword` indicates classification. So the example means that Brockelman's *Geschicte der arabischen Litteratur* (GAL) categorises the text as hadith. | GAL@hadith |
-| **10\#BOOK\#TITLEA\#AR:** | Short title of the work, written in betacode. | Tahḏīb al-Āṯār |
-| **10\#BOOK\#TITLEB\#AR:** | Full title of the work, written in betacode | Tahḏīb al-āṯār wa-tafṣīl al-ṯābit ʿan rasūl Allāh min al-aḫbār |
+| **10\#BOOK\#TITLEA\#AR:** | Short title of the work, written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html). | Tahḏīb al-Āṯār |
+| **10\#BOOK\#TITLEB\#AR:** | Full title of the work, written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html) | Tahḏīb al-āṯār wa-tafṣīl al-ṯābit ʿan rasūl Allāh min al-aḫbār |
 | **20\#BOOK\#WROTE\#\#\#\#:** | Locations where the work was written, using URIs from Althurayya ([[https://althurayya .github.io/]{.underli ne}](https://althuray ya.github.io/)), comma separated. The example is the URI for Baghdad. For an explanation on getting URIs from Althurayya, see below | BAGHDAD\_443E333N\_S |
 | **30\#BOOK\#WROTE\#\#AH:** | Year that the book was written (or X+ for unknown), with AH date. Format: YEAR-MON-DA | 0305-XXX-XX |
 | **40\#BOOK\#ABRIDGED\#:** | If this work is an abridgement of an earlier work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. THIS WILL BE SUBJECT TO CHANGE IN A FUTURE UPDATE TO YML FILES | |
@@ -631,12 +631,12 @@ For an example of an original file see:
 | Field | Description | Example (random, not necessarily real data) |
 |-------|-------------|---------------------------------------------|
 | 00\#AUTH\#URI\#\#\#\#\#\# | The unique OpenITI identifier for this author | 0310Tabari |
-| 10\#AUTH\#ISM\#\#\#\#AR | The author's *ism* ("first name") | Muḥammad |
-| 10\#AUTH\#KUNYA\#\#AR | The author's *kunya* (teknonym); comma-separated | Abū Ǧaʿfar |
-| 10\#AUTH\#LAQAB\#\#AR | The author's *laqab* (cognomen/agnomen/title); comma-separated | Tāǧ al-Dīn |
-| 10\#AUTH\#NASAB\#\#AR | The author's *nasab* (ancestry chain); series of patronymics (use b. for *ibn*, bt. for *bint*) | b. Ǧarīr b. Yazīd |
-| 10\#AUTH\#NISBA\#\#AR | The author's *nisba* (demonym or other designations); comma-separated | al-Ṭabarī |
-| 10\#AUTH\#SHUHRA\#AR | The name the author was most commonly known as; comma-separated | al-Ṭabarī |
+| 10\#AUTH\#ISM\#\#\#\#AR | The author's *ism* ("first name"), written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html). | Muḥammad |
+| 10\#AUTH\#KUNYA\#\#AR | The author's *kunya*(s) (teknonym), written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html); comma-separated | Abū Ǧaʿfar |
+| 10\#AUTH\#LAQAB\#\#AR | The author's *laqab*(s) (cognomen/agnomen/title), written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html); comma-separated | Tāǧ al-Dīn |
+| 10\#AUTH\#NASAB\#\#AR | The author's *nasab*(s) (ancestry chain), written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html); series of patronymics (use b. for *ibn*, bt. for *bint*) | b. Ǧarīr b. Yazīd |
+| 10\#AUTH\#NISBA\#\#AR | The author's *nisba*(s) (demonym or other designations), written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html); comma-separated | al-Ṭabarī |
+| 10\#AUTH\#SHUHRA\#AR | The name the author was most commonly known as, written in [betacode](https://alraqmiyyat.github.io/2015/02-07.html); comma-separated | al-Ṭabarī |
 | 20\#AUTH\#BORN\#\#\#\#\# | Place(s) where the author was born; URIs from Althurayya, comma separated |  |
 | 20\#AUTH\#DIED\#\#\#\#\# | Place(s) where the author died; URIs from Althurayya, comma separated | |
 | 20\#AUTH\#RESIDED\#\# | Place(s) where the author died; URIs from Althurayya, comma separated | |
@@ -1697,13 +1697,15 @@ for more detail):
      Exit), then repeat all steps from the beginning of this section.
 
 -   The scheme is automatically activated in EditPad Pro by the first
-     line in the file, which must be: \#\#\#\#\#OpenITI\# (called magic
-     value in EditPad Pro)
+     line in the file, which must be: `#####OpenITI#` (called "magic
+     value" in EditPad Pro)
 
 -   Open a file in EditPad Pro and check if the schema works. It should
-     look like this: ![](./media/image21.png)
+     look like this: 
+     
+     ![](./media/image21.png)
 
-NB: EditPad Pro was recently upgraded from version 7 to version 8.
+NB: EditPad Pro was upgraded from version 7 to version 8 in 2020.
 Currently we provide highlighting schemas for both versions, but 7 will
 be phased out in future updates.
 
@@ -1711,17 +1713,17 @@ be phased out in future updates.
 
 
 Installing bash/working through command line tool: see
-[tutorial](#kwqrb181e1nv)
+[tutorial](#introducing-your-main-git-tool-git-bash)
 
 ## 6. Teaching and learning resources
 
 
-(Coming soon\...)
+(Coming soon...)
 
 ## 7. FAQ
 
 
-### - How can I find a text in OpenITI? 
+### How can I find a text in OpenITI? 
 
 One can use the metadata application at
 [https://kitab-corpus-metadata.azurewebsites.net/](https://kitab-corpus-metadata.azurewebsites.net/)
@@ -1741,19 +1743,19 @@ forms, please follow the following rules:
      used. Two most problematic Arabic letters are dealt with in the
      following manner: 1) hamzas are omitted to avoid using non-letter
      characters; 2) ʿayns are transliterated with c, which is
-     capitalized when appropriate (ʿAlī \> Cali; Aʿyān al-šīʿaŧ \>
+     capitalized when appropriate (ʿAlī \> Cali; Aʿyān al-šīʿa \>
      AcyanShica).
 
--   b\. (إبن) as part of a name is written in full and capitalized: ʿAlī b.
+-   b. (ابن) as part of a name is written in full and capitalized: ʿAlī b.
      Abī Ṭālib \> CaliIbnAbiTalib.
 
 -   Although an effort was made to use šuhras for AuthorIDs, in cases
      when it was not possible, the following formula was followed:
-     Ibn + Ism Abī-hi + Nisbaŧ (these were the onomastic elements most
+     Ibn + Ism Abī-hi + Nisba (these were the onomastic elements most
      commonly available in the metadata).
 
 -   The word kitāb is dropped from the titles, unless it is the major
-     keyword, like in the case of, for example, Sibawayhi's Kitāb,
+     keyword, like in the case of, for example, Sībawayhī's Kitāb,
      whose unique identifier is 0180Sibawayh.KitabSibawayh.
 
 -   Definite articles are dropped everywhere: Tārīḫ al-islām \>
@@ -1763,29 +1765,33 @@ forms, please follow the following rules:
      other words, there are no spaces between words, but each word is
      capitalized: al-Nāsiḫ wa-l-Mansūḫ \> NasikhWaMansukh.
 
--   NB: In the beginning, tāʾ marbūṭaŧs were dropped throughout, but
+-   NB: In the beginning, tāʾ marbūṭas were dropped throughout, but
      later transliterated only in iḍāfas; still fixing that issue...
 
 Here is an example that shows how search function works.
 
 ![](./media/image44.png)
 
-Further reading: [A New Application that Helps You Find Texts in the
+**Further reading**: 
+
+* [A New Application that Helps You Find Texts in the
 OpenITI
 Corpus](http://kitab-project.org/2019/11/04/a-new-application-that-helps-you-find-texts-in-the-openiti-corpus/)
 
-### - The text I\'m looking for is not in OpenITI. What now? 
+### The text I'm looking for is not in OpenITI. What now? 
 
 -   Check if you can find the text here:
     * [https://kitab-collections-app.azurewebsites.net/](https://kitab-collections-app.azurewebsites.net/) Many texts have not yet been added to the OpenITI corpus. However, we already do have them in machine-actionable form.
 
--   Add a text yourself: see [how](#lde4t8tyccvf)
+-   Add a text yourself: see [how](#the-barzakh-repository)
 
--   Request a new text be added: see [how](#gfinkmqtcdg7)
+-   Request a new text be added: see [how](#the-easy-way-contact-us)
 
-### - How do I add a text to the OpenITI corpus? 
+### How do I add a text to the OpenITI corpus? 
 
-See the tutorial [here](#lde4t8tyccvf) \-
+See the tutorial [here](#the-barzakh-repository)
+
+**To do:**
 
 -   How to share a link to a text
 
@@ -1802,7 +1808,7 @@ See the tutorial [here](#lde4t8tyccvf) \-
 
 -   Directions to the OCR pipeline (?)
 
-### - How do I request a new text be added? 
+### How do I request a new text be added? 
 
 If you have an open access version of a text in machine-readable format
 or a PDF (if the digital version is not available), or a link to such
@@ -1815,12 +1821,11 @@ to the OCR process.
 If you have a transcription, the quickest way is to push to the barzakh
 repository. The texts in this repository will be processed and added to
 the corpus. For more information, please see [Contributing New
-Texts](#lde4t8tyccvf).
+Texts](#the-barzakh-repository).
 
-For other cases, please [contact
-us](mailto:Lorenz.Nigst@aku.edu).
+For other cases, please [contact us](mailto:Lorenz.Nigst@aku.edu).
 
-### - How do I cite OpenITI texts? 
+### How do I cite OpenITI texts? 
 
 OpenITI releases are published under the [CC BY-NC-SA
 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
@@ -1831,9 +1836,9 @@ check the release version which you would like to cite and use the
 citation information from our GitHub repository
 ([https://github.com/OpenITI/RELEASE](https://github.com/OpenITI/RELEASE)).
 OpenITI releases are freely available to download, in their entirety at
-the above link and Zenodo.
+the above link and [Zenodo](https://doi.org/10.5281/zenodo.3082463).
 
-\- What is the quality of the texts in OpenITI?
+### What is the quality of the texts in OpenITI?
 
 Our digital texts are generally speaking reliable reproductions of
 modern printed editions. We are finding this as we annotate digital
@@ -1856,7 +1861,7 @@ rely on you, the user of OpenITI, to flag typos and other problems in
 our texts. Please raise a [text quality
 issue](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=)
 if you encounter typos or other text quality problems. Or correct the
-text yourself and create a [pull request](#ogb9951o2vm8).
+text yourself and create a [pull request](#contribute-to-openiti-push-changes-and-pull-requests).
 
 Different types of digital analysis of texts require different levels of
 accuracy of texts in the corpus. For example, a search will likely fail
@@ -1883,7 +1888,7 @@ Further reading:
          and [judging differences
          mathematically](http://kitab-project.org/2019/11/14/judging-the-difference-between-different-arabic-text-versions-mathematically/)
 
-### - Do you use texts generated by Optical Character Recognition?
+### Do you use texts generated by Optical Character Recognition?
 
 Some of the texts in the corpus we collected from other digital text
 repositories seem to have been created using OCR software, but this is
@@ -1897,7 +1902,12 @@ to improve the quality of Arabic-language OCR. We are slowly adding new
 texts to the corpus using OCR; if a text was OCR'ed by OpenITI
 contributors, this will be mentioned in its metadata file.
 
-### - How can I help develop OpenITI? 
+Even if the quality of OCR'ed texts is not always good enough for close reading, 
+or to conduct reliable searches using regular expressions, 
+the quality may still be good enough for other distant reading approaches
+(for example, the `passim` text reuse algorithm).
+
+### How can I help develop OpenITI? 
 
 \- produce good scans for the OCR pipeline
 
@@ -1908,12 +1918,10 @@ annotation
 
 \- draw attention to projects
 
-### - I found a typo in a text / a mistake in the metadata or URI. How do I flag this?
+### I found a typo in a text / a mistake in the metadata or URI. How do I flag this?
 
 -   Please raise an issue on GitHub (you will need a GitHub account to
      do this):
-
-<!-- -->
 
 -   For problems with a URI:
     * [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=URI+change+suggestion&template=change-uri.md&title=)
@@ -1933,10 +1941,11 @@ annotation
 2.  The author, Book Title and Book Id columns contain a number of icons
      that can be used to raise issues:
 
-![](./media/image43.png)
+     ![](./media/image43.png)
+
      Use one of the issue links to click in the Book id column of the text. These categories are in fact the labels that we have created for the issues on the [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). Make sure that you have a github account to raise an issue. If you have one and are already logged in the github, you will be redirected to a page where you can create an issue by filling the required information and clicking the \"Submit new issue\" button (see the example below). You can also choose another category for the issue [here](https://github.com/OpenITI/Annotation/issues/new/choose) and click \"Get started\" of the proper category.
 
-![](./media/image29.png)
+     ![](./media/image29.png)
 
 You can also submit issues directly on the corresponding github
 repository by clicking on the \"New issue\" on the \"Issues\" tab in the
@@ -1946,7 +1955,7 @@ metadata app.
 
 ![](./media/image27.png)
 
-### - How can I use OpenITI? What license is used?
+### How can I use OpenITI? What license is used?
 
 OpenITI is published under the [CC BY-NC-SA
 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
@@ -1955,7 +1964,7 @@ it according to the license. Please, do cite the files or the corpus if
 you use them. For the citation information, please use [this
 link](http://github.com/OpenITI/RELEASE).
 
-### - what about copyright issues?
+### what about copyright issues?
 
 OpenITI has a duty to ensure all content of uploaded texts is not
 subject to copyright. In order to comply with this, all editions which
@@ -1964,7 +1973,7 @@ is all editorial input, such as footnotes and introductory matter).
 OpenITI removes this type of content in the course of its text
 annotation process.
 
-### - Why do you use mARkdown rather than TEI? Can I convert my TEI tags to mARkdown or vice versa? 
+### Why do you use mARkdown rather than TEI? Can I convert my TEI tags to mARkdown or vice versa? 
 
 OpenITI mARkdown was designed by Maxim Romanov to enable annotators to
 add basic markup to Arabic texts more quickly than with more complex
@@ -1973,7 +1982,7 @@ text and left-to-right tags that plague annotators of Arabic texts in
 other markup languages. OpenITI mARkdown tags can be automatically
 converted into TEI XML.
 
-### - A text I am researching is in the corpus but not annotated, or the annotation is insufficient for my research interests. What do I do?
+### A text I am researching is in the corpus but not annotated, or the annotation is insufficient for my research interests. What do I do?
 
 -   Policy on contributions - can anyone branch, pull and annotate
      texts?
@@ -1985,9 +1994,9 @@ converted into TEI XML.
 -   If you have a question about the corpus, mARkdown annotation or our
      methods, please consult our FAQs before sending us an email.
 
-###  - I am not sure there is an appropriate mARkdown annotation, or I am not sure how to annotate a particular part of a text. What do I do?
+###  I am not sure there is an appropriate mARkdown annotation, or I am not sure how to annotate a particular part of a text. What do I do?
 
-## **Glossary**
+## Glossary
 
 
 -   **OpenITI**: a GitHub organization where all texts are hosted
@@ -2011,7 +2020,6 @@ converted into TEI XML.
 
 -   **Validator:** a person who reviews annotation and text quality
 
--   
 
 **Suggested items:**
 
@@ -2020,5 +2028,4 @@ converted into TEI XML.
 
 -   **Betacode**: a transliteration system that allows easy conversion
      from one transliteration system to another, and into fully
-     vocalized Arabic text. See
-    * [https://alraqmiyyat.github.io/2015/02-07.html](https://alraqmiyyat.github.io/2015/02-07.html)
+     vocalized Arabic text. See [https://alraqmiyyat.github.io/2015/02-07.html](https://alraqmiyyat.github.io/2015/02-07.html)
