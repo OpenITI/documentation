@@ -996,25 +996,30 @@ on your computer so you can work on it.
 
 4.  Open Git Bash (on Mac: Terminal, on Linux: a shell) in that folder
 
-5.  Type the command "git clone" and paste the link (for Windows users:
-     use shift+insert, ctrl+v does not work in Git Bash):\
-     \$ git clone https://github.com/<yourUsername\>/<year\>.git
+5.  Type the command `git clone ` and paste the link (for Windows users:
+     use shift+insert, ctrl+v does not work in Git Bash):
+     ```
+     $ git clone https://github.com/<yourUsername\>/<year\>.git
+     ```
 
 6.  Git will now download all files and folders from your clone to your
      computer. This may take some time if you forked a large
      repository.
 
-7.  After the cloning process is done, you can use the command "ls" to
+7.  After the cloning process is done, you can use the command `ls` to
      show all files and folders in your current working directory; it
-     will show you that the new repository was added:\
+     will show you that the new repository was added:
+     
      ![](./media/image7.png)
 
-8.  Now use the command "ls -a" followed by the name of the repository
-     (the -a is a "flag" that tells the program to also show hidden
+8.  Now use the command `ls -a` followed by the name of the repository
+     (the `-a` is a "flag" that tells the program to also show hidden
      files):
+     
      ![](./media/image24.png)
-     The .git/ folder contains the change history of the repository;
-     the data/ folder contains the text files.
+     
+     The `.git/` folder contains the change history of the repository;
+     the `data/` folder contains the text files.
 
 9.  You can now read the text files in the repository, make changes to
      them, etc.
@@ -1028,53 +1033,62 @@ OpenITI has many contributors. In order to make sure that your copy
 one on the OpenITI GitHub page, we create a connection between the copy
 on your local machine and the repo on OpenITI.
 
-You will need to connect your local repository to the upstream repo only
+You will need to make this connection of your local repository to the upstream repo only
 once.
 
 Each copy of a repository can be given a name. By default, the name
-"origin" is used for the repository you cloned (the one on your personal
+`origin` is used for the repository you cloned (the one on your personal
 GitHub page). You can check this by going into the root folder of your
-repository, and writing the command "remote -v". This will list all
+repository, and writing the command `remote -v`. This will list all
 remote repositories (that is, repositories on the internet, not locally
 on your computer) linked to your local repository:
 
 ![](./media/image36.png)
 
 The response you see in Git Bash means that only one remote repository
-is connected to your local repo: it is called origin, is located at the
-given URL, and is used for both "fetch" and "push" actions (that is,
-synchronizing in both directions).
+is connected to your local repo: it is called `origin`, is located at the
+given URL, and is used for both `fetch` and `push` actions (that is,
+synchronizing in both directions: downloading and uploading).
 
 We will now connect our local repository with the OpenITI repository
 from which you created your fork.
 
 1.  Go to the OpenITI GitHub page and copy the link from the original
-     repo again, as you did before, by clicking the green "Code" button
-     and then clicking the icon next to the URL:\
+     repo again, as you did before, by clicking the green `Code` button
+     and then clicking the icon next to the URL:
+     
      ![](./media/image9.png)
+   
 2.  In Git Bash on your computer, use the cd command to move into your
-     local repository:\
-     \$ cd D:/London/trainings/GitHub/0325AH
+     local repository:
+     ```
+     $ cd D:/London/trainings/GitHub/0325AH
+     ```
 
-3.  Write the command "git remote add upstream" followed by the copied
-     link:\
-     \$ git remote add upstream https://github.com/OpenITI/0325AH.git\
-     NB: "upstream" is only a name and could be replaced with any other
+3.  Write the command `git remote add upstream ` followed by the copied
+     link:
+     ```
+     $ git remote add upstream https://github.com/OpenITI/0325AH.git
+     ```
+     
+     NB: `upstream` is only a name and could be replaced with any other
      name; but it is accepted practice to call the repository from
-     which you cloned "upstream", so better to stick with that!
+     which you cloned `upstream`, so best to stick with that!
 
-4.  Check whether this worked by writing the command "git remote -v"
-     again:\
+4.  Check whether this worked by writing the command `git remote -v`
+     again:
+     
      ![](./media/image16.png)
+     
      You see a new remote repository has been added: it is called
-     "upstream", is located at the URL you copied, and can be used for
-     synchronizing in both directions.\
-     NB: Even though git indicates here that you can send ("push") your
-     local changes to the upstream repository, GitHub will not allow
+     `upstream`, is located at the URL you copied, and can be used for
+     synchronizing in both directions.
+     NB: Even though **git** indicates here that you can send ("push") your
+     local changes to the upstream repository, **GitHub** will not allow
      you to push your changes directly to the upstream repository. This
-     is a safety measure to protect the online repos from malicious
+     is a safety measure by the GitHub website to protect the online repos from malicious
      changes. Instead of pushing your changes directly to the upstream
-     repository, you will have to make a pull request: ask permission
+     repository, you will have to make a **pull request**: ask permission
      from the owner of the upstream repo to push your changes. See
      below.
 
@@ -1091,16 +1105,19 @@ repository to your local repository, and you can "push" your own changes
 from your local repo to a remote repository.
 
 1.  We can synchronize our local repository with the upstream repository
-     (in case another user made changes to the using the following
-     command: "git pull upstream master"\
-     \$ git pull upstream master\
-     NB: "upstream" is the name we have given to the original version
-     of the repo we forked, on the OpenITI GitHub page; "master" is the
+     (in case another user made changes to the repo) using the following
+     command: `git pull upstream master`
+     ```
+     $ git pull upstream master
+     ```
+     
+     NB: `upstream` is the name we have given to the original version
+     of the repo we forked, on the OpenITI GitHub page; `master` is the
      name of a branch within this repo. Branches are an important
      concept in Git (see
-    * [here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches)
+     [here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches)
      if you want to learn more), but in OpenITI text repositories, we
-     only use the master branch, so don't worry about this.
+     only use the `master` branch, so don't worry about this.
 
 2.  If no changes were made to the upstream repo (by another user) since
      you forked it, Git will respond with a message "already up to
