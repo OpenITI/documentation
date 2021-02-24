@@ -1,6 +1,6 @@
 # OpenITI documentation
 
-![](./media/image37.png)
+![OpenITI logo](./media/image37.png)
 
 NB: this documentation is a work in progress. Please feel free to
 [contact us](mailto:kitab@aku.edu) if you feel something is missing or unclear.
