@@ -324,59 +324,45 @@ less than 10 percent of the 4290, are represented in all three
 collections, almost half of the books are represented in more than one
 collection.
 
-![](./media/image40.png){width="4.34375in" height="4.020833333333333in"}
+![](./media/image40.png)
 
 *Overlap of the main source collections of OpenITI: al-Maktaba
 al-Shāmila (Sham), al-Jāmiʿ al-Kabīr (JK), ShiaOnlineLibrary (ShiaOL).*
 
-TO DO: genre breakdown
+**TO DO: genre breakdown**
 
 ### Further reading
 
 
--   [The first-ish general description of
-    > OpenITI](https://maximromanov.github.io/OpenITI/)
+-   [The first-ish general description of OpenITI](https://maximromanov.github.io/OpenITI/)
 
 ## 2. Structure and organization of the OpenITI GitHub
-
-
--   [Peter's recent
-    > description](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
-    > (pp. 4ff.)
-
--   [Raqmiyyāt](https://alraqmiyyat.github.io/OpenITI/)
-    > description
-
--   [Uploading texts to the DAR Process Summary - Version
-    > 2](https://docs.google.com/document/d/1vNxgNQTYr0roU1qwuWcSMOYhrM5hj1ukv14ycy4XTac/edit?usp=sharing) -
-    > see data structure on page 6
 
 The OpenITI GitHub page contains a large number of repositories, which
 can be divided into several groups:
 
 -   Text files, along with metadata on each author, book and version;
-    > these are organized in repositories that each cover a
-    > chronological period of 25AH lunar years. The names of the text
-    > repositories look like this: 0025AH, 0050AH (the number being the
-    > last year in the period for which it contains the texts)
+     these are organized in repositories that each cover a
+     chronological period of 25AH lunar years. The names of the text
+     repositories look like this: 0025AH, 0050AH (the number being the
+     last year in the period for which it contains the texts)
 
 -   Working repositories: these contain data for the maintenance and
-    > development of OpenITI. The most important working repository is
-    > the Annotation repo.
+     development of OpenITI. The most important working repository is
+     the Annotation repo.
 
 -   Instantiation repositories: these repositories contain special
-    > versions of the corpus, prepared for specific applications (e.g.,
-    > istylo, an instantiation of the corpus for use with the R library
-    > stylo). These repos all start with a prefix "i".
+     versions of the corpus, prepared for specific applications (e.g.,
+     istylo, an instantiation of the corpus for use with the R library
+     stylo). These repos all start with a prefix "i".
 
 ### Text repositories
 
-
-### 25-years folders
+#### 25-years folders
 
 -   [Old-ish
-    > description](https://maximromanov.github.io/OpenITI/#the-overall-organization-of-openiti)
-    > from maximromanov.github.io
+     description](https://maximromanov.github.io/OpenITI/#the-overall-organization-of-openiti)
+     from maximromanov.github.io
 
 The entire corpus is divided into a series of repositories. Each
 repository covers a chronological period of 25AH lunar years: 1) the
@@ -387,9 +373,9 @@ versions). For example, the repository 0525AH includes authors whose
 death dates fall in the range of 501--525 AH). Below is an example of
 how al-Ġazālī's Iḥyāʾ ʿulūm al-dīn fits into the corpus.
 
-![](./media/image31.png){width="6.5in" height="2.6944444444444446in"}
+![](./media/image31.png)
 
-![](./media/image47.png){width="6.5in" height="2.361111111111111in"}
+![](./media/image47.png)
 
 From this example, you can see that the repository 0525AH includes a
 subfolder data, which includes a subfolder with al-Ġazālī's URI,
@@ -400,17 +386,17 @@ technical descriptions for a relevant level; \*.yml files contain
 machine-readable metadata (On these metadata files see the description
 of YAML files below).
 
-### URIs & CTS-Like Folder Structure
+#### URIs & CTS-Like Folder Structure
 
 -   [Peter's recent
-    > description](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
+     description](https://docs.google.com/document/d/1nlllGYQsEyYZqV808CzJcZV9XyDPrFWGch9vEmp0n4k/edit?usp=sharing)
 
 -   [Raqmiyyāt](https://alraqmiyyat.github.io/OpenITI/#cts-compliant-naming-pattern)
-    > description of the URIs
+     description of the URIs
 
 -   Need to add description of naming convention for large texts spread
-    > across multiple files: [URIs special
-    > cases](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit)
+     across multiple files: [URIs special
+     cases](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit)
 
 OpenITI URIs are CTS-compliant and constructed hierarchically, by
 chaining together sub-URIs. To make this example more understandable in
@@ -420,73 +406,73 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
 ![](./media/image46.png){width="6.5in" height="2.0694444444444446in"}
 
 1.  Namespaces are standard technical parameters from the CTS URN
-    > structure which, among other things, allow building and
-    > maintaining multilingual corpora.
+     structure which, among other things, allow building and
+     maintaining multilingual corpora.
 
 2.  AuthorID is the unique identifier for an author. As a rule, AuthorID
-    > is formed by combining (a) the hijrī year of death formatted into
-    > a 4-digit number (prepended with 0s, if necessary) and (b) the
-    > šuhraŧ of the author, since this is usually the most recognizable
-    > element of any author's name. The year of death in the AuthorID
-    > does not have to be exact, if any controversy exists. Even an
-    > approximate date will suffice, since it will allow you to arrange
-    > texts chronologically. Any issues regarding the year death can
-    > described in the metadata files (\*.yml). In the above example,
-    > 0748Dhahabi is the identifier for Šams al-dīn al-Ḏahabī, who died
-    > in 748/1347
+     is formed by combining (a) the hijrī year of death formatted into
+     a 4-digit number (prepended with 0s, if necessary) and (b) the
+     šuhraŧ of the author, since this is usually the most recognizable
+     element of any author's name. The year of death in the AuthorID
+     does not have to be exact, if any controversy exists. Even an
+     approximate date will suffice, since it will allow you to arrange
+     texts chronologically. Any issues regarding the year death can
+     described in the metadata files (\*.yml). In the above example,
+     0748Dhahabi is the identifier for Šams al-dīn al-Ḏahabī, who died
+     in 748/1347
 
 3.  BookID is an element that identifies a book (book title), usually
-    > formed from one or two recognizable keywords from the title.
-    > Combined with the preceding elements, it becomes 7: Unique Work
-    > Identifier.
+     formed from one or two recognizable keywords from the title.
+     Combined with the preceding elements, it becomes 7: Unique Work
+     Identifier.
 
 4.  VersionID points to the origins of the specific version of a text
-    > and allows accommodating multiple versions of the same text. It is
-    > formed by combining the name of a digital library or collection
-    > from which the text originates with the unique number of this text
-    > in that collection. In cases when texts are provided by
-    > individuals or projects, the last name of the provider or the name
-    > of the project is used as name, while texts are numbers
-    > sequentially within the provided batch. Combined with the
-    > preceding elements it becomes 8: Unique Edition Identifier.
+     and allows accommodating multiple versions of the same text. It is
+     formed by combining the name of a digital library or collection
+     from which the text originates with the unique number of this text
+     in that collection. In cases when texts are provided by
+     individuals or projects, the last name of the provider or the name
+     of the project is used as name, while texts are numbers
+     sequentially within the provided batch. Combined with the
+     preceding elements it becomes 8: Unique Edition Identifier.
 
 5.  Lang indicates the main language of the text (these are ISO 639-2
-    > codes, see [Codes for the Representation of Names of
-    > Languages](https://www.loc.gov/standards/iso639-2/php/code_list.php)
-    > at the LOC website). Lang also allows one to accommodate
-    > translations of a specific version of a text. For example, the URI
-    > 0748Dhahabi.TarikhIslam.Shamela0035100-eng1 would indicate an
-    > English translation of al-Ḏahabī's Taʾrīḫ al-islām, which is based
-    > on the text represented with the URI in the
-    > example---0748Dhahabi.TarikhIslam.Shamela0035100-ara1; the number
-    > that follows the three-letter language code also allows to
-    > accommodate additional versioning. For example, the URI
-    > 0748Dhahabi.TarikhIslam.Shamela0035100-eng2 would represent
-    > another translation of
-    > 0748Dhahabi.TarikhIslam.Shamela0035100-ara1. Combined with the
-    > preceding elements, it becomes 9: Unique Version Identifier.
+     codes, see [Codes for the Representation of Names of
+     Languages](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+     at the LOC website). Lang also allows one to accommodate
+     translations of a specific version of a text. For example, the URI
+     0748Dhahabi.TarikhIslam.Shamela0035100-eng1 would indicate an
+     English translation of al-Ḏahabī's Taʾrīḫ al-islām, which is based
+     on the text represented with the URI in the
+     example---0748Dhahabi.TarikhIslam.Shamela0035100-ara1; the number
+     that follows the three-letter language code also allows to
+     accommodate additional versioning. For example, the URI
+     0748Dhahabi.TarikhIslam.Shamela0035100-eng2 would represent
+     another translation of
+     0748Dhahabi.TarikhIslam.Shamela0035100-ara1. Combined with the
+     preceding elements, it becomes 9: Unique Version Identifier.
 
 6.  Passage is the ID of a specific text unit (like a chapter, a
-    > biography, a paragraph, etc.). Combined with the preceding
-    > elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document
+     biography, a paragraph, etc.). Combined with the preceding
+     elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document
 * [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
 
-### Text files: mARkdown
+#### Text files: OpenITI mARkdown
 
--   [Current description of
-    > mARkdown](https://maximromanov.github.io/mARkdown/) @
-    > maximromanov.github.io
+-   [Current description of OpenITI
+     mARkdown](https://maximromanov.github.io/mARkdown/) @
+     maximromanov.github.io
 
 -   [Updating
-    > mARkdown](https://docs.google.com/document/d/1N2mcXVCU1fPk4BbH3jSL10D83_98y87hxy1juQwVock/edit?usp=sharing),
-    > working document by Maxim and Peter.
+     mARkdown](https://docs.google.com/document/d/1N2mcXVCU1fPk4BbH3jSL10D83_98y87hxy1juQwVock/edit?usp=sharing),
+     working document by Maxim and Peter.
 
     -   Also, from previous discussions of [logical
-        > chunking](https://docs.google.com/document/d/1etXDRSUjVJJRuIWlh80g343V_wQ_6OWaZ4VzYv0RbRM/edit)
-        > with Masoumeh.
+         chunking](https://docs.google.com/document/d/1etXDRSUjVJJRuIWlh80g343V_wQ_6OWaZ4VzYv0RbRM/edit)
+         with Masoumeh.
 
     -   Main goal: simplification of mARkdown, i.e. removing and
-        > shortening whatever can be removed and shortened.
+         shortening whatever can be removed and shortened.
 
         -   Each unit of text must receive a unique ID:
 
@@ -498,27 +484,27 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
             -   IDs to be stored in
 
 -   [mARkdownMSS](https://docs.google.com/document/d/1MTBiCTc0URbtDbDrrWUGGKqdpGh5hvj0t738R0CXepU/edit?usp=sharing),
-    > a working version \-\-- Maxim together with Matt Miller, for Carl
-    > Ernst (UNC, Chapel Hill) and Mbaye Lo (Duke U); input is needed
-    > from Peter, Lorenz, and others)
+     a working version \-\-- Maxim together with Matt Miller, for Carl
+     Ernst (UNC, Chapel Hill) and Mbaye Lo (Duke U); input is needed
+     from Peter, Lorenz, and others)
 
 -   Extra:
 
     -   Basic vs. advanced annotation - with use cases? (examples are
-        > given in the general description of mARkdown)
+         given in the general description of mARkdown)
 
     -   [DSP Dataset
-        > Preparation](https://docs.google.com/document/d/19EZE_2jK44IgqK2dbq9-uywuvbAW-jG-Gyd9Cf-pLYg/edit?usp=sharing)
-        > section 6 has a use case for semantic tagging
+         Preparation](https://docs.google.com/document/d/19EZE_2jK44IgqK2dbq9-uywuvbAW-jG-Gyd9Cf-pLYg/edit?usp=sharing)
+         section 6 has a use case for semantic tagging
 
 ### Metadata: YAML files
 
 -   [YAML Template
-    > Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
-    > on OpenITI gitHub; current YAML templates are different
+     Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
+     on OpenITI gitHub; current YAML templates are different
 
 -   Explanation of YML files from [4. Annotation Workflow - Version
-    > 20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing):
+     20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing):
 
 YAML files record Metadata associated with texts, authors and annotators
 in the OpenITI. There are three types. For their locations see the
@@ -549,18 +535,18 @@ version that the annotator used to annotate the text
 **(Link to the original YML-1 described in the table, here:
 [https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml](https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml))**
 
-  **Field**                    **Description**                                                                                                                                                                                 **Example (from file)**
-  ---------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
-  00\#VERS\#CLENGTH\#\#:       in characters (autoupdated)                                                                                                                                                                     **5785781**
-  00\#VERS\#LENGTH\#\#\#:      in words (autoupdated)                                                                                                                                                                          **1414455**
-  00\#VERS\#URI\#\#\#\#\#\#:   XXXShuhra.Title.Version (autoupdated)                                                                                                                                                           **0597IbnJawzi.Muntazam.Shamela0012406-ara1**
-  80\#VERS\#BASED\#\#\#\#:     permalink (e.g. from worldcat) of the edition that the text is based on.                                                                                                                        **http://www.worldcat.org/oclc/1035773549**
-  80\#VERS\#COLLATED\#:        permalink (e.g. from worldcat) of the edition that the text that the annotator used to annotate the text - usually the same as the link above.                                                  **http://www.worldcat.org/oclc/1035773549**
-  80\#VERS\#LINKS\#\#\#\#:     Link to a location where a digital copy of the original edition (e.g. a pdf) might be found. If not using a printed version, add a permalink to the worldcat page for the book that was used.   **https://archive.org/details/muntazim\_tarikh\_mlouk\_oumm**
-  90\#VERS\#ANNOTATOR:         Name of the people who annotated the text                                                                                                                                                       **Maroussia**
-  90\#VERS\#COMMENT\#\#        A free-running comment on the text                                                                                                                                                              Comment inserted in metadata was removed\... third level header would be meaningful to provide the text with a better structure.
-  90\#VERS\#DATE\#\#\#\#\#:    YYYY-MM-DD (the date of annotation)                                                                                                                                                             **2019-07-24**
-  90\#VERS\#ISSUES\#\#\#:      formalised issues, separated with commas                                                                                                                                                        **HEADERS, BIOGRAPHICAL-TAGS**
+| Field | Description | Example (from file) |
+|-------|-------------|---------------------|
+| 00\#VERS\#CLENGTH\#\#: | in characters (autoupdated) | **5785781** |
+| 00\#VERS\#LENGTH\#\#\#: | in words (autoupdated) | **1414455** |
+| 00\#VERS\#URI\#\#\#\#\#\#: | XXXShuhra.Title.Version (autoupdated) | **0597IbnJawzi.Muntazam.Shamela0012406-ara1** |
+| 80\#VERS\#BASED\#\#\#\#: | permalink (e.g. from worldcat) of the edition that the text is based on. | **http://www.worldcat.org/oclc/1035773549** |
+| 80\#VERS\#COLLATED\#: | permalink (e.g. from worldcat) of the edition that the text that the annotator used to annotate the text - usually the same as the link above. | **http://www.worldcat.org/oclc/1035773549** |
+| 80\#VERS\#LINKS\#\#\#\#: | Link to a location where a digital copy of the original edition (e.g. a pdf) might be found. If not using a printed version, add a permalink to the worldcat page for the book that was used. | **https://archive.org/details/muntazim\_tarikh\_mlouk\_oumm** |
+| 90\#VERS\#ANNOTATOR: | Name of the people who annotated the text | **Maroussia** |
+| 90\#VERS\#COMMENT\#\# | A free-running comment on the text | Comment inserted in metadata was removed\... third level header would be meaningful to provide the text with a better structure. |
+| 90\#VERS\#DATE\#\#\#\#\#: | YYYY-MM-DD (the date of annotation) | **2019-07-24** |
+| 90\#VERS\#ISSUES\#\#\#: | formalised issues, separated with commas | **HEADERS, BIOGRAPHICAL-TAGS** |
 
 **Further guidance on filling out YML-1 files**
 
@@ -572,11 +558,11 @@ from GitHub. To get a permalink, follow these steps:
     * [https://www.worldcat.org](https://www.worldcat.org/)
 
 2.  Search for a needed book; there are usually many records \-\-- pick
-    > the one that looks best (those submitted by major libraries are
-    > usually quite good)
+     the one that looks best (those submitted by major libraries are
+     usually quite good)
 
 3.  Open that record and copy a permalink from a small pop-up window as
-    > shown on the screenshot below.
+     shown on the screenshot below.
 
 ![](./media/image12.png){width="6.5in" height="3.2222222222222223in"}
 
@@ -766,7 +752,7 @@ locations and the metadata associated with those locations in the
 Althurayya database. To identify those URIs take the following steps:
 
 1.  Go to:
-    > [**[https://althurayya.github.io/]{.underline}**](https://althurayya.github.io/)
+     [**[https://althurayya.github.io/]{.underline}**](https://althurayya.github.io/)
 
 2.  Go to the search tab on the left.
 
@@ -775,10 +761,10 @@ Althurayya database. To identify those URIs take the following steps:
 4.  Click the pin symbol (circled in red in the screenshot).
 
 5.  Click 'Technical Information' (circled in green in the screenshot),
-    > and the technical information will appear.
+     and the technical information will appear.
 
 6.  Copy the URI under the 'Technical Information' (circled in blue in
-    > the screenshot).
+     the screenshot).
 
 ![](./media/image32.png){width="6.5in" height="4.194444444444445in"}
 
@@ -835,33 +821,33 @@ advance of the annotation of the corpus. Steps below only explain the
 process of selection of a text for annotation.
 
 -   Open the [priority
-    > list](https://github.com/OpenITI/Annotation/blob/master/priority_list.csv).
-    > It is organized chronologically and is searchable (the field with
-    > a magnifying glass, saying Search this file).
+     list](https://github.com/OpenITI/Annotation/blob/master/priority_list.csv).
+     It is organized chronologically and is searchable (the field with
+     a magnifying glass, saying Search this file).
 
 -   Texts with priority are the ones that should be annotated. Work in
-    > chronological order. Texts up to 1000 AH are of top priority.
+     chronological order. Texts up to 1000 AH are of top priority.
 
 -   While the priority list will be updated regularly, you should check
-    > if a text is not being annotated. To do so, go to
+     if a text is not being annotated. To do so, go to
     * [issues](https://github.com/OpenITI/Annotation/issues)
-    > and, in the Field FILTER, search for the URI of the book that you
-    > want to annotate (use either complete URI, like
-    > 0597IbnJawzi.Muntazam, or Author\'s URI 0597IbnJawzi, or the title
-    > of the book like Muntazam; note: if you search for IbnJawzi
-    > nothing will be found).
+     and, in the Field FILTER, search for the URI of the book that you
+     want to annotate (use either complete URI, like
+     0597IbnJawzi.Muntazam, or Author\'s URI 0597IbnJawzi, or the title
+     of the book like Muntazam; note: if you search for IbnJawzi
+     nothing will be found).
 
 -   Check results in both open and closed issues. If nothing is found,
-    > you can start working on the selected text. (git fork \> git
-    > clone \> annotate).
+     you can start working on the selected text. (git fork \> git
+     clone \> annotate).
 
 -   Before you proceed, open an issue
-    > ([issues](https://github.com/OpenITI/Annotation/issues) \>
-    > New Issue), using IN PROGRESS template.
+     ([issues](https://github.com/OpenITI/Annotation/issues) \>
+     New Issue), using IN PROGRESS template.
 
 -   After you finish annotating, send a pull request, close your IN
-    > PROGRESS ISSUE, and open another issue using the Submission report
-    > (for Pull Requests) template.
+     PROGRESS ISSUE, and open another issue using the Submission report
+     (for Pull Requests) template.
 
 Note: You can create an URGENT issue to assign specific text to a
 specific person. Go to ISSUES \> New Issue \> select URGENT template \>
@@ -875,27 +861,27 @@ for specific forms of analysis. At the moment, these include the
 following instantiations (in progress):
 
 -   i.cex with all texts split mechanically into 300 word units,
-    > converted into cex format.
+     converted into cex format.
 
 -   i.mech with all texts split mechanically into 300 word units.
 
 -   i.logic with all texts split into logical units (chapters, sections,
-    > etc.); only tagged texts are included here (\~130 texts at the
-    > moment).
+     etc.); only tagged texts are included here (\~130 texts at the
+     moment).
 
 -   i.passim\_new\_json with all texts split mechanically into 300 word
-    > units, converted for the use with new passim (JSON).
+     units, converted for the use with new passim (JSON).
 
 -   i.passim\_old\_mech with all texts split mechanically into 300 word
-    > units, converted for the use with old passim (XML, gzipped).
+     units, converted for the use with old passim (XML, gzipped).
 
 -   i.stylo includes all texts from OpenITI (duplicates excluded) that
-    > are renamed and slightly reformatted (Arabic orthography is
-    > simplified) for the use with stylo R-package.
+     are renamed and slightly reformatted (Arabic orthography is
+     simplified) for the use with stylo R-package.
 
 -   i.farasa, an instantiation of the corpus for processing with the
     * [Farasa](http://qatsdemo.cloudapp.net/farasa/)
-    > engine.
+     engine.
 
 ## 3. Working with GitHub
 
@@ -1067,21 +1053,21 @@ Useful commands:
 -   cd (for "change directory"):
 
     -   move to another folder by writing the path to it (which is the
-        > chain of folders that connects that folder to your current
-        > working directory):\
-        > \$ cd path/to/my/folder
+         chain of folders that connects that folder to your current
+         working directory):\
+         \$ cd path/to/my/folder
 
     -   To move to the parent folder (which is the folder above your
-        > current working directory):\
-        > ![](./media/image15.png){width="5.4375in" height="0.96875in"}
+         current working directory):\
+         ![](./media/image15.png){width="5.4375in" height="0.96875in"}
 
 -   ls (for "list"): list all files and folders in a directory (folder).
 
     -   List all files and folders in the current working directory:\
-        > \$ ls
+         \$ ls
 
     -   List all files and folders in another directory:\
-        > \$ ls path/to/my/folder
+         \$ ls path/to/my/folder
 
 #### 
 
@@ -1094,13 +1080,13 @@ or install a dedicated command line tool for Git, called Git Bash:
 To open Terminal, do one of the following:
 
 -   Click the Launchpad icon
-    > ![](./media/image17.png){width="0.20833333333333334in"
-    > height="0.20833333333333334in"} in the Dock, type Terminal in the
-    > search field, then click Terminal.
+     ![](./media/image17.png){width="0.20833333333333334in"
+     height="0.20833333333333334in"} in the Dock, type Terminal in the
+     search field, then click Terminal.
 
 -   In the Finder ![](./media/image42.png){width="0.20833333333333334in"
-    > height="0.20833333333333334in"}, open the /Applications/Utilities
-    > folder, then double-click Terminal.
+     height="0.20833333333333334in"}, open the /Applications/Utilities
+     folder, then double-click Terminal.
 
 To install Git Bash: download it from here:
 [https://downloads.digitaltrends.com/git/mac](https://downloads.digitaltrends.com/git/mac)
@@ -1128,21 +1114,21 @@ forks off from the trunk - nothing to do with cutlery).
     * [https://github.com/OpenITI](https://github.com/OpenITI)
 
 3.  Select a text repository (0025AH, 0050AH, 0075AH, ...); you can
-    > search the repositories using the "Find a repository" search box
+     search the repositories using the "Find a repository" search box
 
 ![](./media/image30.png){width="5.614583333333333in" height="3.78125in"}
 
 4.  On the repository page, click the "Fork" button (in the upper right
-    > corner): ![](./media/image5.png){width="1.1875in"
-    > height="0.4583333333333333in"}
+     corner): ![](./media/image5.png){width="1.1875in"
+     height="0.4583333333333333in"}
 
 5.  If GitHub asks you where to fork the repository to, choose the
-    > option with your GitHub username.
+     option with your GitHub username.
 
 6.  You will now be transferred to a new repository on your personal
-    > GitHub page that contains an exact copy of the repository you
-    > forked; its URL will look something like:
-    > https://github.com/\<yourUsername\>/\<year\>AH
+     GitHub page that contains an exact copy of the repository you
+     forked; its URL will look something like:
+     https://github.com/\<yourUsername\>/\<year\>AH
 
 ### Create a copy of your OpenITI fork on your computer: Cloning
 
@@ -1150,42 +1136,42 @@ Now you have your own fork of an OpenITI repository, you can download it
 on your computer so you can work on it.
 
 1.  Go to the fork you just created on GitHub
-    > (https://github.com/\<yourUsername\>/\<year\>AH)
+     (https://github.com/\<yourUsername\>/\<year\>AH)
 
 2.  Click the green "Code" button, and then click the icon next to the
-    > URL to copy the URL to your clipboard:\
-    > ![](./media/image9.png){width="3.7916666666666665in"
-    > height="1.6145833333333333in"}
+     URL to copy the URL to your clipboard:\
+     ![](./media/image9.png){width="3.7916666666666665in"
+     height="1.6145833333333333in"}
 
 3.  On your computer, create a folder where you will keep all your
-    > OpenITI repositories
+     OpenITI repositories
 
 4.  Open Git Bash (on Mac: Terminal, on Linux: a shell) in that folder
 
 5.  Type the command "git clone" and paste the link (for Windows users:
-    > use shift+insert, ctrl+v does not work in Git Bash):\
-    > \$ git clone https://github.com/\<yourUsername\>/\<year\>.git
+     use shift+insert, ctrl+v does not work in Git Bash):\
+     \$ git clone https://github.com/\<yourUsername\>/\<year\>.git
 
 6.  Git will now download all files and folders from your clone to your
-    > computer. This may take some time if you forked a large
-    > repository.
+     computer. This may take some time if you forked a large
+     repository.
 
 7.  After the cloning process is done, you can use the command "ls" to
-    > show all files and folders in your current working directory; it
-    > will show you that the new repository was added:\
-    > ![](./media/image7.png){width="5.625in"
-    > height="0.5833333333333334in"}
+     show all files and folders in your current working directory; it
+     will show you that the new repository was added:\
+     ![](./media/image7.png){width="5.625in"
+     height="0.5833333333333334in"}
 
 8.  Now use the command "ls -a" followed by the name of the repository
-    > (the -a is a "flag" that tells the program to also show hidden
-    > files):\
-    > ![](./media/image24.png){width="5.40625in"
-    > height="0.6041666666666666in"}\
-    > The .git/ folder contains the change history of the repository;
-    > the data/ folder contains the text files.
+     (the -a is a "flag" that tells the program to also show hidden
+     files):\
+     ![](./media/image24.png){width="5.40625in"
+     height="0.6041666666666666in"}\
+     The .git/ folder contains the change history of the repository;
+     the data/ folder contains the text files.
 
 9.  You can now read the text files in the repository, make changes to
-    > them, etc.
+     them, etc.
 
 ### Keep up to date with OpenITI: pull changes
 
@@ -1217,37 +1203,37 @@ We will now connect our local repository with the OpenITI repository
 from which you created your fork.
 
 1.  Go to the OpenITI GitHub page and copy the link from the original
-    > repo again, as you did before, by clicking the green "Code" button
-    > and then clicking the icon next to the URL:\
-    > ![](./media/image9.png){width="3.7916666666666665in"
-    > height="1.6145833333333333in"}
+     repo again, as you did before, by clicking the green "Code" button
+     and then clicking the icon next to the URL:\
+     ![](./media/image9.png){width="3.7916666666666665in"
+     height="1.6145833333333333in"}
 
 2.  In Git Bash on your computer, use the cd command to move into your
-    > local repository:\
-    > \$ cd D:/London/trainings/GitHub/0325AH
+     local repository:\
+     \$ cd D:/London/trainings/GitHub/0325AH
 
 3.  Write the command "git remote add upstream" followed by the copied
-    > link:\
-    > \$ git remote add upstream https://github.com/OpenITI/0325AH.git\
-    > NB: "upstream" is only a name and could be replaced with any other
-    > name; but it is accepted practice to call the repository from
-    > which you cloned "upstream", so better to stick with that!
+     link:\
+     \$ git remote add upstream https://github.com/OpenITI/0325AH.git\
+     NB: "upstream" is only a name and could be replaced with any other
+     name; but it is accepted practice to call the repository from
+     which you cloned "upstream", so better to stick with that!
 
 4.  Check whether this worked by writing the command "git remote -v"
-    > again:\
-    > ![](./media/image16.png){width="6.5in"
-    > height="1.0555555555555556in"}\
-    > You see a new remote repository has been added: it is called
-    > "upstream", is located at the URL you copied, and can be used for
-    > synchronizing in both directions.\
-    > NB: Even though git indicates here that you can send ("push") your
-    > local changes to the upstream repository, GitHub will not allow
-    > you to push your changes directly to the upstream repository. This
-    > is a safety measure to protect the online repos from malicious
-    > changes. Instead of pushing your changes directly to the upstream
-    > repository, you will have to make a pull request: ask permission
-    > from the owner of the upstream repo to push your changes. See
-    > below.
+     again:\
+     ![](./media/image16.png){width="6.5in"
+     height="1.0555555555555556in"}\
+     You see a new remote repository has been added: it is called
+     "upstream", is located at the URL you copied, and can be used for
+     synchronizing in both directions.\
+     NB: Even though git indicates here that you can send ("push") your
+     local changes to the upstream repository, GitHub will not allow
+     you to push your changes directly to the upstream repository. This
+     is a safety measure to protect the online repos from malicious
+     changes. Instead of pushing your changes directly to the upstream
+     repository, you will have to make a pull request: ask permission
+     from the owner of the upstream repo to push your changes. See
+     below.
 
 #### Synchronize your local repository with the "upstream" repo
 
@@ -1262,34 +1248,34 @@ repository to your local repository, and you can "push" your own changes
 from your local repo to a remote repository.
 
 1.  We can synchronize our local repository with the upstream repository
-    > (in case another user made changes to the using the following
-    > command: "git pull upstream master"\
-    > \$ git pull upstream master\
-    > NB: "upstream" is the name we have given to the original version
-    > of the repo we forked, on the OpenITI GitHub page; "master" is the
-    > name of a branch within this repo. Branches are an important
-    > concept in Git (see
+     (in case another user made changes to the using the following
+     command: "git pull upstream master"\
+     \$ git pull upstream master\
+     NB: "upstream" is the name we have given to the original version
+     of the repo we forked, on the OpenITI GitHub page; "master" is the
+     name of a branch within this repo. Branches are an important
+     concept in Git (see
     * [here](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/about-branches)
-    > if you want to learn more), but in OpenITI text repositories, we
-    > only use the master branch, so don't worry about this.
+     if you want to learn more), but in OpenITI text repositories, we
+     only use the master branch, so don't worry about this.
 
 2.  If no changes were made to the upstream repo (by another user) since
-    > you forked it, Git will respond with a message "already up to
-    > date". If changes had been made, Git will try to merge both
-    > versions of the repo, and will bring up an editor window that says
-    > it wants to create a commit message that states that both versions
-    > were merged. Press Ctrl+S and Ctrl+X to save and close this
-    > message.\
-    > NB: if you have made changes to a file on your own computer, and
-    > someone else has meanwhile made changes in the upstream repo to
-    > the same line in that same file, this leads to a "merge conflict":
-    > Git cannot decide which change to keep. You will have to
+     you forked it, Git will respond with a message "already up to
+     date". If changes had been made, Git will try to merge both
+     versions of the repo, and will bring up an editor window that says
+     it wants to create a commit message that states that both versions
+     were merged. Press Ctrl+S and Ctrl+X to save and close this
+     message.\
+     NB: if you have made changes to a file on your own computer, and
+     someone else has meanwhile made changes in the upstream repo to
+     the same line in that same file, this leads to a "merge conflict":
+     Git cannot decide which change to keep. You will have to
     * [resolve](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
-    > this merge conflict by manually selecting which changes to keep:
-    > the one you pulled from the OpenITI GitHub page, or the one you
-    > made locally. This can be a huge pain. In order to avoid this,
-    > always make sure to pull the changes from the upstream repository
-    > before you make any change to your local files!
+     this merge conflict by manually selecting which changes to keep:
+     the one you pulled from the OpenITI GitHub page, or the one you
+     made locally. This can be a huge pain. In order to avoid this,
+     always make sure to pull the changes from the upstream repository
+     before you make any change to your local files!
 
 ### Save your changes: add and commit
 
@@ -1308,50 +1294,50 @@ the repository, for example to return to earlier versions of a file.
 1.  Make sure you have saved and closed the files you changed.
 
 2.  In Git Bash on your computer, use the cd command to move into your
-    > local repository:\
-    > \$ cd D:/London/trainings/GitHub/0325AH
+     local repository:\
+     \$ cd D:/London/trainings/GitHub/0325AH
 
 3.  You can use the command "git status" to make Git check which files
-    > in your local repository have undergone changes:\
-    > \$ git status If no changes occurred, you will get the following message:\ On branch master\ Your branch is up to date with \'origin/master\'.\ nothing to commit, working tree clean If you have made changes, Git will return a list of the files that have been changed (or added):\ ![](./media/image14.png){width="6.5in" height="2.0in"}\ For this example, we have changed the metadata about the life of the author al-Ṭabarī in his author yml file. Git displays it in red to show that the changes to this file have not yet been stored in Git.
+     in your local repository have undergone changes:\
+     \$ git status If no changes occurred, you will get the following message:\ On branch master\ Your branch is up to date with \'origin/master\'.\ nothing to commit, working tree clean If you have made changes, Git will return a list of the files that have been changed (or added):\ ![](./media/image14.png){width="6.5in" height="2.0in"}\ For this example, we have changed the metadata about the life of the author al-Ṭabarī in his author yml file. Git displays it in red to show that the changes to this file have not yet been stored in Git.
 
 4.  A commit is like a box in which changes are saved. First you have to
-    > add the changes to the box using the "git add" command, followed
-    > by the path to the files you changed. In this example, we changed
-    > the yml file of the author al-Ṭabarī:\
-    > \$ git add data/0310Tabari/0310Tabari.yml
+     add the changes to the box using the "git add" command, followed
+     by the path to the files you changed. In this example, we changed
+     the yml file of the author al-Ṭabarī:\
+     \$ git add data/0310Tabari/0310Tabari.yml
 
 5.  If you use the "git status" command again, you will see that the
-    > file we changed is now displayed in green: the changes are in the
-    > commit box, ready to be committed to the storage system.\
-    > ![](./media/image34.png){width="6.5in"
-    > height="2.111111111111111in"}
+     file we changed is now displayed in green: the changes are in the
+     commit box, ready to be committed to the storage system.\
+     ![](./media/image34.png){width="6.5in"
+     height="2.111111111111111in"}
 
 6.  Using the command "git commit", we will commit our changes to the
-    > storage system. For later reference, we have to add a "commit
-    > message": a label to the commit box, so to say, that should other
-    > users help to understand the changes you made to the file without
-    > having to compare both files.\
-    > ![](./media/image3.png){width="6.5in"
-    > height="0.6944444444444444in"}\
-    > NB: a good commit message should be around 50 characters long, be
-    > descriptive, and in the imperative mood: the idea is that when you
-    > go through the history of changes made to a repo from the start,
-    > you can read the commit message as "when you execute this commit,
-    > Git will..."
+     storage system. For later reference, we have to add a "commit
+     message": a label to the commit box, so to say, that should other
+     users help to understand the changes you made to the file without
+     having to compare both files.\
+     ![](./media/image3.png){width="6.5in"
+     height="0.6944444444444444in"}\
+     NB: a good commit message should be around 50 characters long, be
+     descriptive, and in the imperative mood: the idea is that when you
+     go through the history of changes made to a repo from the start,
+     you can read the commit message as "when you execute this commit,
+     Git will..."
 
 7.  Your changes have now been included in the change history. You can
-    > view the change history with the command "git log":\
-    > \$ git log\
-    > This will open an editor within Git Bash that will show you a log
-    > of all commits made to the repo, from the most recent to the
-    > earliest. You can use the UP and DOWN arrows on your keyboard to
-    > navigate through this history.\
-    > To quit the log, type "q" after the colon at the bottom of the
-    > window.\
-    > \
-    > ![](./media/image39.png){width="6.5in"
-    > height="3.6666666666666665in"}
+     view the change history with the command "git log":\
+     \$ git log\
+     This will open an editor within Git Bash that will show you a log
+     of all commits made to the repo, from the most recent to the
+     earliest. You can use the UP and DOWN arrows on your keyboard to
+     navigate through this history.\
+     To quit the log, type "q" after the colon at the bottom of the
+     window.\
+     \
+     ![](./media/image39.png){width="6.5in"
+     height="3.6666666666666665in"}
 
 ### Contribute to OpenITI: push changes and pull requests
 
@@ -1367,74 +1353,74 @@ GitHub page; and then we will request the administrator of the OpenITI
 GitHub page to pull our changes to the "upstream" repo.
 
 1.  In Git Bash on your computer, use the cd command to move into your
-    > local repository:\
-    > \$ cd D:/London/trainings/GitHub/0325AH
+     local repository:\
+     \$ cd D:/London/trainings/GitHub/0325AH
 
 2.  Use the command "git push origin master" to push your changes to
-    > your fork on your personal GitHub page:\
-    > \$ git push origin master NB: "origin" is the default name for any remote repository you clone on your computer; "master" is the name of the branch within that repository. As we explained above, OpenITI does not use different branches in its text repositories, so the name of the branch will always be the default "master".
+     your fork on your personal GitHub page:\
+     \$ git push origin master NB: "origin" is the default name for any remote repository you clone on your computer; "master" is the name of the branch within that repository. As we explained above, OpenITI does not use different branches in its text repositories, so the name of the branch will always be the default "master".
 
 3.  If we go to our personal GitHub page now, we will see that our
-    > changes are now also visible in our remote repository. Our commit
-    > message is displayed at the top; and GitHub notifies us that our
-    > fork is "1 commit ahead" of the repository on the OpenITI GitHub
-    > page.\
-    > ![](./media/image1.png){width="6.5in"
-    > height="2.236111111111111in"}
+     changes are now also visible in our remote repository. Our commit
+     message is displayed at the top; and GitHub notifies us that our
+     fork is "1 commit ahead" of the repository on the OpenITI GitHub
+     page.\
+     ![](./media/image1.png){width="6.5in"
+     height="2.236111111111111in"}
 
 4.  We now have to update the "upstream" repository on the OpenITI
-    > GitHub page. Try to use the same "git push" command, but now with
-    > "upstream master" as the names of the destination repository and
-    > branch:\
-    > \$ git push upstream master\
-    > This does not work: GitHub does not give us permission to push
-    > directly to the upstream repository:\
-    > Remote: Permission to OpenITI/0325AH.git denied to pverkind. This is a safety measure: GitHub allows anyone to fork any public repository; if anyone would be allowed to make changes to any repo, this would open the door to digital vandalism.
+     GitHub page. Try to use the same "git push" command, but now with
+     "upstream master" as the names of the destination repository and
+     branch:\
+     \$ git push upstream master\
+     This does not work: GitHub does not give us permission to push
+     directly to the upstream repository:\
+     Remote: Permission to OpenITI/0325AH.git denied to pverkind. This is a safety measure: GitHub allows anyone to fork any public repository; if anyone would be allowed to make changes to any repo, this would open the door to digital vandalism.
 
 5.  To update the upstream repository, we have to request the
-    > administrator of the upstream repository to accept our changes.
-    > This is called a "pull request". This has to be done from our
-    > personal GitHub page. Go to the page of the repo and click "pull
-    > requests" at the top of the page: ![](./media/image18.png){width="6.5in" height="1.3472222222222223in"}
+     administrator of the upstream repository to accept our changes.
+     This is called a "pull request". This has to be done from our
+     personal GitHub page. Go to the page of the repo and click "pull
+     requests" at the top of the page: ![](./media/image18.png){width="6.5in" height="1.3472222222222223in"}
 
 6.  In the upper right corner, click the green "New pull request"
-    > button:\
-    > ![](./media/image11.png){width="1.6458333333333333in"
-    > height="0.5104166666666666in"}
+     button:\
+     ![](./media/image11.png){width="1.6458333333333333in"
+     height="0.5104166666666666in"}
 
 7.  GitHub will ask you now between which repositories you want to
-    > create the pull request. Make sure the repository on the right of
-    > the arrow is the one on your personal GitHub page
-    > (\<yourUsername\>/\<repoName\>); and the one on the left (the
-    > destination) of the arrow is the repository on the OpenITI GitHub
-    > page (OpenITI/\<repoName\>). Then click the green "Create pull
-    > request" button.\
-    > ![](./media/image23.png){width="6.5in" height="1.5in"}
+     create the pull request. Make sure the repository on the right of
+     the arrow is the one on your personal GitHub page
+     (\<yourUsername\>/\<repoName\>); and the one on the left (the
+     destination) of the arrow is the repository on the OpenITI GitHub
+     page (OpenITI/\<repoName\>). Then click the green "Create pull
+     request" button.\
+     ![](./media/image23.png){width="6.5in" height="1.5in"}
 
 8.  This will open a new window where you should write a "pull request
-    > message" (similar to the "commit message" we used on our local
-    > machine) to explain your changes to the administrators of the
-    > repository. By default, the latest commit message will be filled
-    > in as the pull request message. You can add a more verbose comment
-    > in the comment field below.\
-    > ![](./media/image26.png){width="6.5in" height="4.125in"}
+     message" (similar to the "commit message" we used on our local
+     machine) to explain your changes to the administrators of the
+     repository. By default, the latest commit message will be filled
+     in as the pull request message. You can add a more verbose comment
+     in the comment field below.\
+     ![](./media/image26.png){width="6.5in" height="4.125in"}
 
 9.  Press the green "Create pull request" button to finalize your pull
-    > request. The administrator of the page will review your changes,
-    > and either accept your request, or require you to make alterations
-    > before they accept your request. NB: pull requests are not only a safety measure; they are also:
+     request. The administrator of the page will review your changes,
+     and either accept your request, or require you to make alterations
+     before they accept your request. NB: pull requests are not only a safety measure; they are also:
 
 -   a quality control tool: administrators can check whether your
-    > changes are acceptable
+     changes are acceptable
 
 -   A collaboration tool: you can create a pull request to show your
-    > changes to administrators and ask their advice. If you feel
-    > insecure about your changes, you can ask a specific member of the
-    > OpenITI team to review your changes: click "Reviewers" (to the
-    > right of the pull request message) and select one or more team
-    > members.\
-    > ![](./media/image13.png){width="6.5in"
-    > height="4.194444444444445in"}
+     changes to administrators and ask their advice. If you feel
+     insecure about your changes, you can ask a specific member of the
+     OpenITI team to review your changes: click "Reviewers" (to the
+     right of the pull request message) and select one or more team
+     members.\
+     ![](./media/image13.png){width="6.5in"
+     height="4.194444444444445in"}
 
 ### Summary 
 
@@ -1463,35 +1449,35 @@ contains its URI in the title.
 To raise a new issue:
 
 1.  Check whether an issue already exists for your text by typing (or
-    > pasting) its URI in the search field in the [issues section of
-    > the Annotation
-    > repository](https://github.com/OpenITI/Annotation/issues):
+     pasting) its URI in the search field in the [issues section of
+     the Annotation
+     repository](https://github.com/OpenITI/Annotation/issues):
 
 ![](./media/image28.png){width="6.5in" height="2.263888888888889in"}
 
 2.  If not, click the green "New" button. This will bring up a page with
-    > a number of issue templates for frequently recurring issues.
-    > Choose the one that fits your issue best and click its "Get
-    > started" button.
+     a number of issue templates for frequently recurring issues.
+     Choose the one that fits your issue best and click its "Get
+     started" button.
 
 ![](./media/image38.png){width="6.5in" height="7.597222222222222in"}
 
 3.  Each issue template contains directives on how to fill it in. Please
-    > follow the directives closely.\
-    > For example, the "Change URI" issue is used for flagging problems
-    > with a URI (e.g., a typo in the title of the book, a wrong death
-    > date for the author, etc.). The issue template tells you to
-    > provide the existing URI, your proposal for a new URI, and a
-    > reason. It also tells you to use the old URI as the title of the
-    > issue:
+     follow the directives closely.\
+     For example, the "Change URI" issue is used for flagging problems
+     with a URI (e.g., a typo in the title of the book, a wrong death
+     date for the author, etc.). The issue template tells you to
+     provide the existing URI, your proposal for a new URI, and a
+     reason. It also tells you to use the old URI as the title of the
+     issue:
 
 ![](./media/image33.png){width="6.5in" height="3.388888888888889in"}
 
 4.  Do not forget to use the URI in the title of the issue, and then
-    > click "Submit new issue".
+     click "Submit new issue".
 
 5.  The OpenITI team will take action to resolve your issue as quickly
-    > as possible.
+     as possible.
 
 ### Contributing New Texts
 
@@ -1519,18 +1505,18 @@ In order to add your text, you will need a GitHub account (see the
 
 1.  Fork the barzakh repository (see the
     * [tutorial](#vr8odkbtoqev)): create a personal copy
-    > of the repository on your own GitHub page.
+     of the repository on your own GitHub page.
 
 2.  On the GitHub page of your fork of the barzakh repository, go to
-    > "Add file", and choose "Upload files"\
-    > ![](./media/image22.png){width="2.375in"
-    > height="1.2291666666666667in"}
+     "Add file", and choose "Upload files"\
+     ![](./media/image22.png){width="2.375in"
+     height="1.2291666666666667in"}
 
 3.  Choose the files you want to add, and write a description of the
-    > text file (author, author's death date, title, original edition
-    > (in case of a manuscript transcription: location and call number
-    > of the manuscript) in the description box:\
-    > ![](./media/image20.png){width="6.5in" height="4.625in"}
+     text file (author, author's death date, title, original edition
+     (in case of a manuscript transcription: location and call number
+     of the manuscript) in the description box:\
+     ![](./media/image20.png){width="6.5in" height="4.625in"}
 
 4.  Click the green "Commit changes" button
 
@@ -1538,9 +1524,9 @@ In order to add your text, you will need a GitHub account (see the
     * [tutorial](#ogb9951o2vm8))
 
 6.  Raise an ["Added new text"
-    > issue](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=new+text&template=added-new-text.md&title=%5BNEW+TEXT%5D)
-    > in the barzakh repository to notify the corpus administrators that
-    > you have added a text
+     issue](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=new+text&template=added-new-text.md&title=%5BNEW+TEXT%5D)
+     in the barzakh repository to notify the corpus administrators that
+     you have added a text
 
 Our corpus managers will create a URI for your text, make sure it
 adheres to the basic formatting of OpenITI texts, and create metadata
@@ -1555,20 +1541,20 @@ can be downloaded from here:
 
 
 -   [Forking a repo and the Open Source
-    > model](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/) -
-    > good explainer and diagram.
+     model](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/) -
+     good explainer and diagram.
 
 -   Watch a video on Git & GitHub in Dr. Vierthaler's *Hacking the
-    > Humanities* series: [Supplement 1: A quick Git and Github
-    > Tutorial](https://www.youtube.com/watch?v=YetC-gxgIVY).
+     Humanities* series: [Supplement 1: A quick Git and Github
+     Tutorial](https://www.youtube.com/watch?v=YetC-gxgIVY).
 
 -   [Introduction to
-    > Git](https://swcarpentry.github.io/git-novice/): very
-    > good tutorial for learning the basics of Git.
+     Git](https://swcarpentry.github.io/git-novice/): very
+     good tutorial for learning the basics of Git.
 
 -   [Git from the bottom
-    > up](https://github.com/tpn/pdfs/blob/master/Git%20from%20the%20Bottom%20Up.pdf):
-    > a more technical explanation of how Git works.
+     up](https://github.com/tpn/pdfs/blob/master/Git%20from%20the%20Bottom%20Up.pdf):
+     a more technical explanation of how Git works.
 
 ## 4. Annotation guidelines
 
@@ -1593,66 +1579,66 @@ These steps assume a basic understanding of the GitHub process (see
 3.  **Annotator** uses EditPad Pro for annotating texts.
 
 4.  **Annotator** checks all available text files and chooses a file
-    > that is of better quality, easier to annotate and there is an
-    > edition to collate with.
+     that is of better quality, easier to annotate and there is an
+     edition to collate with.
 
 5.  **Annotator** submits an issue to the ***Annotation repository***,
-    > using the template [**[IN
-    > PROGRESS]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=in+progress&template=in-progress.md&title=IN+PROGRESS%3A+%5B%5BURI+of+the+TEXT%5D%5D)
-    > to inform others that a specific text has been claimed and is in
-    > the process of tagging. **Note**: *with this step in place we will always know who is working on what, where, and when. Before you start working on a specific text, simply search for the URI of your text on the [page with issues for the Annotation repository](https://github.com/OpenITI/Annotation/issues): if the URI is not found, it is safe to annotate that text.*
+     using the template [**[IN
+     PROGRESS]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=in+progress&template=in-progress.md&title=IN+PROGRESS%3A+%5B%5BURI+of+the+TEXT%5D%5D)
+     to inform others that a specific text has been claimed and is in
+     the process of tagging. **Note**: *with this step in place we will always know who is working on what, where, and when. Before you start working on a specific text, simply search for the URI of your text on the [page with issues for the Annotation repository](https://github.com/OpenITI/Annotation/issues): if the URI is not found, it is safe to annotate that text.*
 
 6.  **Annotator** finds an edition of the text online (it must be a
-    > scanned version of the actual book, not an electronic text file!
-    > Alternatively, the actual printed book).
+     scanned version of the actual book, not an electronic text file!
+     Alternatively, the actual printed book).
 
 7.  If **Annotator** cannot find a suitable edition:
 
     a.  **Annotator** puts the text aside.
 
     b.  **Annotator** fills the YML as described in
-        > [**[YML-1]{.underline}**](#roqh12z02fg7).
+         [**[YML-1]{.underline}**](#roqh12z02fg7).
 
     c.  **Annotator** submits an issue to the ***Annotation
-        > repository***, using template [**[NO EDITION
-        > FOUND]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=no+edition+found&template=no-edition-found.md&title=NO+EDITION+FOUND%3A+%2Apaste+the+URI+of+a+text%2A)
+         repository***, using template [**[NO EDITION
+         FOUND]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=no+edition+found&template=no-edition-found.md&title=NO+EDITION+FOUND%3A+%2Apaste+the+URI+of+a+text%2A)
 
 8.  If **Annotator** can find a relevant edition:
 
     d.  **Annotator** annotates the text by collating its structure with
-        > the PDF or the actual book. Only chapter headers need to be
-        > tagged (*approximately*: what you see in the table of
-        > contents). **IMPORTANT**: save your progress after every tagging session, using **git** (git add . \> git commit -m "your message" \> git push origin master)
+         the PDF or the actual book. Only chapter headers need to be
+         tagged (*approximately*: what you see in the table of
+         contents). **IMPORTANT**: save your progress after every tagging session, using **git** (git add . \> git commit -m "your message" \> git push origin master)
 
 9.  After the annotation is complete**:**
 
     e.  **Annotator** renames the tagged file by adding "**.completed**"
-        > to the end of the filename. For example, if the file was
-        > **0597IbnJawzi.Muntazam.JK001209-ara1**, it should become
-        > **0597IbnJawzi.Muntazam.JK001209-ara1.completed**
+         to the end of the filename. For example, if the file was
+         **0597IbnJawzi.Muntazam.JK001209-ara1**, it should become
+         **0597IbnJawzi.Muntazam.JK001209-ara1.completed**
 
     f.  **Annotator** updates the relevant YML file, as described
-        > [**[here]{.underline}**](#roqh12z02fg7).
+         [**[here]{.underline}**](#roqh12z02fg7).
 
     g.  **Annotator** [pushes](#ogb9951o2vm8) local
-        > updates to her remote repository
+         updates to her remote repository
 
     h.  **Annotator** submits a [pull
-        > request](#ogb9951o2vm8) (please, do pull requests
-        > for each finished text!)
+         request](#ogb9951o2vm8) (please, do pull requests
+         for each finished text!)
 
     i.  **Annotator** submits an issue to **the Annotation repository**
-        > using the template [**[Submission report (for Pull
-        > Requests)]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
+         using the template [**[Submission report (for Pull
+         Requests)]{.underline}**](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
 
         i.  The title of the issue (already prefilled) should be: **TEXT
-            > TAGGED: \<URI of the text\>**
+             TAGGED: \<URI of the text\>**
 
         ii. In the body of the issue: please paste the contents of your
-            > YML file ([from YML-1](#roqh12z02fg7)).
+             YML file ([from YML-1](#roqh12z02fg7)).
 
     j.  **Annotator** closes the **IN PROGRESS** issue for that text
-        > (opened in Step 4a, above).
+         (opened in Step 4a, above).
 
 10. Repeat
 
@@ -1662,7 +1648,7 @@ These steps assume a basic understanding of the GitHub process (see
 1.  **Validator** downloads annotated text from GitHub
 
 2.  **Validator** checks issue reports on GitHub and yml file for text
-    > issues that need to be assessed and fixed.
+     issues that need to be assessed and fixed.
 
 3.  **Validator** begins work with text:
 
@@ -1671,13 +1657,13 @@ These steps assume a basic understanding of the GitHub process (see
     b.  **Validator** checks the annotation against the printed edition
 
     c.  **IMPORTANT**: save your progress after every tagging session,
-        > using **git** (git add . \> git commit -m "your message" \>
-        > git push origin master)
+         using **git** (git add . \> git commit -m "your message" \>
+         git push origin master)
 
 4.  **Validator** saves text with extension .mARkdown
 
 5.  **Validator** checks and updates all relevant yml files and saves
-    > them.
+     them.
 
 6.  **Validator** commits changes and pushes back to GitHub
 
@@ -1704,12 +1690,12 @@ To be added
 
 
 -   [Annotation Workflow - Version
-    > 20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing) -
-    > covers both 3 and 4 - also explains YMLs
+     20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing) -
+     covers both 3 and 4 - also explains YMLs
 
 -   A useful annotator's introduction is found in the following blog:
     * [Tagging the Structure of Texts in the OPENITI Corpus \|
-    > KITAB](http://kitab-project.org/2020/06/12/tagging-the-structure-of-texts-in-the-openiti-corpus/)
+     KITAB](http://kitab-project.org/2020/06/12/tagging-the-structure-of-texts-in-the-openiti-corpus/)
 
 ## 5. Software (versions and installation)
 
@@ -1757,8 +1743,8 @@ steps to install the mARkdown schema (see
 for more detail):
 
 -   VERY IMPORTANT: Make sure that EditPad Pro is fully closed. Do not
-    > close it using the "X" in the upper right corner (which will not
-    > fully close the program) but go to 'file \> exit' in Edit Pad Pro.
+     close it using the "X" in the upper right corner (which will not
+     fully close the program) but go to 'file \> exit' in Edit Pad Pro.
 
 -   Download
     * [https://github.com/OpenITI/mARkdown\_scheme/archive/master.zip](https://github.com/OpenITI/mARkdown_scheme/archive/master.zip)
@@ -1766,33 +1752,33 @@ for more detail):
 -   Unzip the downloaded file.
 
 -   The unzipped folder contains two zip files; one for EditPad Pro
-    > Version 7 and one for EditPad Pro version 8. Unzip the file for
-    > your version of EditPad Pro.
+     Version 7 and one for EditPad Pro version 8. Unzip the file for
+     your version of EditPad Pro.
 
 -   Open the unzipped folder, and copy all of the files
 
 -   Within the unzipped folder, double click on the link
-    > '\_\_Follow\_this\_link\_to\_paste\_mARkdownScheme7.lnk'. This
-    > link takes you to the location where EditPad Pro was installed on
-    > your computer (%APPDATA%\\JGsoft\\EditPad Pro 7 in case of
-    > EditPadPro7 and %APPDATA%\\JGsoft\\EditPad Pro 8 in case of
-    > EditPadPro 8)
+     '\_\_Follow\_this\_link\_to\_paste\_mARkdownScheme7.lnk'. This
+     link takes you to the location where EditPad Pro was installed on
+     your computer (%APPDATA%\\JGsoft\\EditPad Pro 7 in case of
+     EditPadPro7 and %APPDATA%\\JGsoft\\EditPad Pro 8 in case of
+     EditPadPro 8)
 
 -   Paste the files into this folder
 
 -   Now, open EditPadPro. If you have done everything correctly, the
-    > background in EditPadPro should be of yellowish color. If the
-    > background is still white, you need to repeat the whole procedure;
-    > now, make absolutely sure to shut down EditPadPro (not just click
-    > on the x in the top right corner, but shut it down through FILE \>
-    > Exit), then repeat all steps from the beginning of this section.
+     background in EditPadPro should be of yellowish color. If the
+     background is still white, you need to repeat the whole procedure;
+     now, make absolutely sure to shut down EditPadPro (not just click
+     on the x in the top right corner, but shut it down through FILE \>
+     Exit), then repeat all steps from the beginning of this section.
 
 -   The scheme is automatically activated in EditPad Pro by the first
-    > line in the file, which must be: \#\#\#\#\#OpenITI\# (called magic
-    > value in EditPad Pro)
+     line in the file, which must be: \#\#\#\#\#OpenITI\# (called magic
+     value in EditPad Pro)
 
 -   Open a file in EditPad Pro and check if the schema works. It should
-    > look like this: ![](./media/image21.png){width="6.5in" height="2.7916666666666665in"}
+     look like this: ![](./media/image21.png){width="6.5in" height="2.7916666666666665in"}
 
 NB: EditPad Pro was recently upgraded from version 7 to version 8.
 Currently we provide highlighting schemas for both versions, but 7 will
@@ -1828,34 +1814,34 @@ entirely consistent in that respect. For search with transliterated
 forms, please follow the following rules:
 
 -   The Library of Congress scheme is followed in its simplified
-    > version, omitting all diacritics so that only ASCII characters are
-    > used. Two most problematic Arabic letters are dealt with in the
-    > following manner: 1) hamzas are omitted to avoid using non-letter
-    > characters; 2) ʿayns are transliterated with c, which is
-    > capitalized when appropriate (ʿAlī \> Cali; Aʿyān al-šīʿaŧ \>
-    > AcyanShica).
+     version, omitting all diacritics so that only ASCII characters are
+     used. Two most problematic Arabic letters are dealt with in the
+     following manner: 1) hamzas are omitted to avoid using non-letter
+     characters; 2) ʿayns are transliterated with c, which is
+     capitalized when appropriate (ʿAlī \> Cali; Aʿyān al-šīʿaŧ \>
+     AcyanShica).
 
 -   b\. (إبن) as part of a name is written in full and capitalized: ʿAlī b.
-    > Abī Ṭālib \> CaliIbnAbiTalib.
+     Abī Ṭālib \> CaliIbnAbiTalib.
 
 -   Although an effort was made to use šuhras for AuthorIDs, in cases
-    > when it was not possible, the following formula was followed:
-    > Ibn + Ism Abī-hi + Nisbaŧ (these were the onomastic elements most
-    > commonly available in the metadata).
+     when it was not possible, the following formula was followed:
+     Ibn + Ism Abī-hi + Nisbaŧ (these were the onomastic elements most
+     commonly available in the metadata).
 
 -   The word kitāb is dropped from the titles, unless it is the major
-    > keyword, like in the case of, for example, Sibawayhi's Kitāb,
-    > whose unique identifier is 0180Sibawayh.KitabSibawayh.
+     keyword, like in the case of, for example, Sibawayhi's Kitāb,
+     whose unique identifier is 0180Sibawayh.KitabSibawayh.
 
 -   Definite articles are dropped everywhere: Tārīḫ al-islām \>
-    > TarikhIslam.
+     TarikhIslam.
 
 -   Parts of the same entities are written together, in camelcase. In
-    > other words, there are no spaces between words, but each word is
-    > capitalized: al-Nāsiḫ wa-l-Mansūḫ \> NasikhWaMansukh.
+     other words, there are no spaces between words, but each word is
+     capitalized: al-Nāsiḫ wa-l-Mansūḫ \> NasikhWaMansukh.
 
 -   NB: In the beginning, tāʾ marbūṭaŧs were dropped throughout, but
-    > later transliterated only in iḍāfas; still fixing that issue...
+     later transliterated only in iḍāfas; still fixing that issue...
 
 Here is an example that shows how search function works.
 
@@ -1881,10 +1867,10 @@ See the tutorial [here](#lde4t8tyccvf) \-
 -   How to share a link to a text
 
 -   We welcome your transcriptions - blog instructing how to transcribe
-    > for us (setting ground rules and benefits) (?)
+     for us (setting ground rules and benefits) (?)
 
     -   Agree on initials of contributing individual to be used in the
-        > URI
+         URI
 
         -   Make sure the initials are documented here:
             * [https://github.com/OpenITI/Annotation](https://github.com/OpenITI/Annotation)
@@ -1963,16 +1949,16 @@ Further reading:
 -   KITAB project blogs about quality issues with OpenITI texts:
 
     -   [When al-Tabarī is Not (Just) al-Tabarī: The Challenges Posed
-        > by Composite Editions in the OpenITI
-        > Corpus](http://kitab-project.org/2020/01/10/when-al-tabari-is-not-just-al-tabari-the-challenges-posed-by-composite-editions-in-the-openiti-corpus/)
+         by Composite Editions in the OpenITI
+         Corpus](http://kitab-project.org/2020/01/10/when-al-tabari-is-not-just-al-tabari-the-challenges-posed-by-composite-editions-in-the-openiti-corpus/)
 
     -   [On Commentaries, Digressions, Transtextualities, and Rabbit
-        > Holes](http://kitab-project.org/2019/12/03/on-commentaries-digressions-transtextualities-and-rabbit-holes/)
+         Holes](http://kitab-project.org/2019/12/03/on-commentaries-digressions-transtextualities-and-rabbit-holes/)
 
     -   [The challenges of
-        > versions](http://kitab-project.org/2017/09/10/a-tale-of-3-versions/)
-        > and [judging differences
-        > mathematically](http://kitab-project.org/2019/11/14/judging-the-difference-between-different-arabic-text-versions-mathematically/)
+         versions](http://kitab-project.org/2017/09/10/a-tale-of-3-versions/)
+         and [judging differences
+         mathematically](http://kitab-project.org/2019/11/14/judging-the-difference-between-different-arabic-text-versions-mathematically/)
 
 ### - Do you use texts generated by Optical Character Recognition?
 
@@ -2002,7 +1988,7 @@ annotation
 ### - I found a typo in a text / a mistake in the metadata or URI. How do I flag this?
 
 -   Please raise an issue on GitHub (you will need a GitHub account to
-    > do this):
+     do this):
 
 <!-- -->
 
@@ -2013,16 +1999,16 @@ annotation
     * [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=) Give your issue a title and fill in the form. Click the "Submit new issue" button.
 
 -   Alternatively, you can use the [metadata
-    > application](https://kitab-corpus-metadata.azurewebsites.net/)
-    > to create a selected categories of github issues on the existing
-    > texts in OpenITI. The issues will be assigned a proper label and
-    > the OpenITI development team will take care of the issue.
+     application](https://kitab-corpus-metadata.azurewebsites.net/)
+     to create a selected categories of github issues on the existing
+     texts in OpenITI. The issues will be assigned a proper label and
+     the OpenITI development team will take care of the issue.
 
 1.  To generate an issue, first find the text in the metadata
-    > application (see [how](#fngdifjhixv)).
+     application (see [how](#fngdifjhixv)).
 
 2.  The author, Book Title and Book Id columns contain a number of icons
-    > that can be used to raise issues:
+     that can be used to raise issues:
 
 ![](./media/image43.png){width="6.5in" height="4.75in"} Use one of the issue links to click in the Book id column of the text. These categories are in fact the labels that we have created for the issues on the [OpenITI Annotation repository](https://github.com/OpenITI/Annotation/issues/new/choose). Make sure that you have a github account to raise an issue. If you have one and are already logged in the github, you will be redirected to a page where you can create an issue by filling the required information and clicking the \"Submit new issue\" button (see the example below). You can also choose another category for the issue
 * [here](https://github.com/OpenITI/Annotation/issues/new/choose) and click \"Get started\" of the proper category.
@@ -2067,14 +2053,14 @@ converted into TEI XML.
 ### - A text I am researching is in the corpus but not annotated, or the annotation is insufficient for my research interests. What do I do?
 
 -   Policy on contributions - can anyone branch, pull and annotate
-    > texts?
+     texts?
 
 -   If you're interested get in touch - please email at the following
-    > address (KITAB GENERAL ADDRESS) and we will try and get back as
-    > soon as possible.
+     address (KITAB GENERAL ADDRESS) and we will try and get back as
+     soon as possible.
 
 -   If you have a question about the corpus, mARkdown annotation or our
-    > methods, please consult our FAQs before sending us an email.
+     methods, please consult our FAQs before sending us an email.
 
 ###  - I am not sure there is an appropriate mARkdown annotation, or I am not sure how to annotate a particular part of a text. What do I do?
 
@@ -2082,16 +2068,16 @@ converted into TEI XML.
 
 
 -   **OpenITI**: a GitHub organization where all texts are hosted
-    > ([https://github.com/OpenITI](https://github.com/OpenITI)).
+     ([https://github.com/OpenITI](https://github.com/OpenITI)).
 
 -   **OpenITI mARkdown**: an easy-to-use tagging scheme developed for
-    > texts in OpenITI. Detailed description can be found here:
+     texts in OpenITI. Detailed description can be found here:
     * [https://maximromanov.github.io/mARkdown/](https://maximromanov.github.io/mARkdown/).
-    > If you have any questions, concerns, or suggestions, you can leave
-    > a comment at the bottom of the page.
+     If you have any questions, concerns, or suggestions, you can leave
+     a comment at the bottom of the page.
 
 -   **Annotation repository**: a repository in the OpenITI, where all
-    > metadata on the entire corpus is being aggregated:
+     metadata on the entire corpus is being aggregated:
     * [https://github.com/OpenITI/Annotation](https://github.com/OpenITI/Annotation)
 
 -   **Annotator**: a person who annotates texts.
@@ -2107,9 +2093,9 @@ converted into TEI XML.
 **Suggested items:**
 
 -   **Structural annotation:** Annotation of the headings of a work,
-    > including nesting.
+     including nesting.
 
 -   **Betacode**: a transliteration system that allows easy conversion
-    > from one transliteration system to another, and into fully
-    > vocalized Arabic text. See
+     from one transliteration system to another, and into fully
+     vocalized Arabic text. See
     * [https://alraqmiyyat.github.io/2015/02-07.html](https://alraqmiyyat.github.io/2015/02-07.html)
