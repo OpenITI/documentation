@@ -1720,7 +1720,7 @@ Installing bash/working through command line tool: see
 
 (Coming soon...)
 
-## 7. FAQ
+## FAQ
 
 
 ### How can I find a text in OpenITI? 
