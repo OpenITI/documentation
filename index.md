@@ -907,16 +907,20 @@ Useful commands:
          ```
 
     -   To move to the parent folder (which is the folder above your
-         current working directory):\
+         current working directory): use `cd ..`
          ![](./media/image15.png)
 
 -   `ls` (for "list"): list all files and folders in a directory (folder).
 
-    -   List all files and folders in the current working directory:\
-         \$ ls
+    -   List all files and folders in the current working directory:
+         ```
+         $ ls
+         ```
 
-    -   List all files and folders in another directory:\
-         \$ ls path/to/my/folder 
+    -   List all files and folders in another directory:
+         ```
+         $ ls path/to/my/folder 
+         ```
 
 ##### On Mac
 
