@@ -619,33 +619,33 @@ Althurayya database. To identify those URIs take the following steps:
 
 #### YML-3 (Author Record)
 
-**Each author in the corpus has a YML-3 file. The records metadata about
-the author and their relationship with other authors in the corpus.**
+Each author in the corpus has a YML-3 file. The records metadata about
+the author and their relationship with other authors in the corpus.
 
-**The following is an explanation of a YML-3 file.**
+The following is an explanation of the fields in a YML-3 file.
 
 For an example of an original file see:
 [https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.yml](https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.yml)
 
-  **Field**                   **Description**                                                                                                                                                                                                                    **Example (random, not necessarily real data)**
-  --------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------
-  00\#AUTH\#URI\#\#\#\#\#\#   The unique OpenITI identifier for this author                                                                                                                                                                                      0310Tabari
-  10\#AUTH\#ISM\#\#\#\#AR     The author's *ism* ("first name")                                                                                                                                                                                                  Muḥammad
-  10\#AUTH\#KUNYA\#\#AR       The author's *kunya* (teknonym); comma-separated                                                                                                                                                                                   Abū Jaʿfar
-  10\#AUTH\#LAQAB\#\#AR       The author's *laqab* (cognomen/agnomen/title); comma-separated                                                                                                                                                                     Tāj al-Dīn
-  10\#AUTH\#NASAB\#\#AR       The author's *nasab* (ancestry chain); series of patronymics (use b. for *ibn*, bt. for *bint*)                                                                                                                                    b\. Jarīr b. Yazīd
-  10\#AUTH\#NISBA\#\#AR       The author's *nisba* (demonym or other designations); comma-separated                                                                                                                                                              al-Ṭabarī
-  10\#AUTH\#SHUHRA\#AR        The name the author was most commonly known as; comma-separated                                                                                                                                                                    al-Ṭabarī
-  20\#AUTH\#BORN\#\#\#\#\#    Place(s) where the author was born; URIs from Althurayya, comma separated                                                                                                                                                          
-  20\#AUTH\#DIED\#\#\#\#\#    Place(s) where the author died; URIs from Althurayya, comma separated                                                                                                                                                              
-  20\#AUTH\#RESIDED\#\#       Place(s) where the author died; URIs from Althurayya, comma separated                                                                                                                                                              
-  20\#AUTH\#VISITED\#\#       Place(s) the author visited; URIs from Althurayya, comma separated                                                                                                                                                                 
-  30\#AUTH\#BORN\#\#\#AH      Date when the author was born; YYYY-MMM-DD (X for unknown)                                                                                                                                                                         0224-XXX-XX
-  30\#AUTH\#DIED\#\#\#AH      Date when the author died; YYYY-MMM-DD (X for unknown)                                                                                                                                                                             0310-XXX-XX
-  40\#AUTH\#STUDENTS\#        List of this author's students; author URIs from OpenITI, comma separated                                                                                                                                                          
-  40\#AUTH\#TEACHERS\#        List of this author's teachers; author URIs from OpenITI, comma separated                                                                                                                                                          
-  80\#AUTH\#BIBLIO\#\#\#      Bibliography on this author; Worldcat.org links, comma-separated                                                                                                                                                                   
-  90\#AUTH\#COMMENT\#\#       a free running comment here; you can add as many lines as you see fit; the main goal of this comment section is to have a place to record valuable information, which is difficult to formalize into the above given categories.   
+| Field | Description | Example (random, not necessarily real data) |
+|-------|-------------|---------------------------------------------|
+| 00\#AUTH\#URI\#\#\#\#\#\# | The unique OpenITI identifier for this author | 0310Tabari |
+| 10\#AUTH\#ISM\#\#\#\#AR | The author's *ism* ("first name") | Muḥammad |
+| 10\#AUTH\#KUNYA\#\#AR | The author's *kunya* (teknonym); comma-separated | Abū Ǧaʿfar |
+| 10\#AUTH\#LAQAB\#\#AR | The author's *laqab* (cognomen/agnomen/title); comma-separated | Tāǧ al-Dīn |
+| 10\#AUTH\#NASAB\#\#AR | The author's *nasab* (ancestry chain); series of patronymics (use b. for *ibn*, bt. for *bint*) | b. Ǧarīr b. Yazīd |
+| 10\#AUTH\#NISBA\#\#AR | The author's *nisba* (demonym or other designations); comma-separated | al-Ṭabarī |
+| 10\#AUTH\#SHUHRA\#AR | The name the author was most commonly known as; comma-separated | al-Ṭabarī |
+| 20\#AUTH\#BORN\#\#\#\#\# | Place(s) where the author was born; URIs from Althurayya, comma separated |  |
+| 20\#AUTH\#DIED\#\#\#\#\# | Place(s) where the author died; URIs from Althurayya, comma separated | |
+| 20\#AUTH\#RESIDED\#\# | Place(s) where the author died; URIs from Althurayya, comma separated | |
+| 20\#AUTH\#VISITED\#\# | Place(s) the author visited; URIs from Althurayya, comma separated | |
+| 30\#AUTH\#BORN\#\#\#AH | Date when the author was born; YYYY-MMM-DD (X for unknown) | 0224-XXX-XX |
+| 30\#AUTH\#DIED\#\#\#AH | Date when the author died; YYYY-MMM-DD (X for unknown) | 0310-XXX-XX |
+| 40\#AUTH\#STUDENTS\# | List of this author's students; author URIs from OpenITI, comma separated | |
+| 40\#AUTH\#TEACHERS\# | List of this author's teachers; author URIs from OpenITI, comma separated | |
+| 80\#AUTH\#BIBLIO\#\#\# | Bibliography on this author; Worldcat.org links, comma-separated | |
+| 90\#AUTH\#COMMENT\#\# | a free running comment here; you can add as many lines as you see fit; the main goal of this comment section is to have a place to record valuable information, which is difficult to formalize into the above given categories. | |
 
 **Further reading:**
 
