@@ -776,6 +776,7 @@ For example, two users can make independent sets of changes on the same
 document.
 
 ![](./media/image10.png)
+
 Unless multiple users make changes to the same section of the document -
 a conflict - you can incorporate two sets of changes into the same base
 document.
@@ -896,18 +897,20 @@ command, press the "Enter" key.
 
 Useful commands:
 
--   cd (for "change directory"):
+-   `cd` (for "change directory"):
 
     -   move to another folder by writing the path to it (which is the
          chain of folders that connects that folder to your current
-         working directory):\
-         \$ cd path/to/my/folder
+         working directory):
+         ```
+         $ cd path/to/my/folder
+         ```
 
     -   To move to the parent folder (which is the folder above your
          current working directory):\
          ![](./media/image15.png)
 
--   ls (for "list"): list all files and folders in a directory (folder).
+-   `ls` (for "list"): list all files and folders in a directory (folder).
 
     -   List all files and folders in the current working directory:\
          \$ ls
