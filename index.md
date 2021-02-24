@@ -252,12 +252,12 @@ distinct authors.
 In its current state, the OpenITI corpus consists almost exclusively of
 Arabic texts, with a strong focus on the pre-modern period:
 
-![](./media/image45.png){width="6.190474628171478in"
-height="3.262895888013998in"}*\
-Text files in OpenITI, per hijrī century (light blue: number of text
+![](./media/image45.png)
+
+*Text files in OpenITI, per hijrī century (light blue: number of text
 files; dark blue: number of distinct books; red: number of distinct
 authors). NB: pre-Islamic texts are in the first-century column, texts
-by authors still alive in the 15th-C column.* (data: Dec. 2020)
+by authors still alive in the 15th-C column. (data: Dec. 2020)*
 
 These text files together represent 2 billion words. Huge numbers like
 these are hard to visualize; 1.8 billion words amount to almost 7
@@ -284,8 +284,7 @@ the second Islamic century in the corpus is 17,830 words (which is about
 1/8 of the word count of the Qur'ān, or about the same size as the Bible
 book Job), by the ninth century, it is about 5 times higher at 79,286.
 
-![](./media/image8.png){width="6.00823053368329in"
-height="3.0416666666666665in"}
+![](./media/image8.png)
 
 *Length of the books in OpenITI, per hijrī century (attention:
 logarithmic scale!). The upper light blue horizontal line represents the
@@ -302,21 +301,21 @@ collections; a small but growing number were digitized by the KITAB team
 by manual transcription or using OCR (26 texts) or provided by users of
 OpenITI (19 texts):
 
-  COUNT   COLL. ID       FULL NAME                                LINK                                                                                             SHORT DESCRIPTION
-  ------- -------------- ---------------------------------------- ------------------------------------------------------------------------------------------------ -------------------------------------------------------------------------------------------------------
-  3635    Shamela        al-Maktaba al-Shāmila                    [shamela.ws](http://www.shamela.ws/)                                               Large digital open-access library, scraped ca. 2014 (*official version*)
-  125     Sham19Y        al-Maktaba al-Shāmila (2019 additions)   [shamela.ws](http://www.shamela.ws/)                                               Additional scrape of new texts in October 2019 (*official version*)
-  2308    JK             al-Jāmiʿ al-kabīr                                                                                                                         Books digitized by Jordanian publisher Markaz al-Turāth
-  1041    Shia           al-Maktaba al-Shīʿiyya                   [shiaonlinelibrary.com](http://shiaonlinelibrary.com/)                             Text collection by the Ayatollah Milani Foundation
-  530     ShamAY                                                  (gift)                                                                                           Official version of al-Maktaba al-Shāmila + private collection of digitized books
-  394     Zaydiyya       al-Maktaba al-Shāmila al-Zaydiyya                                                                                                         Collection of Zaydī texts, packaged in a Maktaba Shamela instance
-  132     ShamIbadiyya   al-Maktaba al-Shāmila al-Ibāḍiyya        [archive.org/details/5\_20190723](https://archive.org/details/5_20190723)          Collection of Ibāḍī texts by the Algerian Jamʿiyyat al-Turāth, packaged in a Maktaba Shamela instance
-  99      GRAR           Graeco-Arabic Studies Corpus             [graeco-arabic-studies.org](https://graeco-arabic-studies.org/)                    A Digital Corpus for Graeco-Arabic Studies
-  81      Tafsir         al-Tafāsīr                               [altafsir.com](http://www.altafsir.com/)                                           Collection of Qur\'ān commentaries by the Jordanian "Royal Aal al-Bayt Institute for Islamic Thought"
-  77      Sham30K        al-Maktaba al-Shāmila (30.000 texts)     [archive.org/details/SHAMELH30-1-20](https://archive.org/details/SHAMELH30-1-20)   Official version of al-Maktaba al-Shamela + large amount of additional texts
-  4       Filaha         The Filāḥa Project                       [filaha.org/](http://www.filaha.org/)                                              Arabic books on husbandry
-  1       Hindawi        Hindawi                                  [hindawi.org/books/](https://www.hindawi.org/books/)                               Books published by the Hindawi Foundation
-  1       BibleCorpus    Bible Corpus                             [github.com/christos-c/bible-corpus](https://github.com/christos-c/bible-corpus)   A multilingual parallel corpus of Bible translations
+| COUNT | COLL. ID | FULL NAME | LINK | SHORT DESCRIPTION |
+|-------|----------|-----------|------|-------------------|
+| 3635 | Shamela | al-Maktaba al-Shāmila | [shamela.ws](http://www.shamela.ws/) | Large digital open-access library, scraped ca. 2014 (*official version*) |
+| 125 | Sham19Y | al-Maktaba al-Shāmila (2019 additions) | [shamela.ws](http://www.shamela.ws/) | Additional scrape of new texts in October 2019 (*official version*) |
+| 2308 | JK | al-Jāmiʿ al-kabīr | Books digitized by Jordanian publisher Markaz al-Turāth |
+| 1041 | Shia | al-Maktaba al-Shīʿiyya | [shiaonlinelibrary.com](http://shiaonlinelibrary.com/) | Text collection by the Ayatollah Milani Foundation |
+| 530 | ShamAY | (gift) | Official version of al-Maktaba al-Shāmila + private collection of digitized books |
+| 394 | Zaydiyya | al-Maktaba al-Shāmila al-Zaydiyya | Collection of Zaydī texts, packaged in a Maktaba Shamela instance |
+| 132 | ShamIbadiyya | al-Maktaba al-Shāmila al-Ibāḍiyya | [archive.org/details/5\_20190723](https://archive.org/details/5_20190723) | Collection of Ibāḍī texts by the Algerian Jamʿiyyat al-Turāth, packaged in a Maktaba Shamela instance |
+| 99 | GRAR | Graeco-Arabic Studies Corpus | [graeco-arabic-studies.org](https://graeco-arabic-studies.org/) | A Digital Corpus for Graeco-Arabic Studies |
+| 81 | Tafsir | al-Tafāsīr | [altafsir.com](http://www.altafsir.com/) | Collection of Qur\'ān commentaries by the Jordanian "Royal Aal al-Bayt Institute for Islamic Thought" |
+| 77 | Sham30K | al-Maktaba al-Shāmila (30.000 texts) | [archive.org/details/SHAMELH30-1-20](https://archive.org/details/SHAMELH30-1-20) | Official version of al-Maktaba al-Shamela + large amount of additional texts |
+| 4 | Filaha | The Filāḥa Project | [filaha.org/](http://www.filaha.org/) | Arabic books on husbandry |
+| 1 | Hindawi | Hindawi | [hindawi.org/books/](https://www.hindawi.org/books/) | Books published by the Hindawi Foundation |
+| 1 | BibleCorpus | Bible Corpus | [github.com/christos-c/bible-corpus](https://github.com/christos-c/bible-corpus) | A multilingual parallel corpus of Bible translations |
 
 4290 out of the 5104 distinct works in OpenITI derive from three main
 source collections (Sham, JK and ShiaOL). These three collections
