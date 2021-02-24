@@ -181,9 +181,9 @@ digital analysis.
 Users of the OpenITI corpus will find the corpus in two key locations:
 GitHub
 ([https://github.com/openiti](https://github.com/openiti))
-and Zenodo (links for releases given below). The first is the active
-version of the corpus, and the second keeps a snapshot of the corpus at
-a given time.
+and [Zenodo](https://zenodo.org/record/4513723#.YDYKUmj0ncs) (links for specific releases given below). The first is the active
+version of the corpus, and the second keeps snapshots of the corpus at
+a given time, for citation purposes.
 
 ### The GitHub Repositories
 
@@ -198,9 +198,9 @@ the use of forking) helps protect against mistakes.
 
 Further reading:
 
-\* [organization of the OpenITI GitHub
-page](#6b0prmhb9c0b)\
-\* [working with GitHub](#j93jp6ujbc6o)
+* [Structure and organization of the OpenITI
+GitHub](#structure-and-organization-of-the-openiti-github)
+* [Working with GitHub](#working-with-github)
 
 ### Zenodo releases
 
