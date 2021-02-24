@@ -1557,12 +1557,11 @@ These steps assume a basic understanding of the GitHub process (see
     i.  **Annotator** submits an issue to **the Annotation repository**
          using the template [Submission report (for Pull
          Requests)](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
+    *  The title of the issue (already prefilled) should be: TEXT
+        TAGGED: \<URI of the text\>
 
-        *  The title of the issue (already prefilled) should be: **TEXT
-             TAGGED: \<URI of the text\>**
-
-        * In the body of the issue: please paste the contents of your
-             YML file ([from YML-1](#roqh12z02fg7)).
+    * In the body of the issue: please paste the contents of your
+       YML file ([from YML-1](#roqh12z02fg7)).
 
     j.  **Annotator** closes the **IN PROGRESS** issue for that text
          (opened in Step 4a, above).
