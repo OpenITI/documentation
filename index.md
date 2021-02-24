@@ -3,7 +3,7 @@
 ![](./media/image37.png)
 
 NB: this documentation is a work in progress. Please feel free to
-contact us if you feel something is missing or unclear.
+[contact us](mailto:kitab@aku.edu) if you feel something is missing or unclear.
 
 [1. What is OpenITI?](#1-what-is-openiti)
 
