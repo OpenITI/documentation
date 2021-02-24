@@ -529,11 +529,10 @@ version that the annotator used to annotate the text
 **Further guidance on filling out YML-1 files**
 
 When filling out version yaml files, it is essential to use permalinks in the
-fields 80\#VERS\#BASED\#\#\#\# and 80\#VERS\#COLLATED\#, for example
+fields `80#VERS#BASED####` and `80#VERS#COLLATED#`, for example
 from Worldcat. To get a permalink, follow these steps:
 
-1.  Go to
-    * [https://www.worldcat.org](https://www.worldcat.org/)
+1.  Go to [https://www.worldcat.org](https://www.worldcat.org/)
 
 2.  Search for a needed book; there are usually many records --- pick
      the one that looks best (those submitted by major libraries are
@@ -544,7 +543,7 @@ from Worldcat. To get a permalink, follow these steps:
 
 ![](./media/image12.png)
 
-For `90\#VERS\#ISSUES\#\#\#`: there is a formalised list of issues that
+For `90#VERS#ISSUES###:` there is a formalised list of issues that
 can be used here:
 
 | Tag | Description of an issue |
@@ -566,160 +565,37 @@ can be used here:
 
 #### YML-2 (Book Record)
 
-Each distinct book in the corpus has a YML-2 file. For example, the
-YML-2 for al-Tabari's Tadhib al-Athar, would be:
-**310Tabari.TahdhibAthar.yml** (note that the file does not include the
+Each distinct work in the corpus has a YML-2 file. For example, the
+YML-2 for al-Tabari's Tahdhīb al-Āthār, would be:
+`310Tabari.TahdhibAthar.yml` (note that the file does not include the
 version part of the URI, as this file is relevant to all versions of the
-book). This file provides further in depth metadata about the book
+book). This file provides further in-depth metadata about the book
 itself.
 
-**The following is an explanation of a YML-2 file.**
+**The following is an explanation of the fields in a YML-2 file.**
 
 For an original file see: [**[0325AH/0310Tabari.TahdhibAthar.yml at
 master · OpenITI/0325AH ·
 GitHub]{.underline}**](https://github.com/OpenITI/0325AH/blob/master/data/0310Tabari/0310Tabari.TahdhibAthar/0310Tabari.TahdhibAthar.yml)
 
-+-----------------------+-----------------------+-----------------------+
-| **Field**             | **Description**       | **Example (random,    |
-|                       |                       | not necessarily real  |
-|                       |                       | data)**               |
-+=======================+=======================+=======================+
-| **00\#BOOK\#URI\#\#\# | The URI of the book : | 0310Tabari.TahdhibAth |
-| \#\#\#:**             | XXXShuhra.IsmKitab    | ar                    |
-|                       | (autoupdated)         |                       |
-+-----------------------+-----------------------+-----------------------+
-| **10\#BOOK\#GENRES\#\ | Classification of     | GAL\@hadith           |
-| #\#:**                | books into forms and  |                       |
-|                       | genres following,     |                       |
-|                       | which is comma        |                       |
-|                       | separated. 'src'      |                       |
-|                       | indicates the creator |                       |
-|                       | of the category and   |                       |
-|                       | 'keyword' indicates   |                       |
-|                       | classification.       |                       |
-|                       |                       |                       |
-|                       | So the example means  |                       |
-|                       | that Brockelman's     |                       |
-|                       | *Geschicte der        |                       |
-|                       | arabischen            |                       |
-|                       | Litteratur* (GAL)     |                       |
-|                       | categorises the text  |                       |
-|                       | as hadith.            |                       |
-+-----------------------+-----------------------+-----------------------+
-| **10\#BOOK\#TITLEA\#A | Short title of the    | Tahḏīb al-Āṯār        |
-| R:**                  | work, written in      |                       |
-|                       | betacode.             |                       |
-+-----------------------+-----------------------+-----------------------+
-| **10\#BOOK\#TITLEB\#A | Full title of the     | Tahḏīb al-āṯār        |
-| R:**                  | work, written in      | wa-tafṣīl al-ṯābit    |
-|                       | betacode              | ʿan rasūl Allāh min   |
-|                       |                       | al-aḫbār              |
-+-----------------------+-----------------------+-----------------------+
-| **20\#BOOK\#WROTE\#\# | Locations where the   | BAGHDAD\_443E333N\_S  |
-| \#\#:**               | work was written,     |                       |
-|                       | using URIs from       |                       |
-|                       | Althurayya            |                       |
-|                       | ([[https://althurayya |                       |
-|                       | .github.io/]{.underli |                       |
-|                       | ne}](https://althuray |                       |
-|                       | ya.github.io/)),      |                       |
-|                       | comma separated.      |                       |
-|                       |                       |                       |
-|                       | The example is the    |                       |
-|                       | URI for Baghdad. For  |                       |
-|                       | an explanation on     |                       |
-|                       | getting URIs from     |                       |
-|                       | Althurayya, see below |                       |
-+-----------------------+-----------------------+-----------------------+
-| **30\#BOOK\#WROTE\#\# | Year that the book    | 0305-XXX-XX           |
-| AH:**                 | was written (or X+    |                       |
-|                       | for unknown), with AH |                       |
-|                       | date. Format:         |                       |
-|                       | YEAR-MON-DA           |                       |
-+-----------------------+-----------------------+-----------------------+
-| **40\#BOOK\#ABRIDGED\ | If this work is an    |                       |
-| #**                   | abridgement of an     |                       |
-|                       | earlier work, enter   |                       |
-|                       | the book URI here.    |                       |
-|                       |                       |                       |
-|                       | Enter the author's    |                       |
-|                       | title if the book is  |                       |
-|                       | not present in the    |                       |
-|                       | OpenITI.              |                       |
-|                       |                       |                       |
-|                       | THIS WILL BE SUBJECT  |                       |
-|                       | TO CHANGE IN A FUTURE |                       |
-|                       | UPDATE TO YML FILES   |                       |
-+-----------------------+-----------------------+-----------------------+
-| **40\#BOOK\#COMMENTD\ | If this work is a     |                       |
-| #:**                  | commentary on an      |                       |
-|                       | earlier work, enter   |                       |
-|                       | the book URI here.    |                       |
-|                       |                       |                       |
-|                       | Enter the author's    |                       |
-|                       | title if the book is  |                       |
-|                       | not present in the    |                       |
-|                       | OpenITI.              |                       |
-|                       |                       |                       |
-|                       | THIS WILL BE SUBJECT  |                       |
-|                       | TO CHANGE IN A FUTURE |                       |
-|                       | UPDATE TO YML FILES   |                       |
-+-----------------------+-----------------------+-----------------------+
-| **40\#BOOK\#PRECEDED\ | If we know what       |                       |
-| #**                   | preceded this work,   |                       |
-|                       | enter the book URI    |                       |
-|                       | here.                 |                       |
-|                       |                       |                       |
-|                       | Enter the author's    |                       |
-|                       | title if the book is  |                       |
-|                       | not present in the    |                       |
-|                       | OpenITI.              |                       |
-+-----------------------+-----------------------+-----------------------+
-| **40\#BOOK\#FOLLOWED\ | If we know what       |                       |
-| #**                   | followed this work,   |                       |
-|                       | enter the book URI    |                       |
-|                       | here.                 |                       |
-|                       |                       |                       |
-|                       | Enter the author's    |                       |
-|                       | title if the book is  |                       |
-|                       | not present in the    |                       |
-|                       | OpenITI.              |                       |
-+-----------------------+-----------------------+-----------------------+
-| **80\#BOOK\#EDITIONS\ | Permalink to an       |                       |
-| #:**                  | edition of this work, |                       |
-|                       | (on permalinks see    |                       |
-|                       | explanation above.)   |                       |
-+-----------------------+-----------------------+-----------------------+
-| **80\#BOOK\#LINKS\#\# |                       |                       |
-| \#\#:**               |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| **80\#BOOK\#MSS\#\#\# | Permalink to a        |                       |
-| \#\#\#:**             | manuscript of this    |                       |
-|                       | work.                 |                       |
-+-----------------------+-----------------------+-----------------------+
-| **80\#BOOK\#STUDIES\# | Permalink to          |                       |
-| \#:**                 | secondary scholarship |                       |
-|                       | on this work.         |                       |
-+-----------------------+-----------------------+-----------------------+
-| **80\#BOOK\#TRANSLAT\ | Permalink to a        |                       |
-| #:                    | translation of this   |                       |
-| **                    | work.                 |                       |
-+-----------------------+-----------------------+-----------------------+
-| **90\#BOOK\#COMMENT\# | Comment on the work   | Work on ḥadīth, never |
-| \#:**                 | (example has been     | finished by the       |
-|                       | abridged, for full    | author. The           |
-|                       | comment see linked    | conception of the     |
-|                       | file)                 | work was \"to provide |
-|                       |                       | an exhaustive and     |
-|                       |                       | penetrating analysis  |
-|                       |                       | of the philological   |
-|                       |                       | and legal             |
-|                       |                       | implications of each  |
-|                       |                       | ḥadīth mentioned and  |
-|                       |                       | to discuss its        |
-|                       |                       | meaning as well as    |
-|                       |                       | its significance\...  |
-+-----------------------+-----------------------+-----------------------+
+| Field | Description | Example (random, not necessarily real |
+|-------|-------------|---------------------------------------|
+| **00\#BOOK\#URI\#\#\#\#\#\#:** | The URI of the book : XXXShuhra.IsmKitab (autoupdated) | 0310Tabari.TahdhibAthar |
+| **10\#BOOK\#GENRES\#\#\#:** | Classification of books into forms and genres following, which is comma separated. 'src' indicates the creator of the category and 'keyword' indicates classification. So the example means that Brockelman's *Geschicte der arabischen Litteratur* (GAL) categorises the text as hadith. | GAL\@hadith |
+| **10\#BOOK\#TITLEA\#AR:** | Short title of the work, written in betacode. | Tahḏīb al-Āṯār |
+| **10\#BOOK\#TITLEB\#AR:** | Full title of the work, written in betacode | Tahḏīb al-āṯār wa-tafṣīl al-ṯābit ʿan rasūl Allāh min al-aḫbār |
+| **20\#BOOK\#WROTE\#\#\#\#:** | Locations where the work was written, using URIs from Althurayya ([[https://althurayya .github.io/]{.underli ne}](https://althuray ya.github.io/)), comma separated. The example is the URI for Baghdad. For an explanation on getting URIs from Althurayya, see below | BAGHDAD\_443E333N\_S |
+| **30\#BOOK\#WROTE\#\#AH:** | Year that the book was written (or X+ for unknown), with AH date. Format: YEAR-MON-DA | 0305-XXX-XX |
+| **40\#BOOK\#ABRIDGED\#** | If this work is an abridgement of an earlier work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. THIS WILL BE SUBJECT TO CHANGE IN A FUTURE UPDATE TO YML FILES | |
+| **40\#BOOK\#COMMENTD\#:** | If this work is a commentary on an earlier work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. THIS WILL BE SUBJECT TO CHANGE IN A FUTURE UPDATE TO YML FILES | |
+| **40\#BOOK\#PRECEDED\#** | If we know what preceded this work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. | |
+| **40\#BOOK\#FOLLOWED\#** | If we know what followed this work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. | |
+| **80\#BOOK\#EDITIONS\#:** | Permalink to an edition of this work, (on permalinks see explanation above.) | |
+| **80\#BOOK\#LINKS\#\#\#\#:** | | |
+| **80\#BOOK\#MSS\#\#\#\#\#\#:** | Permalink to a manuscript of this work. | |
+| **80\#BOOK\#STUDIES\#\#:** | Permalink to secondary scholarship on this work. | |
+| **80\#BOOK\#TRANSLAT\#**: | Permalink to a translation of this work. | |
+| **90\#BOOK\#COMMENT\#\#:** | Comment on the work (example has been abridged, for full comment see linked file) | Work on ḥadīth, never finished by the author. The conception of the work was \"to provide an exhaustive and penetrating analysis of the philological and legal implications of each ḥadīth mentioned and to discuss its meaning as well as its significance...\" |
 
 **Further guidance on filling out YML-2 files**
 
