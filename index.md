@@ -20,16 +20,16 @@ GitHub](#2-structure-and-organization-of-the-openiti-github)
 
 * [Text repositories](#text-repositories)
     * [25-years folders](#years-folders)
-    * [URIs & CTS-Like Folder Structure](#uris-cts-like-folder-structure)
-    * [Text files: mARkdown](#text-files-markdown)
-    * [Metadata: YAML files](#metadata-yaml-files)
-        * [YML-1 (Version Record)](#yml-1-version-record)
-        * [YML-2 (Book Record)](#yml-2-book-record)
-        * [YML-3 (Author Record)](#yml-3-author-record)
-* [RAW folders](#raw-folders)
+        * [URIs & CTS-Like Folder Structure](#uris-cts-like-folder-structure)
+        * [Text files: mARkdown](#text-files-markdown)
+        * [Metadata: YAML files](#metadata-yaml-files)
+            * [YML-1 (Version Record)](#yml-1-version-record)
+            * [YML-2 (Book Record)](#yml-2-book-record)
+            * [YML-3 (Author Record)](#yml-3-author-record)
+    * [RAW folders](#raw-folders)
 * [Working repositories](#working-repositories)
-* [Annotation repo](#annotation-repo)
-* [Instantiations](#instantiations)
+    * [Annotation repo](#annotation-repo)
+    * [Instantiations](#instantiations)
 
 [3. Working with GitHub](#3-working-with-github)
 
@@ -649,9 +649,9 @@ For an example of an original file see:
 
 **Further reading:**
 
--   [YAML Template
-     Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
-     on OpenITI gitHub; current YAML templates are different
+-   [original OpenITI YAML Template
+     Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml). NB:
+     on OpenITI gitHub; current YAML templates are slightly different
 
 ### RAW folders
 
@@ -665,7 +665,7 @@ repositories whose names start with RAW.
 ### Working repositories 
 
 
-### Annotation repo
+#### Annotation repo
 
 The [Annotation
 repository](https://github.com/OpenITI/Annotation) is
@@ -708,7 +708,7 @@ Note: You can create an URGENT issue to assign specific text to a
 specific person. Go to ISSUES \> New Issue \> select URGENT template \>
 Follow the instructions in the template.
 
-### Instantiations
+#### Instantiations
 
 
 i.xxxxx repositories are instantiations of the OpenITI corpus adapted
