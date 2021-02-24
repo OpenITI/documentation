@@ -1121,11 +1121,12 @@ from your local repo to a remote repository.
 
 2.  If no changes were made to the upstream repo (by another user) since
      you forked it, Git will respond with a message "already up to
-     date". If changes had been made, Git will try to merge both
+     date". If changes have been made, Git will try to merge both
      versions of the repo, and will bring up an editor window that says
      it wants to create a commit message that states that both versions
-     were merged. Press Ctrl+S and Ctrl+X to save and close this
-     message.\
+     were merged. Press `Ctrl+S` and `Ctrl+X` to save and close this
+     message.
+     
      NB: if you have made changes to a file on your own computer, and
      someone else has meanwhile made changes in the upstream repo to
      the same line in that same file, this leads to a "merge conflict":
@@ -1164,14 +1165,19 @@ the repository, for example to return to earlier versions of a file.
      ```
      $ git status
      ```
+     
      If no changes occurred, you will get the following message: 
+     
      ```
      On branch master
      Your branch is up to date with \'origin/master\'.
      nothing to commit, working tree clean
      ```
+
      If you have made changes, Git will return a list of the files that have been changed (or added):
-![](./media/image14.png)
+
+     ![](./media/image14.png)
+     
      For this example, we have changed the metadata about the life of the author al-Ṭabarī 
      in his author yml file. Git displays it in red to show that the changes to this file 
      have not yet been stored in Git.
@@ -1181,6 +1187,7 @@ the repository, for example to return to earlier versions of a file.
      add the changes to the box using the "git add" command, followed
      by the path to the files you changed. In this example, we changed
      the yml file of the author al-Ṭabarī:
+     
      ```
      $ git add data/0310Tabari/0310Tabari.yml
      ```
@@ -1188,6 +1195,7 @@ the repository, for example to return to earlier versions of a file.
 5.  If you use the "git status" command again, you will see that the
      file we changed is now displayed in green: the changes are in the
      commit box, ready to be committed to the storage system.
+     
      ![](./media/image34.png)
 
 6.  Using the command `git commit`, we will commit our changes to the
@@ -1195,7 +1203,9 @@ the repository, for example to return to earlier versions of a file.
      message": a label to the commit box, so to say, that should help other
      users to understand the changes you made to the file without
      having to compare both files.
+     
      ![](./media/image3.png)
+     
      NB: a good commit message should be around 50 characters long, be
      descriptive, and in the imperative mood: the idea is that when you
      go through the history of changes made to a repo from the start,
@@ -1204,15 +1214,18 @@ the repository, for example to return to earlier versions of a file.
 
 7.  Your changes have now been included in the change history. You can
      view the change history with the command `git log`:
+     
      ```
      $ git log
      ```
+     
      This will open an editor within Git Bash that will show you a log
      of all commits made to the repo, from the most recent to the
      earliest. You can use the UP and DOWN arrows on your keyboard to
      navigate through this history.
      To quit the log, type "q" after the colon at the bottom of the
      window.
+     
      ![](./media/image39.png)
 
 ### Contribute to OpenITI: push changes and pull requests
