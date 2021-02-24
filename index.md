@@ -581,15 +581,15 @@ GitHub]{.underline}**](https://github.com/OpenITI/0325AH/blob/master/data/0310Ta
 | Field | Description | Example (random, not necessarily real |
 |-------|-------------|---------------------------------------|
 | **00\#BOOK\#URI\#\#\#\#\#\#:** | The URI of the book : XXXShuhra.IsmKitab (autoupdated) | 0310Tabari.TahdhibAthar |
-| **10\#BOOK\#GENRES\#\#\#:** | Classification of books into forms and genres following, which is comma separated. 'src' indicates the creator of the category and 'keyword' indicates classification. So the example means that Brockelman's *Geschicte der arabischen Litteratur* (GAL) categorises the text as hadith. | GAL\@hadith |
+| **10\#BOOK\#GENRES\#\#\#:** | Classification of books into forms and genres according to different sources, comma-separated. Template: `src@keyword` : `src` indicates the creator of the category and `keyword` indicates classification. So the example means that Brockelman's *Geschicte der arabischen Litteratur* (GAL) categorises the text as hadith. | GAL@hadith |
 | **10\#BOOK\#TITLEA\#AR:** | Short title of the work, written in betacode. | Tahḏīb al-Āṯār |
 | **10\#BOOK\#TITLEB\#AR:** | Full title of the work, written in betacode | Tahḏīb al-āṯār wa-tafṣīl al-ṯābit ʿan rasūl Allāh min al-aḫbār |
 | **20\#BOOK\#WROTE\#\#\#\#:** | Locations where the work was written, using URIs from Althurayya ([[https://althurayya .github.io/]{.underli ne}](https://althuray ya.github.io/)), comma separated. The example is the URI for Baghdad. For an explanation on getting URIs from Althurayya, see below | BAGHDAD\_443E333N\_S |
 | **30\#BOOK\#WROTE\#\#AH:** | Year that the book was written (or X+ for unknown), with AH date. Format: YEAR-MON-DA | 0305-XXX-XX |
-| **40\#BOOK\#ABRIDGED\#** | If this work is an abridgement of an earlier work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. THIS WILL BE SUBJECT TO CHANGE IN A FUTURE UPDATE TO YML FILES | |
+| **40\#BOOK\#ABRIDGED\#:** | If this work is an abridgement of an earlier work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. THIS WILL BE SUBJECT TO CHANGE IN A FUTURE UPDATE TO YML FILES | |
 | **40\#BOOK\#COMMENTD\#:** | If this work is a commentary on an earlier work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. THIS WILL BE SUBJECT TO CHANGE IN A FUTURE UPDATE TO YML FILES | |
-| **40\#BOOK\#PRECEDED\#** | If we know what preceded this work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. | |
-| **40\#BOOK\#FOLLOWED\#** | If we know what followed this work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. | |
+| **40\#BOOK\#PRECEDED\#:** | If we know what preceded this work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. | |
+| **40\#BOOK\#FOLLOWED\#:** | If we know what followed this work, enter the book URI here. Enter the author's title if the book is not present in the OpenITI. | |
 | **80\#BOOK\#EDITIONS\#:** | Permalink to an edition of this work, (on permalinks see explanation above.) | |
 | **80\#BOOK\#LINKS\#\#\#\#:** | | |
 | **80\#BOOK\#MSS\#\#\#\#\#\#:** | Permalink to a manuscript of this work. | |
@@ -605,8 +605,7 @@ Location URIs contain all the data needed to link the texts to specific
 locations and the metadata associated with those locations in the
 Althurayya database. To identify those URIs take the following steps:
 
-1.  Go to:
-     [**[https://althurayya.github.io/]{.underline}**](https://althurayya.github.io/)
+1.  Go to [althurayya.github.io/](https://althurayya.github.io/)
 
 2.  Go to the search tab on the left.
 
@@ -620,7 +619,7 @@ Althurayya database. To identify those URIs take the following steps:
 6.  Copy the URI under the 'Technical Information' (circled in blue in
      the screenshot).
 
-![](./media/image32.png){width="6.5in" height="4.194444444444445in"}
+![](./media/image32.png)
 
 #### YML-3 (Author Record)
 
