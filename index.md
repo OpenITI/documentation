@@ -976,7 +976,7 @@ forks off from the trunk - nothing to do with cutlery).
 6.  You will now be transferred to a new repository on your personal
      GitHub page that contains an exact copy of the repository you
      forked; its URL will look something like:
-     https://github.com/<yourUsername>/<year>AH
+     https://github.com/<yourUsername\>/<year\>AH
 
 ### Create a copy of your OpenITI fork on your computer: Cloning
 
