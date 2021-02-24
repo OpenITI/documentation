@@ -1927,7 +1927,7 @@ annotation
 
     -   For typos and other types of text quality problems: [here](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+quality&template=text-quality-issue-.md&title=)
     
-         Give your issue a title and fill in the form. Click the "Submit new issue" button.
+     Give your issue a title and fill in the form. Click the "Submit new issue" button.
 
 -   Alternatively, you can use the [metadata
      application](https://kitab-corpus-metadata.azurewebsites.net/)
@@ -1992,17 +1992,19 @@ converted into TEI XML.
 
 ### A text I am researching is in the corpus but not annotated, or the annotation is insufficient for my research interests. What do I do?
 
--   Policy on contributions - can anyone branch, pull and annotate
-     texts?
+-   Improve the annotation yourself: follow the [annotation guidelines](#4-annotation-guidelines)
 
--   If you're interested get in touch - please email at the following
-     address (KITAB GENERAL ADDRESS) and we will try and get back as
+-   If you're interested get in touch - please email us at [kitab@aku.edu](mailto:kitab@aku.edu) and we will try and get back as
      soon as possible.
 
 -   If you have a question about the corpus, mARkdown annotation or our
      methods, please consult our FAQs before sending us an email.
 
 ###  I am not sure there is an appropriate mARkdown annotation, or I am not sure how to annotate a particular part of a text. What do I do?
+
+-   Check the full description of OpenITI mARkdown at [alraqmiyyat.github.io/mARkdown/](https://alraqmiyyat.github.io/mARkdown/)
+-   If you can't find what you need, contact us at [kitab@aku.edu](mailto:kitab@aku.edu)
+
 
 ## Glossary
 
