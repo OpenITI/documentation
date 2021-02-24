@@ -1106,7 +1106,8 @@ from your local repo to a remote repository.
 
 1.  We can synchronize our local repository with the upstream repository
      (in case another user made changes to the repo) using the following
-     command: `git pull upstream master`
+     command:
+     
      ```
      $ git pull upstream master
      ```
@@ -1131,7 +1132,7 @@ from your local repo to a remote repository.
      someone else has meanwhile made changes in the upstream repo to
      the same line in that same file, this leads to a "merge conflict":
      Git cannot decide which change to keep. You will have to
-    * [resolve](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
+     [resolve](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line)
      this merge conflict by manually selecting which changes to keep:
      the one you pulled from the OpenITI GitHub page, or the one you
      made locally. This can be a huge pain. In order to avoid this,
@@ -1156,12 +1157,14 @@ the repository, for example to return to earlier versions of a file.
 
 2.  In Git Bash on your computer, use the cd command to move into your
      local repository:
+     
      ```
      $ cd D:/London/trainings/GitHub/0325AH
      ```
 
 3.  You can use the command `git status` to make Git check which files
      in your local repository have undergone changes:
+     
      ```
      $ git status
      ```
@@ -1242,37 +1245,65 @@ GitHub page; and then we will request the administrator of the OpenITI
 GitHub page to pull our changes to the "upstream" repo.
 
 1.  In Git Bash on your computer, use the cd command to move into your
-     local repository:\
-     \$ cd D:/London/trainings/GitHub/0325AH
+     local repository:
+     
+     ```
+     $ cd D:/London/trainings/GitHub/0325AH
+     ```
 
-2.  Use the command "git push origin master" to push your changes to
-     your fork on your personal GitHub page:\
-     \$ git push origin master NB: "origin" is the default name for any remote repository you clone on your computer; "master" is the name of the branch within that repository. As we explained above, OpenITI does not use different branches in its text repositories, so the name of the branch will always be the default "master".
+2.  Use the command `git push origin master` to push your changes to
+     your fork on your personal GitHub page:
+     
+     ```
+     $ git push origin master
+     ```
+     
+     NB: `origin` is the default name for any remote repository you clone on your computer; 
+     `master` is the name of the branch within that repository. 
+     As we explained [above](#synchronize-your-local-repository-with-the-upstream-repo), 
+     OpenITI does not use different branches in its text repositories, 
+     so the name of the branch will always be the default `master`.
 
 3.  If we go to our personal GitHub page now, we will see that our
      changes are now also visible in our remote repository. Our commit
      message is displayed at the top; and GitHub notifies us that our
      fork is "1 commit ahead" of the repository on the OpenITI GitHub
-     page.\
+     page.
+     
      ![](./media/image1.png)
 
-4.  We now have to update the "upstream" repository on the OpenITI
-     GitHub page. Try to use the same "git push" command, but now with
-     "upstream master" as the names of the destination repository and
-     branch:\
-     \$ git push upstream master\
+4.  We now have to update the `upstream` repository on the OpenITI
+     GitHub page. Try to use the same `git push` command, but now with
+     `upstream master` as the names of the destination repository and
+     branch:
+     
+     ```
+     $ git push upstream master
+     ```
+     
      This does not work: GitHub does not give us permission to push
-     directly to the upstream repository:\
-     Remote: Permission to OpenITI/0325AH.git denied to pverkind. This is a safety measure: GitHub allows anyone to fork any public repository; if anyone would be allowed to make changes to any repo, this would open the door to digital vandalism.
+     directly to the upstream repository:
+     
+     ```
+     Remote: Permission to OpenITI/0325AH.git denied to pverkind. 
+     ```
+     
+     This is a safety measure by the GitHub website: 
+     GitHub allows anyone to fork any public repository; 
+     if anyone would be allowed to make changes to any repo, 
+     this would open the door to digital vandalism.
 
 5.  To update the upstream repository, we have to request the
      administrator of the upstream repository to accept our changes.
      This is called a "pull request". This has to be done from our
-     personal GitHub page. Go to the page of the repo and click "pull
-     requests" at the top of the page: ![](./media/image18.png)
+     personal GitHub page. Go to the page of the repo and click 
+     `pull requests` at the top of the page: 
+     
+     ![](./media/image18.png)
 
-6.  In the upper right corner, click the green "New pull request"
-     button:\
+6.  In the upper right corner, click the green `New pull request`
+     button:
+     
      ![](./media/image11.png)
 
 7.  GitHub will ask you now between which repositories you want to
@@ -1281,20 +1312,25 @@ GitHub page to pull our changes to the "upstream" repo.
      (\<yourUsername\>/\<repoName\>); and the one on the left (the
      destination) of the arrow is the repository on the OpenITI GitHub
      page (OpenITI/\<repoName\>). Then click the green "Create pull
-     request" button.\
+     request" button.
+     
      ![](./media/image23.png)
+     
 8.  This will open a new window where you should write a "pull request
      message" (similar to the "commit message" we used on our local
      machine) to explain your changes to the administrators of the
      repository. By default, the latest commit message will be filled
      in as the pull request message. You can add a more verbose comment
-     in the comment field below.\
+     in the comment field below.
+     
      ![](./media/image26.png)
 
-9.  Press the green "Create pull request" button to finalize your pull
+9.  Press the green `Create pull request` button to finalize your pull
      request. The administrator of the page will review your changes,
      and either accept your request, or require you to make alterations
-     before they accept your request. NB: pull requests are not only a safety measure; they are also:
+     before they accept your request.
+     
+     NB: pull requests are not only a safety measure; they are also:
 
 -   a quality control tool: administrators can check whether your
      changes are acceptable
@@ -1304,7 +1340,8 @@ GitHub page to pull our changes to the "upstream" repo.
      insecure about your changes, you can ask a specific member of the
      OpenITI team to review your changes: click "Reviewers" (to the
      right of the pull request message) and select one or more team
-     members.\
+     members.
+     
      ![](./media/image13.png)
 
 ### Summary 
@@ -1321,7 +1358,8 @@ GitHub uses
 keep track of tasks inside a team, and allow external users to notify
 the development team about bugs or requests they have. Every GitHub
 repository has its own issues section, which you can find at the top of
-a GitHub repo page, just under its title:\
+a GitHub repo page, just under its title:
+
 ![](./media/image41.png)
 
 In OpenITI, we collect all issues related to the texts in the corpus in
@@ -1338,17 +1376,18 @@ To raise a new issue:
      the Annotation
      repository](https://github.com/OpenITI/Annotation/issues):
 
-![](./media/image28.png)
+     ![](./media/image28.png)
 
 2.  If not, click the green "New" button. This will bring up a page with
      a number of issue templates for frequently recurring issues.
      Choose the one that fits your issue best and click its "Get
      started" button.
 
-![](./media/image38.png)
+     ![](./media/image38.png)
 
 3.  Each issue template contains directives on how to fill it in. Please
-     follow the directives closely.\
+     follow the directives closely.
+     
      For example, the "Change URI" issue is used for flagging problems
      with a URI (e.g., a typo in the title of the book, a wrong death
      date for the author, etc.). The issue template tells you to
@@ -1356,7 +1395,7 @@ To raise a new issue:
      reason. It also tells you to use the old URI as the title of the
      issue:
 
-![](./media/image33.png)
+     ![](./media/image33.png)
 
 4.  Do not forget to use the URI in the title of the issue, and then
      click "Submit new issue".
@@ -1370,12 +1409,12 @@ To raise a new issue:
 If you have a text that is not in OpenITI and you want to add it to the
 corpus, there are a couple of ways to go about this.
 
-### The easy way: contact us
+#### The easy way: contact us
 
 The easiest way to contribute a new text is to send it to our corpus
 manager, [Lorenz Nigst](mailto:Lorenz.Nigst@aku.edu).
 
-### The *barzakh* repository
+#### The *barzakh* repository
 
 You can also add new texts to the corpus yourself.
 
@@ -1386,26 +1425,26 @@ the Christian concept of
 [https://github.com/OpenITI/barzakh](https://github.com/OpenITI/barzakh)
 
 In order to add your text, you will need a GitHub account (see the
-[tutorial](#tzqgboevt0m1)):
+[tutorial](#create-a-github-account)):
 
-1.  Fork the barzakh repository (see the
-    * [tutorial](#vr8odkbtoqev)): create a personal copy
+1.  Fork the barzakh repository (see the [tutorial](#create-your-personal-copy-of-an-openiti-repo-forking)): create a personal copy
      of the repository on your own GitHub page.
 
 2.  On the GitHub page of your fork of the barzakh repository, go to
-     "Add file", and choose "Upload files"\
+     "Add file", and choose "Upload files"
+     
      ![](./media/image22.png)
 
 3.  Choose the files you want to add, and write a description of the
      text file (author, author's death date, title, original edition
      (in case of a manuscript transcription: location and call number
-     of the manuscript) in the description box:\
+     of the manuscript) in the description box:
+     
      ![](./media/image20.png)
 
 4.  Click the green "Commit changes" button
 
-5.  Create a pull request (see the
-    * [tutorial](#ogb9951o2vm8))
+5.  Create a pull request (see the [tutorial](#contribute-to-openiti-push-changes-and-pull-requests))
 
 6.  Raise an ["Added new text"
      issue](https://github.com/OpenITI/barzakh/issues/new?assignees=Lrnzmtths%2C+pverkind&labels=new+text&template=added-new-text.md&title=%5BNEW+TEXT%5D)
@@ -1417,7 +1456,7 @@ adheres to the basic formatting of OpenITI texts, and create metadata
 files, before adding it to the corpus.
 
 You can help us by providing metadata about the text and its author, by
-[filling in yml metadata files](#roqh12z02fg7) (templates
+[filling in yml metadata files](#metadata-yaml-files) (templates
 can be downloaded from here:
 [https://github.com/OpenITI/Templates](https://github.com/OpenITI/Templates))
 
@@ -1451,7 +1490,7 @@ using GitHub issues. Validators check the annotations and the quality of
 the text.
 
 These steps assume a basic understanding of the GitHub process (see
-[tutorial](#j93jp6ujbc6o)).
+[tutorial](#3-working-with-github)).
 
 ### Annotation workflow
 
