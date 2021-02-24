@@ -1,6 +1,6 @@
 # OpenITI documentation
 
-[](./media/image37.png)
+![](./media/image37.png)
 
 NB: this documentation is a work in progress. Please feel free to
 contact us if you feel something is missing or unclear.
@@ -19,13 +19,13 @@ contact us if you feel something is missing or unclear.
 GitHub](#2-structure-and-organization-of-the-openiti-github)
 
 * [Text repositories](#text-repositories)
-* [25-years folders](#years-folders)
-* [URIs & CTS-Like Folder Structure](#uris-cts-like-folder-structure)
-* [Text files: mARkdown](#text-files-markdown)
-* [Metadata: YAML files](#metadata-yaml-files)
-* [YML-1 (Version Record)](#yml-1-version-record)
-* [YML-2 (Book Record)](#yml-2-book-record)
-* [YML-3 (Author Record)](#yml-3-author-record)
+    * [25-years folders](#years-folders)
+    * [URIs & CTS-Like Folder Structure](#uris-cts-like-folder-structure)
+    * [Text files: mARkdown](#text-files-markdown)
+    * [Metadata: YAML files](#metadata-yaml-files)
+        * [YML-1 (Version Record)](#yml-1-version-record)
+        * [YML-2 (Book Record)](#yml-2-book-record)
+        * [YML-3 (Author Record)](#yml-3-author-record)
 * [RAW folders](#raw-folders)
 * [Working repositories](#working-repositories)
 * [Annotation repo](#annotation-repo)
