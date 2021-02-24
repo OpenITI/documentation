@@ -1557,13 +1557,13 @@ These steps assume a basic understanding of the GitHub process (see
     i.  **Annotator** submits an issue to **the Annotation repository**
          using the template [Submission report (for Pull
          Requests)](https://github.com/OpenITI/Annotation/issues/new?assignees=&labels=text+tagged&template=--submission-report--for-pull-requests-.md&title=Text+tagged%3A+INSERT_FULL_URI_HERE):
-    *  The title of the issue (already prefilled) should be: TEXT
-        TAGGED: \<URI of the text\>
+    *  The title of the issue (already prefilled) should be: 
+        **TEXT TAGGED: \<URI of the text\>**
 
-    * In the body of the issue: please paste the contents of your
-       YML file ([from YML-1](#roqh12z02fg7)).
+    * In the body of the issue: please paste the contents of your version
+       YML file ([from YML-1](#yml-1-version-record)).
 
-    j.  **Annotator** closes the **IN PROGRESS** issue for that text
+    j.  **Annotator** closes the `IN PROGRESS` issue for that text
          (opened in Step 4a, above).
 
 10. Repeat
@@ -1595,8 +1595,8 @@ These steps assume a basic understanding of the GitHub process (see
 
 7.  **Validator** closes issue
 
-### OpenITI mARkdown
 
+### OpenITI mARkdown
 
 The texts in the corpus are in OpenITI mARkdown format, a simple system
 for tagging structural, morphological and semantic elements. The system
@@ -1608,9 +1608,9 @@ with other markup schemes.
 A full description of OpenITI mARkdown can be found here:
 [https://alraqmiyyat.github.io/mARkdown/](https://alraqmiyyat.github.io/mARkdown/)
 
-To be added
+***To be added
 
--   Basic regex guide for annotators
+-   Basic regex guide for annotators*** 
 
 ### Further reading
 
@@ -1644,36 +1644,33 @@ offers custom highlighting schemes that allow highlighting of OpenITI
 mARkdown tags.
 
 The free (trial) version of the software can be downloaded here:
-[http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe](http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe)
+[download.jgsoft.com/editpad/SetupEditPadProDemo.exe](http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe)
 . The trial version is fully functional for the needs of working with
 OpenITI texts.
 
 NB: EditPad Pro works on Windows only. If you use a Mac or Linux
 computer, you can still run the program using an emulator software like
-Wine ([https://www.winehq.org/](https://www.winehq.org/)),
+Wine ([winehq.org/](https://www.winehq.org/)),
 which makes it possible to use Windows programs on Mac and Linux. For
 Mac, see:
-[https://wiki.winehq.org/MacOS](https://wiki.winehq.org/MacOS).
+[wiki.winehq.org/MacOS](https://wiki.winehq.org/MacOS).
 Alternatively, you can install a virtual machine on your computer that
 runs Windows:
 
--   Parallels (commercial):
-    * [https://www.parallels.com/products/desktop/](https://www.parallels.com/products/desktop/)
+-   Parallels (commercial): [parallels.com/products/desktop/](https://www.parallels.com/products/desktop/)
 
--   VirtualBox (free):
-    * [https://www.virtualbox.org/](https://www.virtualbox.org/)
+-   VirtualBox (free): [virtualbox.org/](https://www.virtualbox.org/)
 
 Once you have downloaded and installed EditPad Pro, take the following
-steps to install the mARkdown schema (see
-[https://github.com/OpenITI/mARkdown\_scheme](https://github.com/OpenITI/mARkdown_scheme)
+steps to install the **OpenITI mARkdown highlighting schema** (see
+[github.com/OpenITI/mARkdown\_scheme](https://github.com/OpenITI/mARkdown_scheme)
 for more detail):
 
 -   VERY IMPORTANT: Make sure that EditPad Pro is fully closed. Do not
      close it using the "X" in the upper right corner (which will not
      fully close the program) but go to 'file \> exit' in Edit Pad Pro.
 
--   Download
-    * [https://github.com/OpenITI/mARkdown\_scheme/archive/master.zip](https://github.com/OpenITI/mARkdown_scheme/archive/master.zip)
+-   Download [https://github.com/OpenITI/mARkdown\_scheme/archive/master.zip](https://github.com/OpenITI/mARkdown_scheme/archive/master.zip)
 
 -   Unzip the downloaded file.
 
@@ -1684,10 +1681,10 @@ for more detail):
 -   Open the unzipped folder, and copy all of the files
 
 -   Within the unzipped folder, double click on the link
-     '\_\_Follow\_this\_link\_to\_paste\_mARkdownScheme7.lnk'. This
+     `__Follow_this_link_to_paste_mARkdownScheme7.lnk`. This
      link takes you to the location where EditPad Pro was installed on
-     your computer (%APPDATA%\\JGsoft\\EditPad Pro 7 in case of
-     EditPadPro7 and %APPDATA%\\JGsoft\\EditPad Pro 8 in case of
+     your computer (`%APPDATA%/JGsoft/EditPad Pro 7` in case of
+     EditPadPro7 and `%APPDATA%/JGsoft/EditPad Pro 8` in case of
      EditPadPro 8)
 
 -   Paste the files into this folder
