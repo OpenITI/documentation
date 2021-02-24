@@ -485,20 +485,16 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
 
 ### Metadata: YAML files
 
--   [YAML Template
-     Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
-     on OpenITI gitHub; current YAML templates are different
-
--   Explanation of YML files from [4. Annotation Workflow - Version
-     20/12/2019](https://docs.google.com/document/d/1XsRR56gn3LvpToTtmy7_YlLtG9bybZImhVMvX1SISrE/edit?usp=sharing):
-
-YAML files record Metadata associated with texts, authors and annotators
-in the OpenITI. There are three types. For their locations see [above](#25-years-folders)
+OpenITI contains metadata for each author, work and text version. 
+This metadata is stored in separate metadata files in YAML format (\*.yml).
+There are three types. For their locations see [above](#25-years-folders)
 
 
 #### YML-1 (Version Record)
 
-YML-1 relates to a specific version of a text. For example, there are
+YML-1 Version YAML files relates to a specific version of a text,
+and are stored together with the text version they describe. 
+For example, there are
 multiple versions of Ibn al-Jawzi's Muntazam in the corpus, based on
 different editions and sourced from different digitisation projects.
 Each of these texts has a YML-1 file.
@@ -516,10 +512,8 @@ version that the annotator used to annotate the text
 
 **The following is an explanation of YML-1 fields:**
 
-**(Link to the original YML-1 described in the table, here:
-[https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml](https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml))**
 
-| Field | Description | Example (from file) |
+| Field | Description | Example (from [this](https://github.com/OpenITI/0600AH/blob/master/data/0597IbnJawzi/0597IbnJawzi.Muntazam/0597IbnJawzi.Muntazam.Shamela0012406-ara1.yml) file) |
 |-------|-------------|---------------------|
 | 00\#VERS\#CLENGTH\#\#: | in characters (autoupdated) | **5785781** |
 | 00\#VERS\#LENGTH\#\#\#: | in words (autoupdated) | **1414455** |
@@ -534,41 +528,41 @@ version that the annotator used to annotate the text
 
 **Further guidance on filling out YML-1 files**
 
-When filling out version files, it is essential to use permalinks in the
+When filling out version yaml files, it is essential to use permalinks in the
 fields 80\#VERS\#BASED\#\#\#\# and 80\#VERS\#COLLATED\#, for example
-from GitHub. To get a permalink, follow these steps:
+from Worldcat. To get a permalink, follow these steps:
 
 1.  Go to
     * [https://www.worldcat.org](https://www.worldcat.org/)
 
-2.  Search for a needed book; there are usually many records \-\-- pick
+2.  Search for a needed book; there are usually many records --- pick
      the one that looks best (those submitted by major libraries are
      usually quite good)
 
 3.  Open that record and copy a permalink from a small pop-up window as
      shown on the screenshot below.
 
-![](./media/image12.png){width="6.5in" height="3.2222222222222223in"}
+![](./media/image12.png)
 
-For 90\#VERS\#ISSUES\#\#\#: there is a formalised list of issues that
+For `90\#VERS\#ISSUES\#\#\#`: there is a formalised list of issues that
 can be used here:
 
-  **TAG**                    **Description of an issue**
-  -------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **NO\_MAJOR\_ISSUES**      *No major issues*
-  **PAGINATION**             *When pagination was not successfully implemented.*
-  **FOOTNOTES**              *When there are footnotes still in the text*
-  **HTML\_TAGS**             *When there are HTML tags in the text*
-  **RANDOM\_CHARS**          *Random symbols in the text (something that should be cleaned)*
-  **NEW\_EDITION\_NEEDED**   *The electronic text and the edition itself are of poor quality; a new version, probably based on a different edition, is needed; a candidate for the OCR platform.*
-  **ASSESSMENT\_NEEDED**     *The text is problematic in a variety of ways; perhaps, not a real text at all, but a product of editor's imagination; requires an expert's assessment; a candidate for removal from the corpus *
-  MISSING\_PARTS             *There are lines/paragraphs/verses/words in the PDF that don't appear in the Editpro version.*
-  REDUNDANT\_PARTS           *There are lines/paragraphs/verses/words in the Editpro version that don't appear in the PDF (this is a bit strange but happens even when the PDF edition is exactly the same as the Editpro edition; so it has nothing to do with selecting a different edition).*
-  MANY\_TYPOS                *A lot of typos in the Editpad Pro version.*
-  REVIEW\_NEEDED             *The annotator is not entirely sure about the tagging and the tagging need to be reviewed by a specialist in the field of the book (the annotator must explain the reason in the yml file and use this tag only when the whole book need to be reviewed and the problem cannot be explained by asking a simple question in the meetings. ATTENTION: use this tag as less as possible!). *
-  EDITORIAL\_SECTIONS        *Anything added by modern editor(s) (the introduction of the editor(s), explanations about the manuscript or the author, indexes at the end of the book, ...). These parts will be removed. *
-  INCOMPLETE\_VERSION        *The version contains only a part of the work (e.g., only one volume of a multi-volume edition; a manuscript transcription that does not cover all of the text). Indicate which parts of the text are present. Ideally, in the future, this will be done with CTN-style section references; for now, a description will be needed.*
-  RECONSTRUCTED\_TEXT        *The text is the result of a reconstruction by a modern editor, usually from quotations of a lost text in a large number of other works. *
+| Tag | Description of an issue |
+|-----|-------------------------|
+| **NO\_MAJOR\_ISSUES** | *No major issues* |
+| **PAGINATION** | *When pagination was not successfully implemented.* |
+| **FOOTNOTES** | *When there are footnotes still in the text* |
+| **HTML\_TAGS** | *When there are HTML tags in the text* |
+| **RANDOM\_CHARS** | *Random symbols in the text (something that should be cleaned)* |
+| **NEW\_EDITION\_NEEDED** | *The electronic text and the edition itself are of poor quality; a new version, probably based on a different edition, is needed; a candidate for the OCR platform.* |
+| **ASSESSMENT\_NEEDED** | *The text is problematic in a variety of ways; perhaps, not a real text at all, but a product of editor's imagination; requires an expert's assessment; a candidate for removal from the corpus * |
+| MISSING\_PARTS | *There are lines/paragraphs/verses/words in the PDF that don't appear in the Editpro version.* |
+| REDUNDANT\_PARTS | *There are lines/paragraphs/verses/words in the Editpro version that don't appear in the PDF (this is a bit strange but happens even when the PDF edition is exactly the same as the Editpro edition; so it has nothing to do with selecting a different edition).* |
+| MANY\_TYPOS | *A lot of typos in the Editpad Pro version.* |
+| REVIEW\_NEEDED | *The annotator is not entirely sure about the tagging and the tagging need to be reviewed by a specialist in the field of the book (the annotator must explain the reason in the yml file and use this tag only when the whole book need to be reviewed and the problem cannot be explained by asking a simple question in the meetings. ATTENTION: use this tag as less as possible!). * |
+| EDITORIAL\_SECTIONS | *Anything added by modern editor(s) (the introduction of the editor(s), explanations about the manuscript or the author, indexes at the end of the book, ...). These parts will be removed. * |
+| INCOMPLETE\_VERSION | *The version contains only a part of the work (e.g., only one volume of a multi-volume edition; a manuscript transcription that does not cover all of the text). Indicate which parts of the text are present. Ideally, in the future, this will be done with CTN-style section references; for now, a description will be needed.* |
+| RECONSTRUCTED\_TEXT | *The text is the result of a reconstruction by a modern editor, usually from quotations of a lost text in a large number of other works. * |
 
 #### YML-2 (Book Record)
 
@@ -781,6 +775,12 @@ For an example of an original file see:
   40\#AUTH\#TEACHERS\#        List of this author's teachers; author URIs from OpenITI, comma separated                                                                                                                                                          
   80\#AUTH\#BIBLIO\#\#\#      Bibliography on this author; Worldcat.org links, comma-separated                                                                                                                                                                   
   90\#AUTH\#COMMENT\#\#       a free running comment here; you can add as many lines as you see fit; the main goal of this comment section is to have a place to record valuable information, which is difficult to formalize into the above given categories.   
+
+**Further reading:**
+
+-   [YAML Template
+     Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml),
+     on OpenITI gitHub; current YAML templates are different
 
 ### RAW folders
 
