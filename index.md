@@ -1651,11 +1651,18 @@ Installing bash/working through command line tool: see
 
 ### - How can I find a text in OpenITI? 
 
-One can use the metadata application at
-[https://kitab-corpus-metadata.azurewebsites.net/](https://kitab-corpus-metadata.azurewebsites.net/)
-and search the books by the death year, author, title, or version id.
-Search function filters the metadata on the fly. By clicking on the Book
-Id one can access the text.
+The easiest way to find a text in the OpenITI corpus is to use the metadata 
+application at [kitab-corpus-metadata.azurewebsites.net](https://kitab-corpus-metadata.azurewebsites.net/).
+The search function of the app allows you to filter the books by 
+the author's name or year of death, the work's title, 
+a specific OpenITI version id, and/or tags. 
+To download a single text file, right-click the Version Id
+of the book (in the right-most column) and choose "save as". 
+By clicking on that Version Id you can access the text on GitHub; 
+clicking on the Book Title link will bring you to the folder on GitHub
+where all text versions and metadata of the same book are stored, 
+and clicking on the Author link will open the GitHub folder where
+all works by that author are stored. 
 
 Search works either in Latin script with transliterated forms or in
 Arabic. For searches in Arabic, please note that, for example, to write
@@ -1696,7 +1703,7 @@ forms, please follow the following rules:
 
 Here is an example that shows how search function works.
 
-![](./media/image44.png)
+![](./media/metadata_app.png)
 
 Further reading: [A New Application that Helps You Find Texts in the
 OpenITI
