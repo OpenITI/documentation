@@ -1363,6 +1363,20 @@ a GitHub repo page, just under its title:
 
 ![](./media/image41.png)
 
+OpenITI is an open project and depends on users to flag issues with our
+texts, as well as with our apps and data. In order to keep things organized, 
+it is important that we keep the issues in the correct location. 
+
+* If you notice a problem related to our texts (including the URIs), follow 
+[these instructions](#raising-text-related-issues)
+* If you encounter a problem with one of our apps, follow 
+[these instructions](#raising-app-related-issues)
+* If you encounter a problem with the data derived from our texts, follow 
+[these instructions](#raising-data-related-issues)
+
+#### Raising text-related issues
+
+
 In OpenITI, we collect all issues related to the texts in the corpus in
 the [Annotation
 repository](https://github.com/OpenITI/Annotation/issues).
@@ -1370,7 +1384,25 @@ This is where we keep track of which texts are being annotated, have
 quality problems, etc. Each issue related to a specific text (or author)
 contains its URI in the title.
 
-To raise a new issue:
+The easiest way to raise text-related issues is through the issue links 
+in our [metadata app](http://kitabapp-v5.azurewebsites.net/visualise):
+
+![Raising issues in the metadata app](./media/metadata-app-issues.png)
+
+Clicking one of these issue links will bring you to a pre-formatted 
+issue on GitHub that contains the URI of your author / book / version
+and instructions on how to file the GitHub issue. After filling in
+the relevant fields, click the "Submit new issue" button to submit your issue.
+
+![Submit a URI change issue on GitHub](./media/GitHub_uri_change_issue.png)
+
+The metadata app also displays an issue icon if an issue already exists on GitHub
+related to the author / book / version you're looking at:
+
+![Raising issues in the metadata app](./media/metadata-app-existing-issues.png)
+
+Alternatively, you can raise a new issue directly in the [Annotation
+repository](https://github.com/OpenITI/Annotation/issues):
 
 1.  Check whether an issue already exists for your text by typing (or
      pasting) its URI in the search field in the [issues section of
@@ -1403,6 +1435,24 @@ To raise a new issue:
 
 5.  The OpenITI team will take action to resolve your issue as quickly
      as possible.
+
+#### Raising data-related issues
+
+Issues related to data created by the Kitab project (for example, 
+the passim algorithm missed important text reuse cases in your text)
+should be raised [here](https://github.com/kitab-project-org/kitab-project-org.github.io/issues/new?assignees=mabarber92&labels=Data%2C+applications&template=data-issue-report.md&title=Short+title+of+data+issue).
+
+#### Raising app-related issues
+
+Issues related to apps using OpenITI texts (for example, the 
+app does not load data, a button does not work, the app freezes
+on a specific action) should be raised in the
+GitHub repo of that app. Often, there will be a link in the app
+to the location where you can raise issues with the app. 
+
+For apps created by the Kitab project, you can raise issues
+[here](https://github.com/kitab-project-org/kitab-project-org.github.io/issues/new/choose).
+
 
 ### Contributing New Texts
 
