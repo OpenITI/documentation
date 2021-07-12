@@ -422,6 +422,8 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
      of the project is used as name, while texts are numbers
      sequentially within the provided batch. Combined with the
      preceding elements it becomes 8: Unique Edition Identifier.
+     (see below for [special cases](#special-cases-in-version-ids))
+     
 
 5.  Lang indicates the main language of the text (these are ISO 639-2
      codes, see [Codes for the Representation of Names of
@@ -441,7 +443,31 @@ al-Ḏahabī's Taʾrīḫ al-islām below.
 
 6.  Passage is the ID of a specific text unit (like a chapter, a
      biography, a paragraph, etc.). Combined with the preceding
-     elements, it becomes 10: Unique Passage Identifier. For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
+     elements, it becomes 10: Unique Passage Identifier. 
+     
+###### Special cases in version IDs:
+
+* `Vols` at the end of the version ID: indicates that the text 
+  is a multivolume text of which every volumne in the source collection
+  had its own ID number; in OpenITI, we join all these volumes into
+  one file and keep only the ID number of the first volume
+  (and add `Vols` to the version ID to log this)
+* `BK<number>` at the end of the version ID: indicates that the text
+  has been split off from a digital text file that contained more
+  than one text (the BK number reflecting the order of appearance
+  of the texts in the original file). 
+  e.g., the file Shia003459 contained two texts that were separated: 
+  - 0255Jahiz.NaqdCuthmaniyya.Shia003459**BK1**-ara1
+  - 0220AbuJacfarIskafi.NaqdCuthmaniyya.Shia003459**BK2**-ara1 (a commentary on the former)
+* `A`, `B`, ... at the end of the version ID: the text file
+  contains only part of a text that had to be split into parts
+  because of file size limitations of GitHub repositories.
+  E.g., 1111Majlisi.BiharAnwar.Shia001432Vols had to be split into three parts: 
+  - 1111Majlisi.BiharAnwar.Shia001432Vols**A**
+  - 1111Majlisi.BiharAnwar.Shia001432Vols**B**
+  - 1111Majlisi.BiharAnwar.Shia001432Vols**C**
+
+For more information on the naming conventions of the special cases, such as large texts that spread across multiple files, please see the document [here](https://docs.google.com/document/d/1d7qlanLOLmcBFZLeH_rE8r5i3BqATeeGyeLTvkupn70/edit?usp=sharing) (in progress). New cases will be added to this document.
 
 ##### Text files: OpenITI mARkdown
 
