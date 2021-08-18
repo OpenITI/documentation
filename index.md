@@ -1795,6 +1795,129 @@ NB: EditPad Pro was upgraded from version 7 to version 8 in 2020.
 Currently we provide highlighting schemas for both versions, but 7 will
 be phased out in future updates.
 
+
+### Working with EditPad Pro
+
+#### Activating the OpenITI mARkdown highlighting scheme 
+
+If you have correctly installed the highlighting scheme, texts that have 
+the magic value `######OpenITI#` on the first line of the text should 
+automatically activate the highlighting scheme.
+
+
+#### Folding sections
+
+One of the most useful features of EditPad Pro and OpenITI mARkdown is that it allows
+you to fold all sections, displaying only their headers. This effectively creates a
+table of contents.
+
+In the menu, go to `Fold > Fold All` to collapse all sections, and `Fold > Unfold All` 
+to make them visible in their entirety again. 
+
+You can also right-click on the text, and select "Fold all" (or "Unfold all") 
+from the context menu.
+
+You can also use the 'plus' or 'minus' symbols next to a section heading to 
+fold only that section.
+
+
+#### Search and replace
+
+EditPad Pro contains a very powerful search and replace function.
+
+To display the search and replace bar, choose `Search > Multi-Line Search Panel`
+or use the keyboard shortcut `Ctrl + Shift + F`. 
+
+
+
+find first, find last, find Nth
+·        find next, find Nth next
+·        find previous, find Nth previous
+
+
+replace current, 
+replace current + find next,
+replace current + find previous, 
+replace all, replace all next, replace all previous
+
+Highlight all matches: if off, only the selected match will be highlighted
+Incremental search: if on, the first match will be selected as one types the search pattern; if off, a match will be selected only after pressing enter or one of the find buttons.
+Make a list of all lines with search results
+
+
+Fold lines (hide all lines that do not contain matches)
+Count matches
+Cut matches
+Copy matches
+
+Regex switches: 
+Enable regular expressions search
+Make the dot match any character INCLUDING new line
+Make the regex case sensitive
+Adapt the case of the replacement to the case of the search text
+Match whole words only
+
+
+Search in all files open in EditPadPro
+Search in all projects open in EditPadPro
+Closed: search even in closed files in open projects
+Block: “Selection only”: search/replace only in the selected part of the open file
+Loop: automatically restart searching from the start or end
+Line by line: select all lines in which there is a match for the search term
+Invert Line by Line: select all lines in which there is no match for the search term
+
+
+
+##### The Search and replace in multiple Files
+
+This is Kate's most powerful search and replace option. 
+
+Open the `Search in Files` bar in one of three ways: 
+* in the menu, choose `Edit > Search Files`
+* use the shortcut key combination `Ctrl+Alt+F`
+* click the `Search and Replace` button in the bottom left of the screen: 
+
+![](media/Kate_search_replace_button.png)
+
+The `Search in Files` bar contains much more options than the other search bars: 
+
+![](media/Kate_search_in_files_bar.png)
+1. `{}` button: toggle regular expressions on/off
+2. `Aa` button: toggle case sensitivity on/off (default: case insensitive, 
+"abc" will match "abc", "ABC", "aBc", etc.)
+3. You can define whether the search and replace operation is executed only in 
+the current file, in all open files, in a folder, in a project, or in all open
+projects. 
+4. you can run multiple searches at the same time: open a new search tab with 
+this button
+5. use this button to show all search options. 
+6. When you conduct a search, the results will be displayed in the results pane: 
+![](media/Kate_search_in_multiple_expanded.png)
+7. You can expand and collapse the search results in each file using this button: 
+
+![](media/Kate_expand_search_results.gif)
+
+You can check and uncheck results in the results pane; use the button `Replace 
+Checked` to replace all checked results in the results pane. 
+
+NB: for regex capture groups, Kate uses the `\1`, `\2`, etc. syntax (as in Python),
+not the `$1`, `$2`, etc. syntax (as in Perl and JavaScript):
+
+![Replace a `#` tag on a new line followed by a number by a `### |` tag](media/Kate_capturing_group.gif)
+
+##### Displaying the toolbar
+
+A tool bar can be displayed below Kate's menu bar. 
+Go to `Settings > Show Toolbar` to display it. 
+
+You can add buttons to the toolbar in the `Settings > Configure Toolbars`.
+
+##### Change font and other settings
+
+Go to `Settings > Configure Kate` to change the font, font size and other settings:
+
+![](media/Kate_settings.png)
+
 ### Kate editor
 
 Kate editor is currently the best alternative to EditPad Pro on Mac, 
