@@ -1914,7 +1914,7 @@ choose `Search > Find on Disk` in the menu, or push the
 
 This will open the Find on Disk dialog window:
 
-![EditPad Pro Find on Disk window](media/EditPadPro_find_on_disk)
+![EditPad Pro Find on Disk window](media/EditPadPro_find_on_disk.png)
 
 Here, you can select which folder to search (1),
 whether you want to search in all subfolders of the selected folder as well (2),
