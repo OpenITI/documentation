@@ -1729,12 +1729,15 @@ with the very largest texts in the corpus.
 EditPad Pro is a powerful text editor with good support for
 right-to-left text and large files. 
 
+#### EditPad Pro installation on Windows
 The free (trial) version of the software can be downloaded here:
 [download.jgsoft.com/editpad/SetupEditPadProDemo.exe](http://download.jgsoft.com/editpad/SetupEditPadProDemo.exe)
 . The trial version is fully functional for the needs of working with
 OpenITI texts.
 
-NB: EditPad Pro works on Windows only. If you use a Mac or Linux
+#### EditPad Pro installation on Mac
+
+EditPad Pro works on Windows only. If you use a Mac or Linux
 computer, you can still run the program using an emulator software like
 Wine ([winehq.org/](https://www.winehq.org/)),
 which makes it possible to use Windows programs on Mac and Linux. For
@@ -1744,8 +1747,11 @@ Alternatively, you can install a virtual machine on your computer that
 runs Windows:
 
 -   Parallels (commercial): [parallels.com/products/desktop/](https://www.parallels.com/products/desktop/)
-
 -   VirtualBox (free): [virtualbox.org/](https://www.virtualbox.org/)
+
+NB: on the latest versions of MacOS, Wine and VirtualBox do not seem to work well.
+
+#### Installing the OpenITI mARkdown highlighting schema
 
 Once you have downloaded and installed EditPad Pro, take the following
 steps to install the **OpenITI mARkdown highlighting schema** (see
@@ -1796,16 +1802,16 @@ Currently we provide highlighting schemas for both versions, but 7 will
 be phased out in future updates.
 
 
-### Working with EditPad Pro
+#### Working with EditPad Pro
 
-#### Activating the OpenITI mARkdown highlighting scheme 
+##### Activating the OpenITI mARkdown highlighting scheme 
 
 If you have correctly installed the highlighting scheme, texts that have 
 the magic value `######OpenITI#` on the first line of the text should 
 automatically activate the highlighting scheme.
 
 
-#### Folding sections
+##### Folding sections
 
 One of the most useful features of EditPad Pro and OpenITI mARkdown is that it allows
 you to fold all sections, displaying only their headers. This effectively creates a
@@ -1821,76 +1827,114 @@ You can also use the 'plus' or 'minus' symbols next to a section heading to
 fold only that section.
 
 
-#### Search and replace
+##### Search and replace
 
 EditPad Pro contains a very powerful search and replace function.
 
 To display the search and replace bar, choose `Search > Multi-Line Search Panel`
-or use the keyboard shortcut `Ctrl + Shift + F`. 
+in the menu or use the keyboard shortcut `Ctrl + Shift + F`. 
 
-![Edit Pad Pro search bar](media/EditPadPro_search_replace_bar.png)
+![EditPad Pro search bar](media/EditPadPro_search_replace_bar.png)
 
 Main components of the search and replace bar:
 
 1. the search field: write your query here
 2. the replace field: write your replace value here
 3. search tools:
-  ![Edit Pad Pro search tools](media/EditPadPro_search_tools.png)
+  ![EditPad Pro search tools](media/EditPadPro_search_tools.png)
   - (1) display/hide search panel
   - (2) go to first result (in dropdown menu: go to last result, go to Nth result)
   - (3) go to next result (in dropdown menu: go to Nth next result)
   - (4) go to previous result
 
 4. replace tools: 
-  ![Edit Pad Pro replace tools](media/EditPadPro_replace_tools.png)
+  ![EditPad Pro replace tools](media/EditPadPro_replace_tools.png)
   - (1) Replace current match
   - (2) Replace current match and find next
   - (3) Replace current match and find previous
-  - (4) Replace all (in dropdown menu: Replace all next, Replace all previous)
 
 5. result display settings: 
-  ![Edit Pad Pro replace tools](media/EditPadPro_result_display_settings.png)
+  ![EditPad Pro display settings](media/EditPadPro_result_display_settings.png)
   - (1) Highlight all matches: if off, only the selected match will be highlighted
   - (2) Incremental search: if on, the first match will be selected as one types the search pattern;
     if off, a match will be selected only after pressing enter or one of the find buttons.
   - (3) List all matches: open a list of all lines with search results in a separate window
-  - (4) search in multiple files: (see below)
 
-6. match tools: 
-  ![Edit Pad Pro replace tools](media/EditPadPro_match_tools.png)
+6. search in multiple files: see [below](#search-and-replace-in-multiple-files)
+
+7. match tools: 
+  ![EditPad Pro match tools](media/EditPadPro_match_tools.png)
   - (1) Fold lines (hide all lines that do not contain matches)
   - (2) Count matches
   - (3) Cut matches
   - (4) Copy matches
 
-7. regular expressions switches:
-  ![Edit Pad Pro replace tools](media/EditPadPro_regex_switches.png)
+8. regular expressions switches:
+  ![EditPad Pro regex_switches](media/EditPadPro_regex_switches.png)
   - (1) Enable regular expressions search
   - (2) Make the dot match any character INCLUDING new line
   - (3) Make the regex case sensitive
   - (4) Adapt the case of the replacement to the case of the search text
   - (5) Match whole words only
 
-8. search scope settings:
-
+9. search settings:
+  ![EditPad Pro search settings](media/EditPadPro_search_settings.png)
   - (1) Search in all files open in EditPadPro
   - (2) Search in all projects open in EditPadPro
   - (3) Closed: search even in closed files in open projects
+  - (4) Block: “Selection only”: search/replace only in the selected part of the open file
+  - (5) Loop: automatically restart searching from the start or end
+  - (6) Line by line: select all lines in which there is a match for the search term
+  - (7) Invert Line by Line: select all lines in which there is no match for the search term
 
-9. search settings flags:
-  - (1) Block: “Selection only”: search/replace only in the selected part of the open file
-  - (2) Loop: automatically restart searching from the start or end
-  - (3) Line by line: select all lines in which there is a match for the search term
-  - (4) Invert Line by Line: select all lines in which there is no match for the search term
-
-10. previous searches: lists the 16 previous searches
+10. previous searches: lists the 16 previous searches, so you can repeat them
 11. Favorite searches: add search term to a list of previous searches, or reuse a favorite search
-12. external regex tools: RegexBuddy, RegexMagick
+12. external regular expressions tools: RegexBuddy, RegexMagick
 
 
-##### The Search and replace in multiple Files
+##### Search and replace in multiple files
+
+EditPad Pro offers the option of searching in entire folders at once. 
+
+To do so, first write your query in the search field and then 
+choose `Search > Find on Disk` in the menu, or push the 
+`Find on Disk` button in the Search and Replace bar (no. 6 in the image above).
+
+This will open the Find on Disk dialog window:
+
+![EditPad Pro Find on Disk window](media/EditPadPro_find_on_disk)
+
+Here, you can select which folder to search (1),
+whether you want to search in all subfolders of the selected folder as well (2),
+and finally, limit the files you want to search (3) by file type, 
+file mask (e.g., `*.completed`), or a regular expression (e.g., `.+-ara\d+(?!\.yml)`).
+
+After clicking `OK`, the program will start searching all files
+that match your description. This may take a couple of minutes if you 
+search through a large number of files. 
+
+When it has finished searching, the results are displayed 
+by file in a separate `Search Matches` window: 
+
+![EditPad Pro Search Matches window](media/EditPadPro_search_matches_window)
+
+Clicking the "+" symbol next to each file name will show you the matches
+in each file. Clicking a match will open that file at the line that contains the match.
+
+You can save these results by copying them (Ctrl+A, followed by Ctrl+C)
+and pasting them into a new text file. 
 
 ##### Change font and other settings
+
+Font and font size can be changed by selecting `Options > Font...` in the menu. 
+
+##### Multiple editor windows
+
+You can open a new editor window by selecting `View > New Editor` in the menu, 
+which can be very useful for comparing two texts.
+
+This will open a new editor window on a second monitor, above, below or besides
+the current editor window. 
 
 
 ### Kate editor
@@ -1935,9 +1979,9 @@ but it works on Windows and Linux as well.
 
 * Kate should now be installed on your computer. Proceed to install the OpenITImARkdown highlighting scheme (see [below](#installing-the-openiti-markdown-highlighting-scheme-for-Kate)).
 
-### Installing the OpenITI mARkdown highlighting scheme for Kate
+#### Installing the OpenITI mARkdown highlighting scheme for Kate
 
-#### On Windows: 
+##### On Windows: 
 
 * Download the highlighting scheme `OpenITImARkdown.xml` file by right-clicking on this [link](./2021IslamicateWorldCourse_files/OpenITImARkdown.xml) and choosing "Save link as". 
 
@@ -1963,8 +2007,7 @@ And also in the dropdown menu in the bottom right of your Kate screen:
 
 ![OpenITImARkdown in dropdown menu](media/screenshot_kate_highlighting_dropdown.png)
 
-#### On Mac: 
-
+##### On Mac: 
 
 1. Download the highlighting scheme `OpenITImARkdown.xml` file by right-clicking on this [link](./2021IslamicateWorldCourse_files/OpenITImARkdown.xml) and choosing "Save link as". 
 2. Open Terminal (see [https://www.idownloadblog.com/2019/04/19/ways-open-terminal-mac/](https://www.idownloadblog.com/2019/04/19/ways-open-terminal-mac/))
@@ -1992,7 +2035,6 @@ Alternatively:
 5. Move into that folder, and create another subfolder using command+shift+n, called `syntax`
 6. Copy the `OpenITImARkdown.xml` file into that folder
 
-
 Close the Kate editor if it was open, and open it again. 
 
 You should now be able to find the OpenITImARkdown highlighting scheme in the list in the Tools > Highlighting > Markup menu: 
@@ -2003,9 +2045,9 @@ And also in the dropdown menu in the bottom right of your Kate screen:
 
 ![OpenITImARkdown in dropdown menu](media/screenshot_kate_highlighting_dropdown.png)
 
-### Working with Kate
+#### Working with Kate
 
-#### Activating the OpenITI mARkdown highlighting scheme 
+##### Activating the OpenITI mARkdown highlighting scheme 
 
 If you have correctly [installed](#installing-the-openiti-markdown-highlighting-scheme-for-kate)
 the highlighting scheme, texts that have the extensions `.mARkdown`, `.completed`
@@ -2028,7 +2070,7 @@ list in the Tools > Highlighting > Markup menu:
 
 ![OpenITImARkdown in Tools menu](media/screenshot_kate_tools_highlighting.png)
 
-#### Folding sections
+##### Folding sections
 
 One of the most useful features of Kate and OpenITI mARkdown is that it allows
 you to fold all sections, displaying only their headers. 
@@ -2052,7 +2094,7 @@ a single section:
 ![](media/Kate_folding.gif)
 
 
-#### Search and replace
+##### Search and replace
 
 Kate contains three options for searching and replacing: 
 
@@ -2064,14 +2106,13 @@ the same time
 
 The latter option is the most powerful, and displays all matched lines.
 
-##### Search bar
+###### Search bar
 
 To make the `Search and replace` bar visible, go to `Edit > Find`: 
 
 ![](media/Kate_edit_replace_menu.png)
 
 You can also use the `Ctrl+F` key shortcut.
-
 
 This opens up a basic search bar, in which you cannot use regular expressions:
 
@@ -2085,7 +2126,7 @@ To use regular expressions, open the [`Power Search and Replace Bar`](#power-sea
 by clicking the button with the sliders on the right of the search bar: ![](media/Kate_sliders_button.png)
 
 
-##### The Power Search and Replace bar
+###### The Power Search and Replace bar
 
 To make the `Search and replace` bar visible, go to `Edit > Replace`: 
 
@@ -2113,7 +2154,7 @@ to replace all matches in the document.
 * If you hit the `Find all` button, the number of matches found in the document
 will be displayed. 
 
-##### The Search in Files bar
+###### The Search in Files bar
 
 This is Kate's most powerful search and replace option. 
 
@@ -2150,19 +2191,18 @@ not the `$1`, `$2`, etc. syntax (as in Perl and JavaScript):
 
 ![Replace a `#` tag on a new line followed by a number by a `### |` tag](media/Kate_capturing_group.gif)
 
-##### Displaying the toolbar
+###### Displaying the toolbar
 
 A tool bar can be displayed below Kate's menu bar. 
 Go to `Settings > Show Toolbar` to display it. 
 
 You can add buttons to the toolbar in the `Settings > Configure Toolbars`.
 
-##### Change font and other settings
+###### Change font and other settings
 
 Go to `Settings > Configure Kate` to change the font, font size and other settings:
 
 ![](media/Kate_settings.png)
-
 
 
 ### Git Bash
