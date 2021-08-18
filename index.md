@@ -1928,7 +1928,7 @@ search through a large number of files.
 When it has finished searching, the results are displayed 
 by file in a separate `Search Matches` window: 
 
-![EditPad Pro Search Matches window](media/EditPadPro_search_matches_window)
+![EditPad Pro Search Matches window](media/EditPadPro_search_matches_window.png)
 
 Clicking the "+" symbol next to each file name will show you the matches
 in each file. Clicking a match will open that file at the line that contains the match.
