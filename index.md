@@ -1828,95 +1828,70 @@ EditPad Pro contains a very powerful search and replace function.
 To display the search and replace bar, choose `Search > Multi-Line Search Panel`
 or use the keyboard shortcut `Ctrl + Shift + F`. 
 
+![Edit Pad Pro search bar](media/EditPadPro_search_replace_bar.png)
 
+Main components of the search and replace bar:
 
-find first, find last, find Nth
-·        find next, find Nth next
-·        find previous, find Nth previous
+1. the search field: write your query here
+2. the replace field: write your replace value here
+3. search tools:
+  ![Edit Pad Pro search tools](media/EditPadPro_search_tools.png)
+  - (1) display/hide search panel
+  - (2) go to first result (in dropdown menu: go to last result, go to Nth result)
+  - (3) go to next result (in dropdown menu: go to Nth next result)
+  - (4) go to previous result
 
+4. replace tools: 
+  ![Edit Pad Pro replace tools](media/EditPadPro_replace_tools.png)
+  - (1) Replace current match
+  - (2) Replace current match and find next
+  - (3) Replace current match and find previous
+  - (4) Replace all (in dropdown menu: Replace all next, Replace all previous)
 
-replace current, 
-replace current + find next,
-replace current + find previous, 
-replace all, replace all next, replace all previous
+5. result display settings: 
+  ![Edit Pad Pro replace tools](media/EditPadPro_result_display_settings.png)
+  - (1) Highlight all matches: if off, only the selected match will be highlighted
+  - (2) Incremental search: if on, the first match will be selected as one types the search pattern;
+    if off, a match will be selected only after pressing enter or one of the find buttons.
+  - (3) List all matches: open a list of all lines with search results in a separate window
+  - (4) search in multiple files: (see below)
 
-Highlight all matches: if off, only the selected match will be highlighted
-Incremental search: if on, the first match will be selected as one types the search pattern; if off, a match will be selected only after pressing enter or one of the find buttons.
-Make a list of all lines with search results
+6. match tools: 
+  ![Edit Pad Pro replace tools](media/EditPadPro_match_tools.png)
+  - (1) Fold lines (hide all lines that do not contain matches)
+  - (2) Count matches
+  - (3) Cut matches
+  - (4) Copy matches
 
+7. regular expressions switches:
+  ![Edit Pad Pro replace tools](media/EditPadPro_regex_switches.png)
+  - (1) Enable regular expressions search
+  - (2) Make the dot match any character INCLUDING new line
+  - (3) Make the regex case sensitive
+  - (4) Adapt the case of the replacement to the case of the search text
+  - (5) Match whole words only
 
-Fold lines (hide all lines that do not contain matches)
-Count matches
-Cut matches
-Copy matches
+8. search scope settings:
 
-Regex switches: 
-Enable regular expressions search
-Make the dot match any character INCLUDING new line
-Make the regex case sensitive
-Adapt the case of the replacement to the case of the search text
-Match whole words only
+  - (1) Search in all files open in EditPadPro
+  - (2) Search in all projects open in EditPadPro
+  - (3) Closed: search even in closed files in open projects
 
+9. search settings flags:
+  - (1) Block: “Selection only”: search/replace only in the selected part of the open file
+  - (2) Loop: automatically restart searching from the start or end
+  - (3) Line by line: select all lines in which there is a match for the search term
+  - (4) Invert Line by Line: select all lines in which there is no match for the search term
 
-Search in all files open in EditPadPro
-Search in all projects open in EditPadPro
-Closed: search even in closed files in open projects
-Block: “Selection only”: search/replace only in the selected part of the open file
-Loop: automatically restart searching from the start or end
-Line by line: select all lines in which there is a match for the search term
-Invert Line by Line: select all lines in which there is no match for the search term
-
+10. previous searches: lists the 16 previous searches
+11. Favorite searches: add search term to a list of previous searches, or reuse a favorite search
+12. external regex tools: RegexBuddy, RegexMagick
 
 
 ##### The Search and replace in multiple Files
 
-This is Kate's most powerful search and replace option. 
-
-Open the `Search in Files` bar in one of three ways: 
-* in the menu, choose `Edit > Search Files`
-* use the shortcut key combination `Ctrl+Alt+F`
-* click the `Search and Replace` button in the bottom left of the screen: 
-
-![](media/Kate_search_replace_button.png)
-
-The `Search in Files` bar contains much more options than the other search bars: 
-
-![](media/Kate_search_in_files_bar.png)
-1. `{}` button: toggle regular expressions on/off
-2. `Aa` button: toggle case sensitivity on/off (default: case insensitive, 
-"abc" will match "abc", "ABC", "aBc", etc.)
-3. You can define whether the search and replace operation is executed only in 
-the current file, in all open files, in a folder, in a project, or in all open
-projects. 
-4. you can run multiple searches at the same time: open a new search tab with 
-this button
-5. use this button to show all search options. 
-6. When you conduct a search, the results will be displayed in the results pane: 
-![](media/Kate_search_in_multiple_expanded.png)
-7. You can expand and collapse the search results in each file using this button: 
-
-![](media/Kate_expand_search_results.gif)
-
-You can check and uncheck results in the results pane; use the button `Replace 
-Checked` to replace all checked results in the results pane. 
-
-NB: for regex capture groups, Kate uses the `\1`, `\2`, etc. syntax (as in Python),
-not the `$1`, `$2`, etc. syntax (as in Perl and JavaScript):
-
-![Replace a `#` tag on a new line followed by a number by a `### |` tag](media/Kate_capturing_group.gif)
-
-##### Displaying the toolbar
-
-A tool bar can be displayed below Kate's menu bar. 
-Go to `Settings > Show Toolbar` to display it. 
-
-You can add buttons to the toolbar in the `Settings > Configure Toolbars`.
-
 ##### Change font and other settings
 
-Go to `Settings > Configure Kate` to change the font, font size and other settings:
-
-![](media/Kate_settings.png)
 
 ### Kate editor
 
