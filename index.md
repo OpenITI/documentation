@@ -1841,20 +1841,26 @@ Main components of the search and replace bar:
 1. the search field: write your query here
 2. the replace field: write your replace value here
 3. search tools:
+
   ![EditPad Pro search tools](media/EditPadPro_search_tools.png)
+
   - (1) display/hide search panel
   - (2) go to first result (in dropdown menu: go to last result, go to Nth result)
   - (3) go to next result (in dropdown menu: go to Nth next result)
   - (4) go to previous result
 
 4. replace tools: 
+
   ![EditPad Pro replace tools](media/EditPadPro_replace_tools.png)
+
   - (1) Replace current match
   - (2) Replace current match and find next
   - (3) Replace current match and find previous
 
 5. result display settings: 
+
   ![EditPad Pro display settings](media/EditPadPro_result_display_settings.png)
+  
   - (1) Highlight all matches: if off, only the selected match will be highlighted
   - (2) Incremental search: if on, the first match will be selected as one types the search pattern;
     if off, a match will be selected only after pressing enter or one of the find buttons.
@@ -1863,14 +1869,18 @@ Main components of the search and replace bar:
 6. search in multiple files: see [below](#search-and-replace-in-multiple-files)
 
 7. match tools: 
+
   ![EditPad Pro match tools](media/EditPadPro_match_tools.png)
+
   - (1) Fold lines (hide all lines that do not contain matches)
   - (2) Count matches
   - (3) Cut matches
   - (4) Copy matches
 
 8. regular expressions switches:
+
   ![EditPad Pro regex_switches](media/EditPadPro_regex_switches.png)
+
   - (1) Enable regular expressions search
   - (2) Make the dot match any character INCLUDING new line
   - (3) Make the regex case sensitive
@@ -1878,7 +1888,9 @@ Main components of the search and replace bar:
   - (5) Match whole words only
 
 9. search settings:
+
   ![EditPad Pro search settings](media/EditPadPro_search_settings.png)
+  
   - (1) Search in all files open in EditPadPro
   - (2) Search in all projects open in EditPadPro
   - (3) Closed: search even in closed files in open projects
