@@ -1995,7 +1995,7 @@ but it works on Windows and Linux as well.
 
 ##### On Windows: 
 
-* Download the highlighting scheme `OpenITImARkdown.xml` file by right-clicking on this [link](./2021IslamicateWorldCourse_files/OpenITImARkdown.xml) and choosing "Save link as". 
+* Download the highlighting scheme `OpenITImARkdown.xml` file by right-clicking on this [link](https://raw.githubusercontent.com/OpenITI/mARkdown_highlighting_Kate/main/OpenITImARkdown.xml) and choosing "Save link as". 
 
 * In Windows Explorer, go to `C:/Users` and double-click the folder with your user name
 
