@@ -844,7 +844,7 @@ through the sign-up process.
 Download Git for windows here:
 [https://gitforwindows.org/](https://gitforwindows.org/)
 
-Execute the downloaded file. In the page Select Components you can leave
+Execute the downloaded file. In the page "Select Components" you can leave
 the options at their defaults.
 
 The Windows Explorer integration \> Context menu entries option allows
@@ -881,6 +881,23 @@ Download Git for Mac here:
 [https://sourceforge.net/projects/git-osx-installer/files/](https://sourceforge.net/projects/git-osx-installer/files/)
 
 Follow the prompts to install Git.
+
+After installing git, open your Terminal by doing one of the following:
+
+-   Click the Launchpad icon
+     ![](./media/image17.png) in the Dock, type "Terminal" in the
+     search field, then click "Terminal".
+
+-   In the Finder ![](./media/image42.png), open the /Applications/Utilities
+     folder, then double-click "Terminal".
+
+NB: if you have a newer Mac computer and haven't used Terminal before,
+you may have to give Terminal explicit access to your file system (see [here](https://cleanmymac.com/blog/operation-not-permitted-terminal)):
+* Select the main Apple menu > System Settings > Privacy & Security.
+* Locate and select Full Disk Access from the list.
+* Find Terminal in the list and toggle the button to the on position. If Terminal is not in the list, press the `+` button at the bottom of the list and add Terminal from the popup window (Applications > Utilities > Terminal)
+* Enter your admin password to make the change.
+* Close and open Terminal for the changes to take effect.
 
 ##### On Linux
 
@@ -962,7 +979,16 @@ To open Terminal, do one of the following:
      search field, then click "Terminal".
 
 -   In the Finder ![](./media/image42.png), open the /Applications/Utilities
-     folder, then double-click "Termina"l.
+     folder, then double-click "Terminal".
+
+NB: if you have a newer Mac computer and haven't used Terminal before,
+you may have to give Terminal explicit access to your file system (see [here](https://cleanmymac.com/blog/operation-not-permitted-terminal)):
+* Select the main Apple menu > System Settings > Privacy & Security.
+* Locate and select Full Disk Access from the list.
+* Find Terminal in the list and toggle the button to the on position. If Terminal is not in the list, press the `+` button at the bottom of the list and add Terminal from the popup window (Applications > Utilities > Terminal)
+* Enter your admin password to make the change.
+* Close and open Terminal for the changes to take effect.
+
 
 To install Git Bash: download it from here:
 [https://downloads.digitaltrends.com/git/mac](https://downloads.digitaltrends.com/git/mac)
