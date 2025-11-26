@@ -26,6 +26,12 @@ GitHub](#2-structure-and-organization-of-the-openiti-github)
             * [YML-1 (Version Record)](#yml-1-version-record)
             * [YML-2 (Book Record)](#yml-2-book-record)
             * [YML-3 (Author Record)](#yml-3-author-record)
+    * [MSS repo](#mss-repo)
+        * [MSS URIs & CTS-Like Folder Structure](#mss-uris--cts-like-folder-structure)
+        * [MSS Metadata: YAML files](#mss-metadata-yaml-files)
+            * [MSS YML-1 (Transcription Record)](#mss-yml-1-transcription-record)
+            * [MSS YML-2 (Manuscript Record)](#mss-yml-2-manuscript-record)
+            * [MSS YML-3 (Location Record)](#mss-yml-3-location-record)
     * [RAW folders](#raw-folders)
 * [Working repositories](#working-repositories)
     * [Annotation repo](#annotation-repo)
@@ -680,6 +686,184 @@ For an example of an original file see:
 -   [original OpenITI YAML Template
      Overview](https://github.com/OpenITI/Annotation/blob/master/templates_for_metadata/all_template.yml). NB:
      on OpenITI gitHub; current YAML templates are slightly different
+
+
+#### MSS repo
+
+This OpenITI sub-corpus contains transcriptions of  various hand-written materials: 
+codices, letters, administrative documents, etc. 
+The entire manuscript corpus is currently stored in a single repo, 
+[MSS](https://github.com/OpenITI/MSS). It contains a subfolder called `data`,
+which contains subfolders for each institution that holds manuscripts/documents.
+
+Each institution's subfolder includes subfolders for the manuscripts/objects
+that are held there. Each object may have one or more transcriptions. 
+
+Below is an example of how a Judaeo-Arabic document from the 
+[Invisible East project](https://www.invisible-east.org/) fits into the corpus.
+
+![mss repo directory tree example](./media/mss-directory-tree.png)
+
+##### MSS URIs & CTS-Like Folder Structure
+
+OpenITI URIs are CTS-compliant and constructed hierarchically, by
+chaining together sub-URIs. To make this example more understandable in
+the context of the OpenITI MSS subcorpus, let's take a look at a practical example below:
+
+![OpenITI MSSS uri structure](./media/mss-uri-structure2.png)
+
+1.  Namespaces are standard technical parameters from the CTS URN
+     structure which, among other things, allow building and
+     maintaining multilingual corpora.
+
+2.  LocationID is the unique identifier for a location (institution,
+    collection) that holds documents. As a rule, LocationID
+     is formed by combining (a) the international calling number of 
+     the country, formatted as a 4-digit number (prepended with 0s,
+     if necessary), (b) the name of the city where it is located,
+     and (c) (an abbreviation of) the name of the institution/collector.
+     In the example above, "0972" is the code for Israel, and
+     NLI is the abbreviation of the National Library of Israel, in Jerusalem.
+
+3.  ShelfmarkID is an element that identifies an object 
+    (manuscript, ostracon, ...), or part of an object (e.g.,
+    a number of pages of a manuscript; one side of a stone slab).
+    It consists of an identifier given to the object by the institution
+    (if the shelfmark some separator is used to separate numbers in the shelfmark,
+    it is replaced with an underscore in the ID). In the example above,
+    the original shelfmark is Ms.Heb.8333.113; and the ID refers to the text
+    on the reverse (verso) of the piece of paper.
+    Combined with the preceding elements, the ShelfmarkID becomes 7:
+    Unique Object Identifier.
+
+4.   VersionID points to the origins of a specific transcription of a document,
+     and allows accommodating multiple transcriptions of the same document. It is
+     formed by combining the name of a digital library or collection
+     from which the transcription originates with the unique number of this text
+     in that collection. In cases when transcriptions are provided by
+     individuals or projects, the last name (or initials) of the provider or the name
+     of the project is used as name, while transcriptions are numbers
+     sequentially within the provided batch, or the date and time of transcription.
+     In any case, the VersionID must be unique to a specific digital text file.
+
+5.   Lang indicates the language(s) and scripts of the text. Where available,
+     these are ISO 639-2 codes, see [Codes for the Representation of Names of
+     Languages](https://www.loc.gov/standards/iso639-2/php/code_list.php).
+     However, we created additional codes for languages written in different
+     scripts (e.g., 'jup' for "Judaeo-Persian", New Persian written in Hebrew script).
+     All language codes used in the OpenITI corpus are listed in the
+     [annotation repo](https://github.com/OpenITI/annotation).
+     The digit refers to the type of transcription used for the text:
+         1: undefined transcription type
+         2: normalized transcription
+         3: diplomatic transcription
+     For multilingual texts: combine language codes for each language (-ara1per1)
+     Combined with the preceding elements, it becomes 8: Unique Version Identifier.
+
+6.  Passage is the ID of a specific text unit (like a chapter, a
+     biography, a paragraph, etc.). Combined with the preceding
+     elements, it becomes 9: Unique Passage Identifier. 
+
+##### MSS Metadata: YAML files
+
+OpenITI contains metadata for each location, manuscript/object and transcription. 
+This metadata is stored in separate metadata files in YAML format (\*.yml).
+There are three types. For their locations see [above](#mss-25-years-folders)
+
+###### MSS YML-1 (Transcription Record)
+
+YML-1 Transcription YAML files relate to a specific transcription of an object,
+and are stored together with the transcription they describe. 
+For example, OpenITI can accommodate different transcriptions of the same object 
+by different scholars; or a diplomatic and a normalized transcription by the same scholar.
+Each of these transcriptions would have a YML-1 file.
+
+YML-1 files record the name of the annotator, the date of annotation and
+any issues encountered with the text. They also document the printed
+edition, upon which the text is based (80\#VERS\#BASED\#\#\#\#) and the
+version that the annotator used to annotate the text
+(80\#VERS\#COLLATED\#), usually the same version .
+
+**The following is an explanation of YML-1 fields:**
+
+| Field | Description | Example (random, not necessarily real data) |
+|-------|-------------|---------------------------------------------|
+| 00\#TRNS\#CLENGTH\#\#: | number of characters | 500 |
+| 00\#TRNS\#LENGTH\#\#\#: | number of tokens | 100 |
+| 00\#TRNS\#URI\#\#\#\#\#\#:| transcription URI (without extension) | MS0972JerusalemNLI.Heb8333_113Recto.IEDC1277-per1ara1 |
+| 40\#TRNS\#PAGES\#\#\#\#: | pages transcribed (use A for recto, B for verso) | 12A-24B | 
+| 80\#TRNS\#BASED\#\#\#\#: | link to a printed text the transcription was digitized from | https://search.worldcat.org/title/952470870 | 
+| 80\#TRNS\#LINKS\#\#\#\#: | links to a website the transcription was taken from (SOURCE@), or to scans/photographs of the text on a IIIF server (IIIF@), a PDF of the original edition (PDF@), ... | SOURCE@permalink, IIIF@permalink, PDF@permalink,  BIBTEX@permalink |
+| 80\#TRNS\#LINMODEL\#: | name and/or URL of the segmentation model used for line segmentation (if transcribed by OCR). | https://github.com/OpenITI/AOCP_print_models/blob/main/transcription/apt-20221130.mlmodel | 
+| 80\#TRNS\#RECMODEL\#: | name and/or URL of the recognition model used for transcription (if transcribed by OCR) | all_arabic_scripts | 
+| 80\#TRNS\#REGMODEL\#: | name and/or URL of the segmentation model used for region segmentation | apt-20221130 | 
+| 90\#TRNS\#CONTRIB\#\#: | Initials of contributors to this transcription | TRANSCRIPTION@MB, CORRECTION@LMN |
+| 90\#TRNS\#COMMENT\#\#: | free running comments, recording valuable information that is difficult to formalize into any of the above categories | The transcription was done in the framework of the AOCP II project. LMN added structural annotation. |
+| 90\#TRNS\#DATE\#\#\#\#\#: | date when the text file was annotated  | 2025-11-11 |
+| 90\#TRNS\#ISSUES\#\#\#: | comma-separated list of issues | UNCORRECTED_OCR, TRANSCRIPTION_ERRORS, INCOMPLETE_TRANSCRIPTION |
+
+###### MSS YML-2 (Manuscript Record)
+
+```
+00#MS#URI########: 
+10#MS#SHELFM#####: shelfmark; shelfmark 
+    [in one-to-one transcription]
+10#MS#GENRES#####: src@keyword, src@keyword, src@keyword
+10#MS#AUTHOR#AR##: author(s) on the front page and/or of parts
+    [in one-to-one transcription; replace language code if needed;
+    semicolon-separated]
+10#MS#TITLE#AR###: title(s) on the front page and/or of parts
+    [in one-to-one transcription; replace language code if needed;
+    semicolon-separated]
+30#MS#DATE#AH####: date of copy in hijri era: DD-MM-YYYY, 
+    DD-MM-YYYY@page, DD-MM-YYYY@page_range
+30#MS#PLACE######: place of copy: place, URI@page
+30#MS#PERSONS####: COPYIST@URI, AUTHOR@URI, PATRON@URI, READER@URI
+30#MS#INSTITUT###: institutions mentioned
+30#MS#SCRIPT#####: Maghribi/Naskh/Nastacliq/Hebrew/...
+40#MS#INCIPIT####: first 5 lines (max.) of transcription
+40#MS#EXPLICIT###: last 5 lines (max.) of transcription
+40#MS#COLOPHON###: transcription of colophon
+40#MS#HEIGHT#MM##: height, in mm (if needed replace MM by CM/IN/...)
+40#MS#WIDTH#MM###: width, in mm (if needed replace MM by CM/IN/...)
+40#MS#INK########: color, color
+40#MS#LINESPP####: lines per page: n, n@page_range
+40#MS#BINDING####: description of the binding
+40#MS#STAMPS#####: seals and stamps: URI@page
+40#MS#HANDS######: description of the different hands in the ms.
+40#MS#DECO#######: description of the decorations in the ms.
+40#MS#COLUMNS####: number of columns in the manuscript: n, n@page_range
+40#MS#PARTS######: URI@page_range, URI@page_range
+40#MS#VOLS#######: X of Y
+70#MS#EXTID######: wikidata@id, src@id
+80#MS#LINKS######: SOURCE@permalink, IIIF@permalink, PDF@permalink, 
+    IMAGES@permalink, BIBTEX@permalink
+80#MS#CATREF#####: reference to a manuscript catalogue 
+90#MS#COMMENT####: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is 
+    to have a place to record valuable information, which is 
+    difficult to formalize into the above given categories.
+90#MS#ISSUES#####: comma-separated list of issues:
+    INCORRECT_FOLIO_ORDER, CORRECTED_FOLIO_ORDER,
+    NO_FOLIO_NUMBERS, INCOMPLETE, FRAGMENT
+```
+
+###### MSS YML-3 (Location Record)
+
+```
+00#LOC#URI#######: 
+10#LOC#CITY#AR###: name of the city, in Arabic [one-to-one transcription]
+10#LOC#CITY#EN###: name of the city, in English
+10#LOC#INST#AR###: name of the institution, in Arabic [one-to-one transcription]
+10#LOC#INST#EN###: name of the institution, in English
+70#LOC#EXTID#####: wikidata@id, src@id
+80#LOC#CATALOGS##: permalink, permalink, permalink [worldcat or other]
+80#LOC#LINKS#####: WEBSITE@permalink, CATALOGUE@permalink, permalink
+90#LOC#COMMENT###: a free running comment here; you can add as many
+    lines as you see fit; the main goal of this comment section is to have a
+    place to record valuable information, which is difficult to formalize
+    into the above given categories.
+```
 
 #### RAW folders
 
@@ -2580,3 +2764,4 @@ converted into TEI XML.
 -   **Betacode**: a transliteration system that allows easy conversion
      from one transliteration system to another, and into fully
      vocalized Arabic text. See [https://alraqmiyyat.github.io/2015/02-07.html](https://alraqmiyyat.github.io/2015/02-07.html)
+
